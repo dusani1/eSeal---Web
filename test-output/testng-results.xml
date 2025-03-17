@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="5" failed="3" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-17T12:58:50 IST" name="Smoke" finished-at="2025-03-17T13:05:41 IST" duration-ms="410231">
+    <groups>
+    </groups>
+    <test started-at="2025-03-17T12:58:50 IST" name="Test" finished-at="2025-03-17T13:05:41 IST" duration-ms="410231">
+      <class name="test.UsersTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:58:50 IST" name="setup" finished-at="2025-03-17T12:58:58 IST" duration-ms="7430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyNavigationToUsersModule()[pri:1, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:58:58 IST" name="verifyNavigationToUsersModule" finished-at="2025-03-17T12:58:58 IST" duration-ms="637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigationToUsersModule -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:58:58 IST" name="tearDown" finished-at="2025-03-17T12:58:59 IST" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:58:59 IST" name="setup" finished-at="2025-03-17T12:59:06 IST" duration-ms="7265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddUserWithValidDetails()[pri:2, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:06 IST" name="verifyAddUserWithValidDetails" finished-at="2025-03-17T12:59:09 IST" duration-ms="3330" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully submitted!] but found [User name is already exists]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully submitted!] but found [User name is already exists]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at test.UsersTest.verifyAddUserWithValidDetails(UsersTest.java:82)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddUserWithValidDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:09 IST" name="tearDown" finished-at="2025-03-17T12:59:09 IST" duration-ms="173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:09 IST" name="setup" finished-at="2025-03-17T12:59:16 IST" duration-ms="6310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddUserWithDuplicateUserName()[pri:3, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:16 IST" name="verifyAddUserWithDuplicateUserName" finished-at="2025-03-17T12:59:19 IST" duration-ms="3084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddUserWithDuplicateUserName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:19 IST" name="tearDown" finished-at="2025-03-17T12:59:19 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:19 IST" name="setup" finished-at="2025-03-17T12:59:26 IST" duration-ms="6668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyMandatoryFieldValidationForAddUser()[pri:4, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:26 IST" name="verifyMandatoryFieldValidationForAddUser" finished-at="2025-03-17T12:59:28 IST" duration-ms="1833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMandatoryFieldValidationForAddUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:28 IST" name="tearDown" finished-at="2025-03-17T12:59:28 IST" duration-ms="164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:28 IST" name="setup" finished-at="2025-03-17T12:59:34 IST" duration-ms="6120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddUserUsingLeadingAndTrailingSpaces()[pri:5, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:34 IST" name="verifyAddUserUsingLeadingAndTrailingSpaces" finished-at="2025-03-17T12:59:37 IST" duration-ms="2806" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [atbs] but found [  atbs  ]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [atbs] but found [  atbs  ]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at test.UsersTest.verifyAddUserUsingLeadingAndTrailingSpaces(UsersTest.java:152)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddUserUsingLeadingAndTrailingSpaces -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:37 IST" name="tearDown" finished-at="2025-03-17T12:59:37 IST" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:37 IST" name="setup" finished-at="2025-03-17T12:59:43 IST" duration-ms="6654" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifySearchUser()[pri:6, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:43 IST" name="verifySearchUser" finished-at="2025-03-17T12:59:43 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:43 IST" name="tearDown" finished-at="2025-03-17T12:59:44 IST" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:44 IST" name="setup" finished-at="2025-03-17T12:59:50 IST" duration-ms="6516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifySavedUserDetailsInEditWindow()[pri:7, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T12:59:50 IST" name="verifySavedUserDetailsInEditWindow" finished-at="2025-03-17T13:02:46 IST" duration-ms="175724" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [Plant] but found [null],
+expected [VCPL - Panthnagar] but found [null],
+expected [None] but found [null],
+expected [Testing role] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Plant] but found [null],
+expected [VCPL - Panthnagar] but found [null],
+expected [None] but found [null],
+expected [Testing role] but found [null]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at test.UsersTest.verifySavedUserDetailsInEditWindow(UsersTest.java:193)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySavedUserDetailsInEditWindow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T13:02:46 IST" name="tearDown" finished-at="2025-03-17T13:02:46 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T13:02:46 IST" name="setup" finished-at="2025-03-17T13:02:53 IST" duration-ms="7157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserInUsersModuleGridWithPagination()[pri:8, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T13:02:53 IST" name="verifyUserInUsersModuleGridWithPagination" finished-at="2025-03-17T13:05:40 IST" duration-ms="167209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserInUsersModuleGridWithPagination -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@411f53a0]" started-at="2025-03-17T13:05:40 IST" name="tearDown" finished-at="2025-03-17T13:05:41 IST" duration-ms="219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.UsersTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Smoke -->
+</testng-results>

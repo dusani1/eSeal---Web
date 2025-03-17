@@ -1,0 +1,16 @@
+<suite name="Smoke" parallel="tests" thread-count="3">
+    <listeners>
+        <listener class-name="listeners.MyListeners"></listener>
+    </listeners>
+    <test name="SmokeTest">
+        <groups>
+            <run>
+                <include name="Others"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="test.LoginTest"/>
+            <class name="test.LogoutTest"/>
+        </classes>
+    </test>
+</suite>
