@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Mar 17 12:58:50 IST 2025</td>
+<td>Started on:</td><td>Wed Mar 19 00:25:12 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>410 seconds (410231 ms)</td>
+<tr><td>Total time:</td><td>91 seconds (91889 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,17 +76,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.UsersTest.verifyAddUserUsingLeadingAndTrailingSpaces()'><b>verifyAddUserUsingLeadingAndTrailingSpaces</b><br>Test class: test.UsersTest</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	expected [atbs] but found [  atbs  ]
-	at test.UsersTest.verifyAddUserUsingLeadingAndTrailingSpaces(UsersTest.java:152)
+<td title='test.LoginTest.verifyLoginPageTitleAndUrl()'><b>verifyLoginPageTitleAndUrl</b><br>Test class: test.LoginTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;this.extentTest&quot; is null
+	at test.LoginTest.verifyLoginPageTitleAndUrl(LoginTest.java:45)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace492135521", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace492135521'><pre>java.lang.AssertionError: The following asserts failed:
-	expected [atbs] but found [  atbs  ]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at test.UsersTest.verifyAddUserUsingLeadingAndTrailingSpaces(UsersTest.java:152)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace399699227", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace399699227'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;this.extentTest&quot; is null
+	at test.LoginTest.verifyLoginPageTitleAndUrl(LoginTest.java:45)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -114,98 +110,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>2</td>
-<td>test.UsersTest@411f53a0</td></tr>
-<tr>
-<td title='test.UsersTest.verifyAddUserWithValidDetails()'><b>verifyAddUserWithValidDetails</b><br>Test class: test.UsersTest</td>
-<td><div><pre>java.lang.AssertionError: expected [Successfully submitted!] but found [User name is already exists]
-	at test.UsersTest.verifyAddUserWithValidDetails(UsersTest.java:82)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace526874139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace526874139'><pre>java.lang.AssertionError: expected [Successfully submitted!] but found [User name is already exists]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at test.UsersTest.verifyAddUserWithValidDetails(UsersTest.java:82)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>3</td>
-<td>test.UsersTest@411f53a0</td></tr>
-<tr>
-<td title='test.UsersTest.verifySavedUserDetailsInEditWindow()'><b>verifySavedUserDetailsInEditWindow</b><br>Test class: test.UsersTest</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	expected [Plant] but found [null],
-	expected [VCPL - Panthnagar] but found [null],
-	expected [None] but found [null],
-	expected [Testing role] but found [null]
-	at test.UsersTest.verifySavedUserDetailsInEditWindow(UsersTest.java:193)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1623028322", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1623028322'><pre>java.lang.AssertionError: The following asserts failed:
-	expected [Plant] but found [null],
-	expected [VCPL - Panthnagar] but found [null],
-	expected [None] but found [null],
-	expected [Testing role] but found [null]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at test.UsersTest.verifySavedUserDetailsInEditWindow(UsersTest.java:193)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>175</td>
-<td>test.UsersTest@411f53a0</td></tr>
+<td>0</td>
+<td>test.LoginTest@4afcd809</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -216,30 +122,60 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.UsersTest.verifyUserInUsersModuleGridWithPagination()'><b>verifyUserInUsersModuleGridWithPagination</b><br>Test class: test.UsersTest</td>
+<td title='test.LoginTest.verifyLoginWithLowercaseInsensitiveEmail()'><b>verifyLoginWithLowercaseInsensitiveEmail</b><br>Test class: test.LoginTest</td>
 <td></td>
-<td>167</td>
-<td>test.UsersTest@411f53a0</td></tr>
+<td>0</td>
+<td>test.LoginTest@4afcd809</td></tr>
 <tr>
-<td title='test.UsersTest.verifyMandatoryFieldValidationForAddUser()'><b>verifyMandatoryFieldValidationForAddUser</b><br>Test class: test.UsersTest</td>
+<td title='test.LoginTest.verifyLoginUsingInvalidCredentials()'><b>verifyLoginUsingInvalidCredentials</b><br>Test class: test.LoginTest</td>
 <td></td>
 <td>1</td>
-<td>test.UsersTest@411f53a0</td></tr>
+<td>test.LoginTest@4afcd809</td></tr>
 <tr>
-<td title='test.UsersTest.verifyNavigationToUsersModule()'><b>verifyNavigationToUsersModule</b><br>Test class: test.UsersTest</td>
+<td title='test.LoginTest.verifyLoginWithShortPassword()'><b>verifyLoginWithShortPassword</b><br>Test class: test.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>test.UsersTest@411f53a0</td></tr>
+<td>test.LoginTest@4afcd809</td></tr>
 <tr>
-<td title='test.UsersTest.verifySearchUser()'><b>verifySearchUser</b><br>Test class: test.UsersTest</td>
+<td title='test.LoginTest.verifyLoginWithBlankCredentials()'><b>verifyLoginWithBlankCredentials</b><br>Test class: test.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>test.UsersTest@411f53a0</td></tr>
+<td>test.LoginTest@4afcd809</td></tr>
 <tr>
-<td title='test.UsersTest.verifyAddUserWithDuplicateUserName()'><b>verifyAddUserWithDuplicateUserName</b><br>Test class: test.UsersTest</td>
+<td title='test.LoginTest.verifyFieldAndCheckboxLabels()'><b>verifyFieldAndCheckboxLabels</b><br>Test class: test.LoginTest</td>
 <td></td>
-<td>3</td>
-<td>test.UsersTest@411f53a0</td></tr>
+<td>0</td>
+<td>test.LoginTest@4afcd809</td></tr>
+<tr>
+<td title='test.LoginTest.verifyLoginWithValidEmailAndInvalidPassword()'><b>verifyLoginWithValidEmailAndInvalidPassword</b><br>Test class: test.LoginTest</td>
+<td></td>
+<td>11</td>
+<td>test.LoginTest@4afcd809</td></tr>
+<tr>
+<td title='test.LoginTest.verifyLoginUsingValidCredentials()'><b>verifyLoginUsingValidCredentials</b><br>Test class: test.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>test.LoginTest@4afcd809</td></tr>
+<tr>
+<td title='test.LoginTest.verifyLoginWithUppercaseInsensitiveEmail()'><b>verifyLoginWithUppercaseInsensitiveEmail</b><br>Test class: test.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>test.LoginTest@4afcd809</td></tr>
+<tr>
+<td title='test.LoginTest.verifyLoginWithEmailOnly()'><b>verifyLoginWithEmailOnly</b><br>Test class: test.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>test.LoginTest@4afcd809</td></tr>
+<tr>
+<td title='test.LoginTest.verifyLoginWithInvalidEmailAndValidPassword()'><b>verifyLoginWithInvalidEmailAndValidPassword</b><br>Test class: test.LoginTest</td>
+<td></td>
+<td>10</td>
+<td>test.LoginTest@4afcd809</td></tr>
+<tr>
+<td title='test.LoginTest.verifyLoginWithPasswordOnly()'><b>verifyLoginWithPasswordOnly</b><br>Test class: test.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>test.LoginTest@4afcd809</td></tr>
 </table><p>
 </body>
 </html>

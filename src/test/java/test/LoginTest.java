@@ -9,6 +9,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import base.Base;
 import pages.HomePage;
@@ -20,9 +24,7 @@ public class LoginTest extends Base {
 	public WebDriver driver;
 	public LoginPage loginPage;
 	public HomePage homePage;
-	String REMEMBER_ME_LABEL_TEXT = "Remember me";
-	String COOKIE_LABEL_TEXT = "I am aware that this site will be using cookies to improve user experience by managing/retaining user sessions on the browser";
-
+	
 	@BeforeMethod
 	public void setup() {
 		driver = openBrowserAndApplicationURL();
@@ -34,13 +36,33 @@ public class LoginTest extends Base {
 	public void tearDown() {
 		quitBrowser(driver);
 	}
-
+	
 	@Test(priority = 1, groups = { "Smoke" })
+	public void verifyLoginPageTitleAndUrl() {
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertEquals(getPageTitle(), "eSeal");
+		softAssert.assertEquals(getPageURL(driver), "https://vguard-bt-stg.esealcom.com/login");
+		}
+
+
+	
+	@Test(priority = 2, groups = { "Smoke" })
+	public void verifyFieldAndCheckboxLabels() {
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertEquals(loginPage.getEmailFieldLabelText(), "Email");
+		softAssert.assertEquals(loginPage.getPasswordFieldLabelText(), "Password");
+		softAssert.assertEquals(loginPage.getRememberMeCheckBoxLabelText(), "Remember me");
+		softAssert.assertEquals(loginPage.getCookieCheckBoxLabelText(), "I am aware that this site will be using cookies to improve user experience by managing/retaining user sessions on the browser");		
+		softAssert.assertEquals(loginPage.getSignInButtonText(), "SIGN IN");
+		softAssert.assertEquals(loginPage.getForgotPasswordText(), "Forgot password? Click here");	
+		softAssert.assertAll();
+		}
+
+	@Test(priority = 3, groups = { "Smoke" })
 	public void verifyLoginUsingValidCredentials() {
 		loginPage.enterEmail(prop.getProperty("email"));
 		loginPage.enterPassword(prop.getProperty("password"));
-		// Assert.assertEquals(loginPage.getRememberMeLabelText(),
-		// REMEMBER_ME_LABEL_TEXT);
+		System.out.println(loginPage.getCookieCheckBoxLabelText());
 		loginPage.checkRememberMeCheckBoxifNotSelected();
 		loginPage.checkCookieCheckBoxifNotSelected();
 		homePage = loginPage.clickOnSubmitButton();
@@ -49,7 +71,132 @@ public class LoginTest extends Base {
 		homePage.clickOnLogoutIcon();
 
 	}
+	
+	@Test(priority = 4, groups = { "Sanity1" })
+	public void verifyLoginUsingInvalidCredentials() throws InterruptedException {
 
+		loginPage.enterEmail(CommonUtils.generateNewEmail());
+		loginPage.enterPassword(prop.getProperty("invalidPassword"));
+		loginPage.checkRememberMeCheckBoxifNotSelected();
+		loginPage.checkCookieCheckBoxifNotSelected();
+		loginPage.clickOnSubmitButton();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(loginPage.getErrorAlertWindow()));
+		Assert.assertEquals(loginPage.getErrorMessage(), "Server: Invalid email or password.");
+		loginPage.clickOnOkInErrorWindow();
+
+	}
+
+	@Test(priority = 5, groups = { "Sanity1" })
+	public void verifyLoginWithInvalidEmailAndValidPassword() throws InterruptedException {
+		loginPage.enterEmail(prop.getProperty("invalidEmail"));
+		loginPage.enterPassword(prop.getProperty("password"));
+		loginPage.checkRememberMeCheckBoxifNotSelected();
+		loginPage.checkCookieCheckBoxifNotSelected();
+		loginPage.clickOnSubmitButton();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(loginPage.getErrorAlertWindow()));
+		Thread.sleep(10000);
+		Assert.assertEquals(loginPage.getErrorMessage(), "Server: Invalid email or password.");
+		loginPage.clickOnOkInErrorWindow();
+	}
+
+	@Test(priority = 6, groups = { "Sanity1" })
+	public void verifyLoginWithValidEmailAndInvalidPassword() throws InterruptedException {
+		loginPage.enterEmail(prop.getProperty("email"));
+		loginPage.enterPassword(prop.getProperty("invalidPassword"));
+		loginPage.checkRememberMeCheckBoxifNotSelected();
+		loginPage.checkCookieCheckBoxifNotSelected();
+		loginPage.clickOnSubmitButton();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(loginPage.getErrorAlertWindow()));
+		Thread.sleep(10000);
+		Assert.assertEquals(loginPage.getErrorMessage(), "Server: Invalid email or password.");
+		loginPage.clickOnOkInErrorWindow();
+	}
+
+	@Test(priority = 7, groups = { "Sanity" })
+	public void verifyLoginWithBlankCredentials() {
+		SoftAssert softAssert = new SoftAssert();
+		loginPage.enterEmail("");
+		loginPage.enterPassword("");
+		loginPage.checkCookieCheckBoxifNotSelected();
+		loginPage.clickOnSubmitButton();
+		softAssert.assertEquals(loginPage.getEmailFieldWarningAlert(), "The email field is required.");
+		softAssert.assertEquals(loginPage.getPasswordFieldWarningAlert(), "The password field is required.");
+	}
+
+	@Test(priority = 8, groups = { "Sanity" })
+	public void verifyLoginWithEmailOnly() {
+		loginPage.enterEmail(prop.getProperty("email"));
+		loginPage.checkCookieCheckBoxifNotSelected();
+		loginPage.clickOnSubmitButton();
+		Assert.assertEquals(loginPage.getPasswordFieldWarningAlert(), "The password field is required.");
+	}
+
+	@Test(priority = 9, groups = { "Sanity" })
+	public void verifyLoginWithPasswordOnly() {
+		loginPage.enterPassword(prop.getProperty("password"));
+		loginPage.checkCookieCheckBoxifNotSelected();
+		loginPage.clickOnSubmitButton();
+		Assert.assertEquals(loginPage.getEmailFieldWarningAlert(), "The email field is required.");
+	}
+
+	@Test(priority = 10, groups = { "Sanity" })
+	public void verifyLoginWithShortPassword() {
+		loginPage.enterEmail(prop.getProperty("email"));
+		loginPage.enterPassword("123");
+		loginPage.checkCookieCheckBoxifNotSelected();
+		loginPage.clickOnSubmitButton();
+		Assert.assertEquals(loginPage.getPasswordFieldWarningAlert(), "The password must be at least 6 characters.");
+
+	}
+
+	@Test(priority = 11, groups = { "Smoke" })
+	public void verifyLoginWithUppercaseInsensitiveEmail() {
+		loginPage.enterEmail(prop.getProperty("email").toUpperCase());
+		loginPage.enterPassword(prop.getProperty("password"));
+		loginPage.checkCookieCheckBoxifNotSelected();
+		homePage = loginPage.clickOnSubmitButton();
+		homePage.clickOnProfileIcon();
+		Assert.assertEquals(homePage.getLoggedInMail().toLowerCase(), prop.getProperty("email").toLowerCase());
+	}
+
+	@Test(priority = 12, groups = { "Smoke" })
+	public void verifyLoginWithLowercaseInsensitiveEmail() {
+		loginPage.enterEmail(prop.getProperty("email").toLowerCase());
+		loginPage.enterPassword(prop.getProperty("password"));
+		loginPage.checkCookieCheckBoxifNotSelected();
+		homePage = loginPage.clickOnSubmitButton();
+		homePage.clickOnProfileIcon();
+		Assert.assertEquals(homePage.getLoggedInMail().toLowerCase(), prop.getProperty("email").toLowerCase());
+	}
+
+	// @Test(priority = 13, groups = { "Sanity" })
+	public void verifyAccountLockout() {
+
+		/*
+		 * for (int i = 0; i < 5; i++) {
+		 * loginPage.enterEmail(prop.getProperty("email"));
+		 * loginPage.enterPassword("wrongPassword");
+		 * loginPage.checkCookieCheckBoxifNotSelected();
+		 * loginPage.clickOnSubmitButton(); loginPage.clickOnOkInErrorWindow(); }
+		 * Assert.assertEquals(loginPage.getErrorMessage(),
+		 * "Account locked due to too many failed attempts.");
+		 */ }
+
+	// @Test(priority = 14, groups = { "Others" })
+	public void verifyLoginWithDeactivatedAccount() {
+		/*
+		 * loginPage.enterEmail(prop.getProperty("deactivatedEmail"));
+		 * loginPage.enterPassword(prop.getProperty("password"));
+		 * loginPage.checkRememberMeCheckBoxifNotSelected();
+		 * loginPage.clickOnSubmitButton();
+		 * Assert.assertEquals(loginPage.getErrorMessage(),
+		 * "Server: Account has been deactivated.");
+		 */ }
+
+//=============Data Driver=========================================
 	/*
 	 * @Test(priority=2, dataProvider="validCredentialsSupplier") public void
 	 * verifLoginIntoTheApplicationUsingValidCredentialsDD(HashMap<String, String>
@@ -70,104 +217,5 @@ public class LoginTest extends Base {
 	 * CommonUtils.getTestData(myXLSReader, "LoginWithValidCredentials", "Login");
 	 * return data; }
 	 */
-
-	@Test(priority = 2, groups = { "Sanity1" })
-	public void verifyLoginUsingInvalidCredentials() throws InterruptedException {
-
-		loginPage.enterEmail(CommonUtils.generateNewEmail());
-		loginPage.enterPassword(prop.getProperty("invalidPassword"));
-		loginPage.checkRememberMeCheckBoxifNotSelected();
-		loginPage.checkCookieCheckBoxifNotSelected();
-		loginPage.clickOnSubmitButton();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(loginPage.getErrorAlertWindow()));
-		Assert.assertEquals(loginPage.getErrorMessage(), "Server: Invalid email or password.");
-		loginPage.clickOnOkInErrorWindow();
-
-	}
-
-	@Test(priority = 3, groups = { "Sanity1" })
-	public void verifyLoginUsingInvalidEmailAndValidPassword() throws InterruptedException {
-		loginPage.enterEmail(prop.getProperty("invalidEmail"));
-		loginPage.enterPassword(prop.getProperty("password"));
-		loginPage.checkRememberMeCheckBoxifNotSelected();
-		loginPage.checkCookieCheckBoxifNotSelected();
-		loginPage.clickOnSubmitButton();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(loginPage.getErrorAlertWindow()));
-		Thread.sleep(10000);
-		Assert.assertEquals(loginPage.getErrorMessage(), "Server: Invalid email or password.");
-		loginPage.clickOnOkInErrorWindow();
-	}
-
-	@Test(priority = 4, groups = { "Sanity" })
-	public void verifyLoginWithBlankUsernameAndPassword() {
-		loginPage.enterEmail("");
-		loginPage.enterPassword("");
-		loginPage.checkCookieCheckBoxifNotSelected();
-		loginPage.clickOnSubmitButton();
-		Assert.assertTrue(loginPage.displayedEmailFieldRequriedWarningAlert());
-		Assert.assertTrue(loginPage.displayedPasswordFieldRequriedWarningAlert());
-	}
-
-	@Test(priority = 5, groups = { "Sanity" })
-	public void verifyLoginWithInvalidEmailAdressAndPassword() {
-		loginPage.enterEmail("abcd");
-		loginPage.enterPassword(prop.getProperty("password"));
-		loginPage.checkCookieCheckBoxifNotSelected();
-		loginPage.clickOnSubmitButton();
-		Assert.assertTrue(loginPage.displayedinvalidEmailWarningAlert());
-
-	}
-
-	@Test(priority = 6, groups = { "Sanity" })
-	public void verifyLoginWithEmailAndLessThan6digitPassword() {
-		loginPage.enterEmail(prop.getProperty("email"));
-		loginPage.enterPassword("123");
-		loginPage.checkCookieCheckBoxifNotSelected();
-		loginPage.clickOnSubmitButton();
-		Assert.assertTrue(loginPage.displayedPasswordLengthWarningAlert());
-
-	}
-
-	//@Test(priority = 7, groups = { "Sanity" })
-	public void verifyAccountLockoutAfterMultipleFailedLoginAttempts() {
-		for (int i = 0; i < 5; i++) {
-			loginPage.enterEmail(prop.getProperty("email"));
-			loginPage.enterPassword("wrongPassword");
-			loginPage.checkCookieCheckBoxifNotSelected();
-			loginPage.clickOnSubmitButton();
-			loginPage.clickOnOkInErrorWindow();
-		}
-		Assert.assertEquals(loginPage.getErrorMessage(), "Account locked due to too many failed attempts.");
-	}
-
-	//@Test(priority = 8, groups = { "Others" })
-	public void verifyLoginWithAccountDeactivated() {
-		loginPage.enterEmail(prop.getProperty("deactivatedEmail"));
-		loginPage.enterPassword(prop.getProperty("password"));
-		loginPage.clickOnSubmitButton();
-		Assert.assertEquals(loginPage.getErrorMessage(), "Server: Account has been deactivated.");
-	}
-
-	@Test(priority = 9, groups = { "Smoke" })
-	public void verifyLoginWithUpperCaseInsensitiveEmail() {
-		loginPage.enterEmail(prop.getProperty("email").toUpperCase());
-		loginPage.enterPassword(prop.getProperty("password"));
-		loginPage.checkCookieCheckBoxifNotSelected();
-		homePage = loginPage.clickOnSubmitButton();
-		homePage.clickOnProfileIcon();
-		Assert.assertEquals(homePage.getLoggedInMail().toLowerCase(), prop.getProperty("email").toLowerCase());
-	}
-
-	@Test(priority = 10, groups = { "Smoke" })
-	public void verifyLoginWithLowerCaseInsensitiveEmail() {
-		loginPage.enterEmail(prop.getProperty("email").toLowerCase());
-		loginPage.enterPassword(prop.getProperty("password"));
-		loginPage.checkCookieCheckBoxifNotSelected();
-		homePage = loginPage.clickOnSubmitButton();
-		homePage.clickOnProfileIcon();
-		Assert.assertEquals(homePage.getLoggedInMail().toLowerCase(), prop.getProperty("email").toLowerCase());
-	}
 
 }

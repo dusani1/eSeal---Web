@@ -27,7 +27,7 @@ public class LogoutTest extends Base {
 		homePage = loginPage.clickOnSubmitButton();
 		homePage.clickOnProfileIcon();
 		Assert.assertEquals(homePage.getLoggedInMail(), prop.getProperty("email"));
-		}
+	}
 
 	@AfterMethod
 	public void tearDown() {
@@ -86,8 +86,6 @@ public class LogoutTest extends Base {
 		Thread.sleep(1000);
 		Assert.assertEquals(getUrl(), "https://vguard-bt-stg.esealcom.com/login");
 	}
-	
-
 
 	@Test(priority = 5, groups = { "Sanity" })
 	public void verifyAutoLogoutAfterSessionTimeout() throws InterruptedException {

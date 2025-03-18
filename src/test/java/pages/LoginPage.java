@@ -23,8 +23,14 @@ public class LoginPage extends RootPage {
 	@FindBy(xpath = "//*[@name='rememberMe']")
 	private WebElement rememberMeCheckbox;
 
+	@FindBy(xpath = "(//label)[1]")
+	private WebElement rememberMeLableText;
+
 	@FindBy(xpath = "//*[@name='cookieCheck']")
 	private WebElement cookieCheckbox;
+
+	@FindBy(xpath = "(//label)[2]")
+	private WebElement coockieLableText;
 
 	@FindBy(xpath = "//*[@type='submit']")
 	private WebElement submitButton;
@@ -38,17 +44,14 @@ public class LoginPage extends RootPage {
 	@FindBy(className = "swal-button--confirm")
 	private WebElement errorConfiratmionButton;
 
-	@FindBy(xpath = "//*[text()='The email field is required.']")
-	private WebElement emailFieldRequriedWarningAlert;
-	
-	@FindBy(xpath = "//*[text()='The password field is required.']")
-	private WebElement passwordFieldRequriedWarningAlert;
-	
-	@FindBy(xpath = "//*[text()='The email must be a valid email address.']")
-	private WebElement invalidEmailWarningAlert;
-	
-	@FindBy(xpath = "//*[text()='The password must be at least 6 characters.']")
-	private WebElement passwordLengthWarningAlert;
+	@FindBy(xpath = "//input[@name='email']//following::p[@class='text-danger']")
+	private WebElement emailFielddWarningAlert;
+
+	@FindBy(xpath = "//input[@name='password']//following::p[@class='text-danger']")
+	private WebElement passwordFieldWarningAlert;
+
+	@FindBy(xpath = "//div[@class='forgot-password']")
+	private WebElement forgotPasswordText;
 
 	public void enterEmail(String emailText) {
 		elementUtilities.enterTextIntoElement(emailField, emailText);
@@ -112,25 +115,36 @@ public class LoginPage extends RootPage {
 
 	}
 
-	public boolean displayedEmailFieldRequriedWarningAlert() {
-		return emailFieldRequriedWarningAlert.isDisplayed();
-		
+	public String getEmailFieldWarningAlert() {
+		return elementUtilities.getElementText(emailFielddWarningAlert);
 	}
-	
-	public boolean displayedPasswordFieldRequriedWarningAlert() {
-		return passwordFieldRequriedWarningAlert.isDisplayed();
-		
+
+	public String getPasswordFieldWarningAlert() {
+		return elementUtilities.getElementText(passwordFieldWarningAlert);
 	}
-	
-	public boolean displayedinvalidEmailWarningAlert() {
-		return invalidEmailWarningAlert.isDisplayed();
-		
+
+	public String getEmailFieldLabelText() {
+		return elementUtilities.getElementDomAttribute(emailField, "placeholder");
 	}
-	
-	public boolean displayedPasswordLengthWarningAlert() {
-		return passwordLengthWarningAlert.isDisplayed();
-		
+
+	public String getPasswordFieldLabelText() {
+		return elementUtilities.getElementDomAttribute(passwordField, "placeholder");
 	}
-	
-	
+
+	public String getRememberMeCheckBoxLabelText() {
+		return elementUtilities.getTextFromElement(rememberMeLableText);
+	}
+
+	public String getCookieCheckBoxLabelText() {
+		return elementUtilities.getTextFromElement(coockieLableText);
+	}
+
+	public String getSignInButtonText() {
+		return elementUtilities.getElementText(submitButton);
+	}
+
+	public String getForgotPasswordText() {
+		return elementUtilities.getElementText(forgotPasswordText);
+	}
+
 }

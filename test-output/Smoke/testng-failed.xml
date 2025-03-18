@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Smoke]">
+  <listeners>
+    <listener class-name="listeners.MyListeners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="test.UsersTest">
+      <class name="test.LoginTest">
         <methods>
-          <include name="verifyAddUserUsingLeadingAndTrailingSpaces"/>
-          <include name="verifySavedUserDetailsInEditWindow"/>
+          <include name="verifyLoginPageTitleAndUrl"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="verifyAddUserWithValidDetails"/>
         </methods>
-      </class> <!-- test.UsersTest -->
+      </class> <!-- test.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Smoke] -->

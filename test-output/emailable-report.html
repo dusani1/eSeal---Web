@@ -9,31 +9,24 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Smoke</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">410,231</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">11</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">91,889</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">test.UsersTest</td><td><a href="#m0">verifyAddUserUsingLeadingAndTrailingSpaces</a></td><td rowspan="1">1742196574301</td><td rowspan="1">2806</td></tr><tr class="failedeven"><td><a href="#m1">verifyAddUserWithValidDetails</a></td><td rowspan="1">1742196546427</td><td rowspan="1">3330</td></tr><tr class="failedeven"><td><a href="#m2">verifySavedUserDetailsInEditWindow</a></td><td rowspan="1">1742196590598</td><td rowspan="1">175724</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">test.UsersTest</td><td><a href="#m3">verifyAddUserWithDuplicateUserName</a></td><td rowspan="1">1742196556247</td><td rowspan="1">3084</td></tr><tr class="passedeven"><td><a href="#m4">verifyMandatoryFieldValidationForAddUser</a></td><td rowspan="1">1742196566183</td><td rowspan="1">1833</td></tr><tr class="passedeven"><td><a href="#m5">verifyNavigationToUsersModule</a></td><td rowspan="1">1742196538339</td><td rowspan="1">637</td></tr><tr class="passedeven"><td><a href="#m6">verifySearchUser</a></td><td rowspan="1">1742196583919</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m7">verifyUserInUsersModuleGridWithPagination</a></td><td rowspan="1">1742196773686</td><td rowspan="1">167209</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">test.LoginTest</td><td><a href="#m0">verifyLoginPageTitleAndUrl</a></td><td rowspan="1">1742324118304</td><td rowspan="1">29</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="11">test.LoginTest</td><td><a href="#m1">verifyFieldAndCheckboxLabels</a></td><td rowspan="1">1742324123847</td><td rowspan="1">178</td></tr><tr class="passedeven"><td><a href="#m2">verifyLoginUsingInvalidCredentials</a></td><td rowspan="1">1742324135421</td><td rowspan="1">1299</td></tr><tr class="passedeven"><td><a href="#m3">verifyLoginUsingValidCredentials</a></td><td rowspan="1">1742324129165</td><td rowspan="1">1080</td></tr><tr class="passedeven"><td><a href="#m4">verifyLoginWithBlankCredentials</a></td><td rowspan="1">1742324174882</td><td rowspan="1">433</td></tr><tr class="passedeven"><td><a href="#m5">verifyLoginWithEmailOnly</a></td><td rowspan="1">1742324180481</td><td rowspan="1">397</td></tr><tr class="passedeven"><td><a href="#m6">verifyLoginWithInvalidEmailAndValidPassword</a></td><td rowspan="1">1742324141963</td><td rowspan="1">10937</td></tr><tr class="passedeven"><td><a href="#m7">verifyLoginWithLowercaseInsensitiveEmail</a></td><td rowspan="1">1742324203405</td><td rowspan="1">866</td></tr><tr class="passedeven"><td><a href="#m8">verifyLoginWithPasswordOnly</a></td><td rowspan="1">1742324186140</td><td rowspan="1">351</td></tr><tr class="passedeven"><td><a href="#m9">verifyLoginWithShortPassword</a></td><td rowspan="1">1742324191667</td><td rowspan="1">461</td></tr><tr class="passedeven"><td><a href="#m10">verifyLoginWithUppercaseInsensitiveEmail</a></td><td rowspan="1">1742324197332</td><td rowspan="1">860</td></tr><tr class="passedeven"><td><a href="#m11">verifyLoginWithValidEmailAndInvalidPassword</a></td><td rowspan="1">1742324158204</td><td rowspan="1">11362</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">test.UsersTest#verifyAddUserUsingLeadingAndTrailingSpaces</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	expected [atbs] but found [  atbs  ]
-	at test.UsersTest.verifyAddUserUsingLeadingAndTrailingSpaces(UsersTest.java:152)
+<h2>Test</h2><h3 id="m0">test.LoginTest#verifyLoginPageTitleAndUrl</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;this.extentTest&quot; is null
+	at test.LoginTest.verifyLoginPageTitleAndUrl(LoginTest.java:45)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">test.UsersTest#verifyAddUserWithValidDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Successfully submitted!] but found [User name is already exists]
-	at test.UsersTest.verifyAddUserWithValidDetails(UsersTest.java:82)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">test.UsersTest#verifySavedUserDetailsInEditWindow</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	expected [Plant] but found [null],
-	expected [VCPL - Panthnagar] but found [null],
-	expected [None] but found [null],
-	expected [Testing role] but found [null]
-	at test.UsersTest.verifySavedUserDetailsInEditWindow(UsersTest.java:193)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">test.UsersTest#verifyAddUserWithDuplicateUserName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">test.UsersTest#verifyMandatoryFieldValidationForAddUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">test.UsersTest#verifyNavigationToUsersModule</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">test.UsersTest#verifySearchUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">test.UsersTest#verifyUserInUsersModuleGridWithPagination</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">test.LoginTest#verifyFieldAndCheckboxLabels</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">test.LoginTest#verifyLoginUsingInvalidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">test.LoginTest#verifyLoginUsingValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">test.LoginTest#verifyLoginWithBlankCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">test.LoginTest#verifyLoginWithEmailOnly</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">test.LoginTest#verifyLoginWithInvalidEmailAndValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">test.LoginTest#verifyLoginWithLowercaseInsensitiveEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">test.LoginTest#verifyLoginWithPasswordOnly</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">test.LoginTest#verifyLoginWithShortPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">test.LoginTest#verifyLoginWithUppercaseInsensitiveEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">test.LoginTest#verifyLoginWithValidEmailAndInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

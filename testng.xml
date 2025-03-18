@@ -4,9 +4,9 @@
   <listeners>
   <listener class-name="listeners.MyListeners"></listener>
   </listeners>
-  <test thread-count="2" name="Test">
+  <test thread-count="5" name="Test">
     <classes>
-	  <class name="test.UsersTest"/>
+    <class name="test.LoginTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
