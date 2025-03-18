@@ -196,7 +196,7 @@ public class LoginTest extends Base {
 		 * "Server: Account has been deactivated.");
 		 */ }
 
-//=============Data Driver=========================================
+//=============Data Driven Tests=========================================
 	/*
 	 * @Test(priority=2, dataProvider="validCredentialsSupplier") public void
 	 * verifLoginIntoTheApplicationUsingValidCredentialsDD(HashMap<String, String>
