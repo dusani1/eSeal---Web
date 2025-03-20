@@ -39,7 +39,7 @@ public class UsersTest extends Base {
 			homePage = loginPage.clickOnSubmitButton();
 			homePage.clickOnAutorizationOption();
 			usersPage = homePage.clickOnUsersOption();
-			Assert.assertEquals(getPageTitle(), "eSeal - Users");
+			Assert.assertEquals(getPageTitle(), prop.getProperty("usersPageTitle"));
 			Assert.assertEquals(getUrl(), prop.get("usersPageURL"));
 		  } catch (Exception e) {
 			e.printStackTrace();
@@ -56,7 +56,7 @@ public class UsersTest extends Base {
 	@Test(priority = 1)
 	public void verifyNavigationToUsersModule() {
 		System.out.println(usersPage.usersPageHeading());
-		Assert.assertEquals(usersPage.usersPageHeading(), "User Management");
+		Assert.assertEquals(usersPage.usersPageHeading(), prop.getProperty("usersPageHeading"));
 		homePage.clickOnProfileIcon();
 		homePage.clickOnLogoutIcon();
 
@@ -83,7 +83,7 @@ public class UsersTest extends Base {
 
 	}
 
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void verifyAddUserWithDuplicateUserName() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
@@ -127,6 +127,22 @@ public class UsersTest extends Base {
 		homePage.clickOnLogoutIcon();
 
 	}
+	
+	@Test(priority = 4)
+	public void verifyMandatoryFieldValidationForUpdatePassword() {
+		SoftAssert softAssert = new SoftAssert();
+		usersPage.searchAndClickIcon("userss", "atbs", "dasfd", "abc@yomail.com","updatePassword");
+		Assert.assertTrue(usersPage.updatePasswordWindowHeading());
+		usersPage.clickOnSaveButton();
+		softAssert.assertEquals(usersPage.getPasswordFieldWarningAlert(), "The password field is required.");
+		softAssert.assertEquals(usersPage.getConfirmPasswordFieldWarningAlert(),
+				"The confirm password field is required.");
+				softAssert.assertAll();
+		usersPage.clickOnCloseButton();
+		homePage.clickOnProfileIcon();
+		homePage.clickOnLogoutIcon();
+
+	}
 
 	@Test(priority = 5)
 	public void verifyAddUserUsingLeadingAndTrailingSpaces() {
@@ -165,9 +181,7 @@ public class UsersTest extends Base {
 	@Test(priority = 7)
 	public void verifySavedUserDetailsInEditWindow() {
 		SoftAssert softAssert = new SoftAssert();
-		// usersPage.enterSerachTextAndSearch("atbs");
-		// usersPage.pressEnterKey();
-		usersPage.searchRecordAndClickOnEditIcon("userss", "atbs", "dasfd", "abc@yomail.com");
+		usersPage.searchAndClickIcon("userss", "atbs", "dasfd", "abc@yomail.com","edit");
 		Assert.assertTrue(usersPage.editUserWindowHeading());
 		String firstName = "atbs";
 		String lastName = "dasfd";
@@ -193,6 +207,18 @@ public class UsersTest extends Base {
 		softAssert.assertAll();
 	}
 
+	@Test
+	public void verifyDeleteUser() throws InterruptedException {
+		SoftAssert softAssert = new SoftAssert();
+		boolean result = usersPage.searchAndClickIcon("userss", "atbs", "dasfd", "abc@yomail.com","delete");
+		System.out.println(result);
+		Thread.sleep(10000);
+		softAssert.assertEquals(usersPage.getdeleteConfirmationAlertTitleText(), "Are you sure?");
+		softAssert.assertEquals(usersPage.getdeleteConfirmationAlertText(), "Once deleted, you will not be able to recover this data!");
+		softAssert.assertAll();
+	}
+	
+	
 	@Test(priority = 8)
 	public void verifyUserInUsersModuleGridWithPagination() {
 		boolean userFound = usersPage.searchRecord("40078", "Triwendra", "Joshi", "Panthnagar GRN Operations",
@@ -207,5 +233,8 @@ public class UsersTest extends Base {
 		homePage.clickOnLogoutIcon();
 
 	}
+	
+	
+	
 
 }

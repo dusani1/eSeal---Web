@@ -43,7 +43,7 @@ public class LogoutTest extends Base {
 			e.printStackTrace();
 		}
 		Assert.assertEquals(getPageTitle(), "eSeal");
-		Assert.assertEquals(getUrl(), "https://vguard-bt-stg.esealcom.com/login");
+		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
 	}
 
 	@Test(priority = 2, groups = { "Smoke" })
@@ -51,7 +51,7 @@ public class LogoutTest extends Base {
 		homePage.clickOnLogoutIcon();
 		Thread.sleep(1000);
 		Assert.assertEquals(getPageTitle(), "eSeal");
-		Assert.assertEquals(getUrl(), "https://vguard-bt-stg.esealcom.com/login");
+		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
 		loginPage.enterEmail(prop.getProperty("email"));
 		loginPage.enterPassword(prop.getProperty("password"));
 		loginPage.checkRememberMeCheckBoxifNotSelected();
@@ -62,7 +62,7 @@ public class LogoutTest extends Base {
 		homePage.clickOnLogoutIcon();
 		Thread.sleep(1000);
 		Assert.assertEquals(getPageTitle(), "eSeal");
-		Assert.assertEquals(getUrl(), "https://vguard-bt-stg.esealcom.com/login");
+		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
 
 	}
 
@@ -71,11 +71,11 @@ public class LogoutTest extends Base {
 		homePage.clickOnLogoutIcon();
 		Thread.sleep(1000);
 		Assert.assertEquals(getPageTitle(), "eSeal");
-		Assert.assertEquals(getUrl(), "https://vguard-bt-stg.esealcom.com/login");
+		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
 		driver.navigate().back();
 		Thread.sleep(1000);
 		Assert.assertEquals(getPageTitle(), "eSeal");
-		Assert.assertEquals(getUrl(), "https://vguard-bt-stg.esealcom.com/login");
+		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
 	}
 
 	@Test(priority = 4, groups = { "Sanity" })
@@ -84,14 +84,14 @@ public class LogoutTest extends Base {
 		driver.navigate().back();
 		driver.navigate().forward();
 		Thread.sleep(1000);
-		Assert.assertEquals(getUrl(), "https://vguard-bt-stg.esealcom.com/login");
+		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
 	}
 
 	@Test(priority = 5, groups = { "Sanity" })
 	public void verifyAutoLogoutAfterSessionTimeout() throws InterruptedException {
 		Thread.sleep(10000); // 15 minutes timeout simulation: Time need to get from Dev team
 		driver.navigate().refresh();
-		Assert.assertEquals(getUrl(), "https://vguard-bt-stg.esealcom.com/login");
+		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
 	}
 
 }

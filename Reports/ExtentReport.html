@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">eSeal Automation Results</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Mar 19, 2025 12:25:12 am</span></a>
+<a href="#"><span class="badge badge-primary">Mar 19, 2025 08:44:49 pm</span></a>
 </li>
 </ul>
 </div>
@@ -80,14 +80,55 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLoginPageTitleAndUrl</p>
+            <p class="name">verifyNavigationToUsersModule</p>
             <p class="text-sm">
-              <span>12:25:18 am</span> / <span>00:00:00:299</span>
+              <span>8:45:45 pm</span> / <span>00:00:00:752</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyNavigationToUsersModule</h5>
+<span class='badge badge-success'>03.19.2025 8:45:45 pm</span>
+<span class='badge badge-danger'>03.19.2025 8:45:46 pm</span>
+<span class='badge badge-default'>00:00:00:752</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:45:46 pm</td>
+        <td>
+          verifyNavigationToUsersModule Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyAddTransactionWithValidData</p>
+            <p class="text-sm">
+              <span>8:46:25 pm</span> / <span>00:00:03:652</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -95,11 +136,11 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">verifyLoginPageTitleAndUrl</h5>
-<span class='badge badge-success'>03.19.2025 12:25:18 am</span>
-<span class='badge badge-danger'>03.19.2025 12:25:18 am</span>
-<span class='badge badge-default'>00:00:00:299</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<h5 class="test-status text-fail">verifyAddTransactionWithValidData</h5>
+<span class='badge badge-success'>03.19.2025 8:46:25 pm</span>
+<span class='badge badge-danger'>03.19.2025 8:46:29 pm</span>
+<span class='badge badge-default'>00:00:03:652</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -108,7 +149,7 @@
 </div>    <div class="row mb-3"><div class="col-md-3">
     
 
-<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyLoginPageTitleAndUrl.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyLoginPageTitleAndUrl.png">
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAddTransactionWithValidData.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAddTransactionWithValidData.png">
   
     
 
@@ -119,17 +160,23 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>12:25:18 am</td>
+        <td>8:46:28 pm</td>
         <td>
-          verifyLoginPageTitleAndUrl Test got failed
+          verifyAddTransactionWithValidData Test got failed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:25:18 am</td>
+        <td>8:46:29 pm</td>
         <td>
-          <textarea readonly class="code-block">java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "this.extentTest" is null
-	at test.LoginTest.verifyLoginPageTitleAndUrl(LoginTest.java:45)
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [Successfully submitted!] but found [Feature Code already exists]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.TransactionsTest.verifyAddTransactionWithValidData(TransactionsTest.java:69)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -165,81 +212,90 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="fail" test-id="3"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyFieldAndCheckboxLabels</p>
+            <p class="name">verifyAddUserWithDuplicateTransactionName</p>
             <p class="text-sm">
-              <span>12:25:23 am</span> / <span>00:00:00:177</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>8:47:36 pm</span> / <span>00:00:04:269</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyFieldAndCheckboxLabels</h5>
-<span class='badge badge-success'>03.19.2025 12:25:23 am</span>
-<span class='badge badge-danger'>03.19.2025 12:25:24 am</span>
-<span class='badge badge-default'>00:00:00:177</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:25:24 am</td>
-        <td>
-          verifyFieldAndCheckboxLabels Test got passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="3"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyLoginUsingValidCredentials</p>
-            <p class="text-sm">
-              <span>12:25:29 am</span> / <span>00:00:01:079</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyLoginUsingValidCredentials</h5>
-<span class='badge badge-success'>03.19.2025 12:25:29 am</span>
-<span class='badge badge-danger'>03.19.2025 12:25:30 am</span>
-<span class='badge badge-default'>00:00:01:079</span>
+<h5 class="test-status text-fail">verifyAddUserWithDuplicateTransactionName</h5>
+<span class='badge badge-success'>03.19.2025 8:47:36 pm</span>
+<span class='badge badge-danger'>03.19.2025 8:47:40 pm</span>
+<span class='badge badge-default'>00:00:04:269</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAddUserWithDuplicateTransactionName.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAddUserWithDuplicateTransactionName.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:25:30 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:47:40 pm</td>
         <td>
-          verifyLoginUsingValidCredentials Test got passed
+          verifyAddUserWithDuplicateTransactionName Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:47:40 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [Transaction name is already exists] but found [Transaction Name already exists]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.TransactionsTest.verifyAddUserWithDuplicateTransactionName(TransactionsTest.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -252,9 +308,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLoginUsingInvalidCredentials</p>
+            <p class="name">verifyAddUserWithDuplicateFeatureCode</p>
             <p class="text-sm">
-              <span>12:25:35 am</span> / <span>00:00:01:298</span>
+              <span>8:49:15 pm</span> / <span>00:00:04:001</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -262,10 +318,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyLoginUsingInvalidCredentials</h5>
-<span class='badge badge-success'>03.19.2025 12:25:35 am</span>
-<span class='badge badge-danger'>03.19.2025 12:25:36 am</span>
-<span class='badge badge-default'>00:00:01:298</span>
+<h5 class="test-status text-pass">verifyAddUserWithDuplicateFeatureCode</h5>
+<span class='badge badge-success'>03.19.2025 8:49:15 pm</span>
+<span class='badge badge-danger'>03.19.2025 8:49:19 pm</span>
+<span class='badge badge-default'>00:00:04:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -278,9 +334,9 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:25:36 am</td>
+        <td>8:49:19 pm</td>
         <td>
-          verifyLoginUsingInvalidCredentials Test got passed
+          verifyAddUserWithDuplicateFeatureCode Test got passed
         </td>
       </tr>
   </tbody>
@@ -293,9 +349,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLoginWithInvalidEmailAndValidPassword</p>
+            <p class="name">verifyMandatoryFieldValidationForAddUser</p>
             <p class="text-sm">
-              <span>12:25:41 am</span> / <span>00:00:10:935</span>
+              <span>8:50:23 pm</span> / <span>00:00:02:197</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -303,10 +359,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyLoginWithInvalidEmailAndValidPassword</h5>
-<span class='badge badge-success'>03.19.2025 12:25:41 am</span>
-<span class='badge badge-danger'>03.19.2025 12:25:52 am</span>
-<span class='badge badge-default'>00:00:10:935</span>
+<h5 class="test-status text-pass">verifyMandatoryFieldValidationForAddUser</h5>
+<span class='badge badge-success'>03.19.2025 8:50:23 pm</span>
+<span class='badge badge-danger'>03.19.2025 8:50:26 pm</span>
+<span class='badge badge-default'>00:00:02:197</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -319,9 +375,9 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:25:52 am</td>
+        <td>8:50:26 pm</td>
         <td>
-          verifyLoginWithInvalidEmailAndValidPassword Test got passed
+          verifyMandatoryFieldValidationForAddUser Test got passed
         </td>
       </tr>
   </tbody>
@@ -329,40 +385,87 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="6"
+        <li class="test-item"  status="fail" test-id="6"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLoginWithValidEmailAndInvalidPassword</p>
+            <p class="name">verifyAddUserUsingLeadingAndTrailingSpaces</p>
             <p class="text-sm">
-              <span>12:25:58 am</span> / <span>00:00:11:360</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>8:51:05 pm</span> / <span>00:00:03:261</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyLoginWithValidEmailAndInvalidPassword</h5>
-<span class='badge badge-success'>03.19.2025 12:25:58 am</span>
-<span class='badge badge-danger'>03.19.2025 12:26:09 am</span>
-<span class='badge badge-default'>00:00:11:360</span>
+<h5 class="test-status text-fail">verifyAddUserUsingLeadingAndTrailingSpaces</h5>
+<span class='badge badge-success'>03.19.2025 8:51:05 pm</span>
+<span class='badge badge-danger'>03.19.2025 8:51:08 pm</span>
+<span class='badge badge-default'>00:00:03:261</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAddUserUsingLeadingAndTrailingSpaces.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAddUserUsingLeadingAndTrailingSpaces.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:09 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:51:08 pm</td>
         <td>
-          verifyLoginWithValidEmailAndInvalidPassword Test got passed
+          verifyAddUserUsingLeadingAndTrailingSpaces Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:51:08 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: The following asserts failed:
+	expected [Testabc] but found [ Testabc ]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at test.TransactionsTest.verifyAddUserUsingLeadingAndTrailingSpaces(TransactionsTest.java:151)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -370,40 +473,89 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="7"
+        <li class="test-item"  status="fail" test-id="7"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLoginWithBlankCredentials</p>
+            <p class="name">verifySavedTransactionDetailsInEditWindow</p>
             <p class="text-sm">
-              <span>12:26:14 am</span> / <span>00:00:00:432</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>8:51:33 pm</span> / <span>00:03:07:907</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyLoginWithBlankCredentials</h5>
-<span class='badge badge-success'>03.19.2025 12:26:14 am</span>
-<span class='badge badge-danger'>03.19.2025 12:26:15 am</span>
-<span class='badge badge-default'>00:00:00:432</span>
+<h5 class="test-status text-fail">verifySavedTransactionDetailsInEditWindow</h5>
+<span class='badge badge-success'>03.19.2025 8:51:33 pm</span>
+<span class='badge badge-danger'>03.19.2025 8:54:41 pm</span>
+<span class='badge badge-default'>00:03:07:907</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifySavedTransactionDetailsInEditWindow.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifySavedTransactionDetailsInEditWindow.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:15 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:54:41 pm</td>
         <td>
-          verifyLoginWithBlankCredentials Test got passed
+          verifySavedTransactionDetailsInEditWindow Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:54:41 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: The following asserts failed:
+	expected [1] but found [null],
+	expected [0] but found [null],
+	expected [0] but found [null]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at test.TransactionsTest.verifySavedTransactionDetailsInEditWindow(TransactionsTest.java:177)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -416,9 +568,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLoginWithEmailOnly</p>
+            <p class="name">verifyUserInUsersModuleGridWithPagination</p>
             <p class="text-sm">
-              <span>12:26:20 am</span> / <span>00:00:00:396</span>
+              <span>8:55:33 pm</span> / <span>00:03:07:688</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -426,10 +578,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyLoginWithEmailOnly</h5>
-<span class='badge badge-success'>03.19.2025 12:26:20 am</span>
-<span class='badge badge-danger'>03.19.2025 12:26:20 am</span>
-<span class='badge badge-default'>00:00:00:396</span>
+<h5 class="test-status text-pass">verifyUserInUsersModuleGridWithPagination</h5>
+<span class='badge badge-success'>03.19.2025 8:55:33 pm</span>
+<span class='badge badge-danger'>03.19.2025 8:58:41 pm</span>
+<span class='badge badge-default'>00:03:07:688</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -442,9 +594,9 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:20 am</td>
+        <td>8:58:41 pm</td>
         <td>
-          verifyLoginWithEmailOnly Test got passed
+          verifyUserInUsersModuleGridWithPagination Test got passed
         </td>
       </tr>
   </tbody>
@@ -457,9 +609,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLoginWithPasswordOnly</p>
+            <p class="name">verifyDeleteUser</p>
             <p class="text-sm">
-              <span>12:26:26 am</span> / <span>00:00:00:349</span>
+              <span>8:59:37 pm</span> / <span>00:03:09:121</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -467,10 +619,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyLoginWithPasswordOnly</h5>
-<span class='badge badge-success'>03.19.2025 12:26:26 am</span>
-<span class='badge badge-danger'>03.19.2025 12:26:26 am</span>
-<span class='badge badge-default'>00:00:00:349</span>
+<h5 class="test-status text-pass">verifyDeleteUser</h5>
+<span class='badge badge-success'>03.19.2025 8:59:37 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:02:46 pm</span>
+<span class='badge badge-default'>00:03:09:121</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -483,9 +635,9 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:26 am</td>
+        <td>9:02:46 pm</td>
         <td>
-          verifyLoginWithPasswordOnly Test got passed
+          verifyDeleteUser Test got passed
         </td>
       </tr>
   </tbody>
@@ -498,9 +650,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLoginWithShortPassword</p>
+            <p class="name">verifyDeleteUser</p>
             <p class="text-sm">
-              <span>12:26:31 am</span> / <span>00:00:00:460</span>
+              <span>9:03:59 pm</span> / <span>00:07:19:505</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -508,10 +660,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyLoginWithShortPassword</h5>
-<span class='badge badge-success'>03.19.2025 12:26:31 am</span>
-<span class='badge badge-danger'>03.19.2025 12:26:32 am</span>
-<span class='badge badge-default'>00:00:00:460</span>
+<h5 class="test-status text-pass">verifyDeleteUser</h5>
+<span class='badge badge-success'>03.19.2025 9:03:59 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:11:19 pm</span>
+<span class='badge badge-default'>00:07:19:505</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -524,9 +676,9 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:32 am</td>
+        <td>9:11:19 pm</td>
         <td>
-          verifyLoginWithShortPassword Test got passed
+          verifyDeleteUser Test got passed
         </td>
       </tr>
   </tbody>
@@ -539,9 +691,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLoginWithUppercaseInsensitiveEmail</p>
+            <p class="name">verifyNavigationToUsersModule</p>
             <p class="text-sm">
-              <span>12:26:37 am</span> / <span>00:00:00:859</span>
+              <span>9:12:11 pm</span> / <span>00:00:01:423</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -549,10 +701,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyLoginWithUppercaseInsensitiveEmail</h5>
-<span class='badge badge-success'>03.19.2025 12:26:37 am</span>
-<span class='badge badge-danger'>03.19.2025 12:26:38 am</span>
-<span class='badge badge-default'>00:00:00:859</span>
+<h5 class="test-status text-pass">verifyNavigationToUsersModule</h5>
+<span class='badge badge-success'>03.19.2025 9:12:11 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:12:12 pm</span>
+<span class='badge badge-default'>00:00:01:423</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -565,9 +717,9 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:38 am</td>
+        <td>9:12:12 pm</td>
         <td>
-          verifyLoginWithUppercaseInsensitiveEmail Test got passed
+          verifyNavigationToUsersModule Test got passed
         </td>
       </tr>
   </tbody>
@@ -575,14 +727,105 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="12"
+        <li class="test-item"  status="fail" test-id="12"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">verifyLoginWithLowercaseInsensitiveEmail</p>
+            <p class="name">verifyAddUserWithValidDetails</p>
             <p class="text-sm">
-              <span>12:26:43 am</span> / <span>00:00:00:866</span>
+              <span>9:13:13 pm</span> / <span>00:00:03:794</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifyAddUserWithValidDetails</h5>
+<span class='badge badge-success'>03.19.2025 9:13:13 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:13:16 pm</span>
+<span class='badge badge-default'>00:00:03:794</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAddUserWithValidDetails.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAddUserWithValidDetails.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:13:16 pm</td>
+        <td>
+          verifyAddUserWithValidDetails Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:13:16 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [Successfully submitted!] but found [User name is already exists]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.UsersTest.verifyAddUserWithValidDetails(UsersTest.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyMandatoryFieldValidationForAddUser</p>
+            <p class="text-sm">
+              <span>9:14:24 pm</span> / <span>00:00:02:089</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -590,11 +833,11 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">verifyLoginWithLowercaseInsensitiveEmail</h5>
-<span class='badge badge-success'>03.19.2025 12:26:43 am</span>
-<span class='badge badge-danger'>03.19.2025 12:26:44 am</span>
-<span class='badge badge-default'>00:00:00:866</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<h5 class="test-status text-pass">verifyMandatoryFieldValidationForAddUser</h5>
+<span class='badge badge-success'>03.19.2025 9:14:24 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:14:26 pm</span>
+<span class='badge badge-default'>00:00:02:089</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -606,9 +849,1306 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>12:26:44 am</td>
+        <td>9:14:26 pm</td>
+        <td>
+          verifyMandatoryFieldValidationForAddUser Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyMandatoryFieldValidationForUpdatePassword</p>
+            <p class="text-sm">
+              <span>9:15:36 pm</span> / <span>00:07:15:942</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifyMandatoryFieldValidationForUpdatePassword</h5>
+<span class='badge badge-success'>03.19.2025 9:15:36 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:22:52 pm</span>
+<span class='badge badge-default'>00:07:15:942</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyMandatoryFieldValidationForUpdatePassword.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyMandatoryFieldValidationForUpdatePassword.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:22:52 pm</td>
+        <td>
+          verifyMandatoryFieldValidationForUpdatePassword Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:22:52 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at test.UsersTest.verifyMandatoryFieldValidationForUpdatePassword(UsersTest.java:135)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyAddUserUsingLeadingAndTrailingSpaces</p>
+            <p class="text-sm">
+              <span>9:23:37 pm</span> / <span>00:00:03:233</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifyAddUserUsingLeadingAndTrailingSpaces</h5>
+<span class='badge badge-success'>03.19.2025 9:23:37 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:23:41 pm</span>
+<span class='badge badge-default'>00:00:03:233</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAddUserUsingLeadingAndTrailingSpaces.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAddUserUsingLeadingAndTrailingSpaces.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:23:41 pm</td>
+        <td>
+          verifyAddUserUsingLeadingAndTrailingSpaces Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:23:41 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: The following asserts failed:
+	expected [atbs] but found [  atbs  ]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at test.UsersTest.verifyAddUserUsingLeadingAndTrailingSpaces(UsersTest.java:168)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifySearchUser</p>
+            <p class="text-sm">
+              <span>9:24:42 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifySearchUser</h5>
+<span class='badge badge-success'>03.19.2025 9:24:42 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:24:42 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:24:42 pm</td>
+        <td>
+          verifySearchUser Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifySavedUserDetailsInEditWindow</p>
+            <p class="text-sm">
+              <span>9:25:45 pm</span> / <span>00:07:07:015</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifySavedUserDetailsInEditWindow</h5>
+<span class='badge badge-success'>03.19.2025 9:25:45 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:32:52 pm</span>
+<span class='badge badge-default'>00:07:07:015</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifySavedUserDetailsInEditWindow.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifySavedUserDetailsInEditWindow.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:32:51 pm</td>
+        <td>
+          verifySavedUserDetailsInEditWindow Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:32:52 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: The following asserts failed:
+	expected [Plant] but found [null],
+	expected [VCPL - Panthnagar] but found [null],
+	expected [None] but found [null],
+	expected [Testing role] but found [null]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at test.UsersTest.verifySavedUserDetailsInEditWindow(UsersTest.java:207)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyUserInUsersModuleGridWithPagination</p>
+            <p class="text-sm">
+              <span>9:34:00 pm</span> / <span>00:06:37:959</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyUserInUsersModuleGridWithPagination</h5>
+<span class='badge badge-success'>03.19.2025 9:34:00 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:40:38 pm</span>
+<span class='badge badge-default'>00:06:37:959</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:40:38 pm</td>
+        <td>
+          verifyUserInUsersModuleGridWithPagination Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginPageTitleAndUrl</p>
+            <p class="text-sm">
+              <span>9:41:47 pm</span> / <span>00:00:00:015</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginPageTitleAndUrl</h5>
+<span class='badge badge-success'>03.19.2025 9:41:47 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:41:47 pm</span>
+<span class='badge badge-default'>00:00:00:015</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:41:47 pm</td>
+        <td>
+          verifyLoginPageTitleAndUrl Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyFieldAndCheckboxLabels</p>
+            <p class="text-sm">
+              <span>9:43:01 pm</span> / <span>00:00:00:109</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyFieldAndCheckboxLabels</h5>
+<span class='badge badge-success'>03.19.2025 9:43:01 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:43:01 pm</span>
+<span class='badge badge-default'>00:00:00:109</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:43:01 pm</td>
+        <td>
+          verifyFieldAndCheckboxLabels Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginUsingValidCredentials</p>
+            <p class="text-sm">
+              <span>9:43:47 pm</span> / <span>00:00:01:036</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginUsingValidCredentials</h5>
+<span class='badge badge-success'>03.19.2025 9:43:47 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:43:48 pm</span>
+<span class='badge badge-default'>00:00:01:036</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:43:48 pm</td>
+        <td>
+          verifyLoginUsingValidCredentials Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginUsingInvalidCredentials</p>
+            <p class="text-sm">
+              <span>9:44:50 pm</span> / <span>00:00:01:365</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginUsingInvalidCredentials</h5>
+<span class='badge badge-success'>03.19.2025 9:44:50 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:44:52 pm</span>
+<span class='badge badge-default'>00:00:01:365</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:44:52 pm</td>
+        <td>
+          verifyLoginUsingInvalidCredentials Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="23"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginWithInvalidEmailAndValidPassword</p>
+            <p class="text-sm">
+              <span>9:46:38 pm</span> / <span>00:00:11:433</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginWithInvalidEmailAndValidPassword</h5>
+<span class='badge badge-success'>03.19.2025 9:46:38 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:46:49 pm</span>
+<span class='badge badge-default'>00:00:11:433</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:46:49 pm</td>
+        <td>
+          verifyLoginWithInvalidEmailAndValidPassword Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="24"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginWithValidEmailAndInvalidPassword</p>
+            <p class="text-sm">
+              <span>9:47:48 pm</span> / <span>00:00:10:971</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginWithValidEmailAndInvalidPassword</h5>
+<span class='badge badge-success'>03.19.2025 9:47:48 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:47:59 pm</span>
+<span class='badge badge-default'>00:00:10:971</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:47:59 pm</td>
+        <td>
+          verifyLoginWithValidEmailAndInvalidPassword Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="25"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginWithBlankCredentials</p>
+            <p class="text-sm">
+              <span>9:49:30 pm</span> / <span>00:00:00:414</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginWithBlankCredentials</h5>
+<span class='badge badge-success'>03.19.2025 9:49:30 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:49:30 pm</span>
+<span class='badge badge-default'>00:00:00:414</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:49:30 pm</td>
+        <td>
+          verifyLoginWithBlankCredentials Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginWithEmailOnly</p>
+            <p class="text-sm">
+              <span>9:51:02 pm</span> / <span>00:00:00:348</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginWithEmailOnly</h5>
+<span class='badge badge-success'>03.19.2025 9:51:02 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:51:03 pm</span>
+<span class='badge badge-default'>00:00:00:348</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:51:03 pm</td>
+        <td>
+          verifyLoginWithEmailOnly Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="27"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginWithPasswordOnly</p>
+            <p class="text-sm">
+              <span>9:52:38 pm</span> / <span>00:00:00:326</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginWithPasswordOnly</h5>
+<span class='badge badge-success'>03.19.2025 9:52:38 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:52:38 pm</span>
+<span class='badge badge-default'>00:00:00:326</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:52:38 pm</td>
+        <td>
+          verifyLoginWithPasswordOnly Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="28"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginWithShortPassword</p>
+            <p class="text-sm">
+              <span>9:54:15 pm</span> / <span>00:00:00:469</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginWithShortPassword</h5>
+<span class='badge badge-success'>03.19.2025 9:54:15 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:54:15 pm</span>
+<span class='badge badge-default'>00:00:00:469</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:54:15 pm</td>
+        <td>
+          verifyLoginWithShortPassword Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="29"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginWithUppercaseInsensitiveEmail</p>
+            <p class="text-sm">
+              <span>9:55:44 pm</span> / <span>00:00:00:923</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginWithUppercaseInsensitiveEmail</h5>
+<span class='badge badge-success'>03.19.2025 9:55:44 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:55:45 pm</span>
+<span class='badge badge-default'>00:00:00:923</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:55:45 pm</td>
+        <td>
+          verifyLoginWithUppercaseInsensitiveEmail Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="30"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLoginWithLowercaseInsensitiveEmail</p>
+            <p class="text-sm">
+              <span>9:56:46 pm</span> / <span>00:00:00:924</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyLoginWithLowercaseInsensitiveEmail</h5>
+<span class='badge badge-success'>03.19.2025 9:56:46 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:56:47 pm</span>
+<span class='badge badge-default'>00:00:00:924</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:56:47 pm</td>
         <td>
           verifyLoginWithLowercaseInsensitiveEmail Test got passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="31"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLogoutFromLogoutOptionUnderProfile</p>
+            <p class="text-sm">
+              <span>9:57:26 pm</span> / <span>00:00:01:248</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifyLogoutFromLogoutOptionUnderProfile</h5>
+<span class='badge badge-success'>03.19.2025 9:57:26 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:57:27 pm</span>
+<span class='badge badge-default'>00:00:01:248</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyLogoutFromLogoutOptionUnderProfile.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyLogoutFromLogoutOptionUnderProfile.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:57:27 pm</td>
+        <td>
+          verifyLogoutFromLogoutOptionUnderProfile Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:57:27 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [null] but found [https://vguard-bt-stg.esealcom.com/login]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.LogoutTest.verifyLogoutFromLogoutOptionUnderProfile(LogoutTest.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="32"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyReLoginImmediatelyAfterLogout</p>
+            <p class="text-sm">
+              <span>9:58:26 pm</span> / <span>00:00:01:247</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifyReLoginImmediatelyAfterLogout</h5>
+<span class='badge badge-success'>03.19.2025 9:58:26 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:58:28 pm</span>
+<span class='badge badge-default'>00:00:01:247</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyReLoginImmediatelyAfterLogout.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyReLoginImmediatelyAfterLogout.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:58:27 pm</td>
+        <td>
+          verifyReLoginImmediatelyAfterLogout Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:58:28 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [null] but found [https://vguard-bt-stg.esealcom.com/login]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.LogoutTest.verifyReLoginImmediatelyAfterLogout(LogoutTest.java:54)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="33"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLogoutAndBackNavigation</p>
+            <p class="text-sm">
+              <span>9:59:36 pm</span> / <span>00:00:01:234</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifyLogoutAndBackNavigation</h5>
+<span class='badge badge-success'>03.19.2025 9:59:36 pm</span>
+<span class='badge badge-danger'>03.19.2025 9:59:38 pm</span>
+<span class='badge badge-default'>00:00:01:234</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyLogoutAndBackNavigation.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyLogoutAndBackNavigation.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:59:37 pm</td>
+        <td>
+          verifyLogoutAndBackNavigation Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:59:38 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [null] but found [https://vguard-bt-stg.esealcom.com/login]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.LogoutTest.verifyLogoutAndBackNavigation(LogoutTest.java:74)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="34"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyLogoutAndForwardNavigation</p>
+            <p class="text-sm">
+              <span>10:00:47 pm</span> / <span>00:00:01:244</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifyLogoutAndForwardNavigation</h5>
+<span class='badge badge-success'>03.19.2025 10:00:47 pm</span>
+<span class='badge badge-danger'>03.19.2025 10:00:49 pm</span>
+<span class='badge badge-default'>00:00:01:244</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyLogoutAndForwardNavigation.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyLogoutAndForwardNavigation.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:00:48 pm</td>
+        <td>
+          verifyLogoutAndForwardNavigation Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:00:49 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [null] but found [https://vguard-bt-stg.esealcom.com/login]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.LogoutTest.verifyLogoutAndForwardNavigation(LogoutTest.java:87)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="35"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyAutoLogoutAfterSessionTimeout</p>
+            <p class="text-sm">
+              <span>10:01:55 pm</span> / <span>00:01:30:543</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifyAutoLogoutAfterSessionTimeout</h5>
+<span class='badge badge-success'>03.19.2025 10:01:55 pm</span>
+<span class='badge badge-danger'>03.19.2025 10:03:25 pm</span>
+<span class='badge badge-default'>00:01:30:543</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAutoLogoutAfterSessionTimeout.png' src="C:\Users\dusan\eclipse-workspace\eSeal\eSealHybridFramework\Screenshots\verifyAutoLogoutAfterSessionTimeout.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:03:25 pm</td>
+        <td>
+          verifyAutoLogoutAfterSessionTimeout Test got failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:03:25 pm</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [null] but found [https://vguard-bt-stg.esealcom.com/admin/home]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.LogoutTest.verifyAutoLogoutAfterSessionTimeout(LogoutTest.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -636,15 +2176,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-danger'>13</span>
 </span>
-<p class="name">java.lang.NullPointerException</p>
-<p class="duration text-sm">1 tests</p>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">13 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>java.lang.NullPointerException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>13 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -657,9 +2197,93 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>00:25:18 am</td>
+<td>20:46:25 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>verifyLoginPageTitleAndUrl</a>
+<a href="#" class="linked" test-id='2' id='2'>verifyAddTransactionWithValidData</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:47:36 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>verifyAddUserWithDuplicateTransactionName</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:51:05 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>verifyAddUserUsingLeadingAndTrailingSpaces</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:51:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>verifySavedTransactionDetailsInEditWindow</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:13:13 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>verifyAddUserWithValidDetails</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:15:36 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>verifyMandatoryFieldValidationForUpdatePassword</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:23:37 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>verifyAddUserUsingLeadingAndTrailingSpaces</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:25:45 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>verifySavedUserDetailsInEditWindow</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:57:26 pm</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>verifyLogoutFromLogoutOptionUnderProfile</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:58:26 pm</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>verifyReLoginImmediatelyAfterLogout</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:59:36 pm</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>verifyLogoutAndBackNavigation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:00:47 pm</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>verifyLogoutAndForwardNavigation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:01:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>verifyAutoLogoutAfterSessionTimeout</a>
 </td>
 </tr>
 </tbody>
@@ -679,25 +2303,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Mar 19, 2025 12:25:12 am</h3>
+<h3>Mar 19, 2025 08:44:49 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Mar 19, 2025 12:26:44 am</h3>
+<h3>Mar 19, 2025 10:03:25 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>11</h3>
+<h3>22</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>13</h3>
 </div></div>
 </div>
 </div>
@@ -713,12 +2337,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='91%'>
-<b>11</b> tests passed
+<div><small data-tooltip='62%'>
+<b>22</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='8%'><b>1</b> tests failed,
+<small data-tooltip='37%'><b>13</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -736,10 +2360,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='84%'><b>11</b> events passed</small></div>
+<div><small data-tooltip='45%'><b>22</b> events passed</small></div>
 <div>
-<small data-tooltip='7%'><b>1</b> events failed,
-<b data-tooltip='%'>1</b> others
+<small data-tooltip='27%'><b>13</b> events failed,
+<b data-tooltip='%'>13</b> others
 </small>
 </div>
 </div>
@@ -755,7 +2379,7 @@
 </div></div>
 <script>
 var timeline = {
-"verifyLoginPageTitleAndUrl":0.299,"verifyFieldAndCheckboxLabels":0.177,"verifyLoginUsingValidCredentials":1.079,"verifyLoginUsingInvalidCredentials":1.298,"verifyLoginWithInvalidEmailAndValidPassword":10.935,"verifyLoginWithValidEmailAndInvalidPassword":11.36,"verifyLoginWithBlankCredentials":0.432,"verifyLoginWithEmailOnly":0.396,"verifyLoginWithPasswordOnly":0.349,"verifyLoginWithShortPassword":0.46,"verifyLoginWithUppercaseInsensitiveEmail":0.859,"verifyLoginWithLowercaseInsensitiveEmail":0.866
+"verifyNavigationToUsersModule":0.752,"verifyAddTransactionWithValidData":3.652,"verifyAddUserWithDuplicateTransactionName":4.269,"verifyAddUserWithDuplicateFeatureCode":4.001,"verifyMandatoryFieldValidationForAddUser":2.197,"verifyAddUserUsingLeadingAndTrailingSpaces":3.261,"verifySavedTransactionDetailsInEditWindow":187.907,"verifyUserInUsersModuleGridWithPagination":187.688,"verifyDeleteUser":189.121,"verifyDeleteUser":439.505,"verifyNavigationToUsersModule":1.423,"verifyAddUserWithValidDetails":3.794,"verifyMandatoryFieldValidationForAddUser":2.089,"verifyMandatoryFieldValidationForUpdatePassword":435.942,"verifyAddUserUsingLeadingAndTrailingSpaces":3.233,"verifySearchUser":0.001,"verifySavedUserDetailsInEditWindow":427.015,"verifyUserInUsersModuleGridWithPagination":397.959,"verifyLoginPageTitleAndUrl":0.015,"verifyFieldAndCheckboxLabels":0.109,"verifyLoginUsingValidCredentials":1.036,"verifyLoginUsingInvalidCredentials":1.365,"verifyLoginWithInvalidEmailAndValidPassword":11.433,"verifyLoginWithValidEmailAndInvalidPassword":10.971,"verifyLoginWithBlankCredentials":0.414,"verifyLoginWithEmailOnly":0.348,"verifyLoginWithPasswordOnly":0.326,"verifyLoginWithShortPassword":0.469,"verifyLoginWithUppercaseInsensitiveEmail":0.923,"verifyLoginWithLowercaseInsensitiveEmail":0.924,"verifyLogoutFromLogoutOptionUnderProfile":1.248,"verifyReLoginImmediatelyAfterLogout":1.247,"verifyLogoutAndBackNavigation":1.234,"verifyLogoutAndForwardNavigation":1.244,"verifyAutoLogoutAfterSessionTimeout":90.543
 };
 </script>
 <div class="row">
@@ -790,8 +2414,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 11,
-failParent: 1,
+passParent: 22,
+failParent: 13,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -807,11 +2431,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 11,
-failEvents: 1,
+passEvents: 22,
+failEvents: 13,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 1
+infoEvents: 13
 };
 </script>        </div>
       </div>

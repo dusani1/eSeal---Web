@@ -6,13 +6,37 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="test.LoginTest">
+      <class name="test.LogoutTest">
         <methods>
-          <include name="verifyLoginPageTitleAndUrl"/>
+          <include name="verifyLogoutAndBackNavigation"/>
+          <include name="verifyLogoutFromLogoutOptionUnderProfile"/>
+          <include name="verifyAutoLogoutAfterSessionTimeout"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="verifyReLoginImmediatelyAfterLogout"/>
+          <include name="verifyLogoutAndForwardNavigation"/>
         </methods>
-      </class> <!-- test.LoginTest -->
+      </class> <!-- test.LogoutTest -->
+      <class name="test.UsersTest">
+        <methods>
+          <include name="verifyAddUserUsingLeadingAndTrailingSpaces"/>
+          <include name="verifySavedUserDetailsInEditWindow"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="verifyAddUserWithValidDetails"/>
+          <include name="verifyMandatoryFieldValidationForUpdatePassword"/>
+        </methods>
+      </class> <!-- test.UsersTest -->
+      <class name="test.TransactionsTest">
+        <methods>
+          <include name="setup"/>
+          <include name="verifyAddUserUsingLeadingAndTrailingSpaces"/>
+          <include name="verifyAddUserWithDuplicateTransactionName"/>
+          <include name="tearDown"/>
+          <include name="verifySavedTransactionDetailsInEditWindow"/>
+          <include name="verifyAddTransactionWithValidData"/>
+        </methods>
+      </class> <!-- test.TransactionsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Smoke] -->

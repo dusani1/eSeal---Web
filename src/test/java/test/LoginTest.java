@@ -11,9 +11,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-
 import base.Base;
 import pages.HomePage;
 import pages.LoginPage;
@@ -41,7 +38,7 @@ public class LoginTest extends Base {
 	public void verifyLoginPageTitleAndUrl() {
 		SoftAssert softAssert = new SoftAssert();
 		softAssert.assertEquals(getPageTitle(), "eSeal");
-		softAssert.assertEquals(getPageURL(driver), "https://vguard-bt-stg.esealcom.com/login");
+		softAssert.assertEquals(getPageURL(driver), prop.getProperty("loginPageURL"));
 		}
 
 

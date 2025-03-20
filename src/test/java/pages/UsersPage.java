@@ -18,7 +18,7 @@ import com.aventstack.extentreports.ExtentTest;
 import root.RootPage;
 
 public class UsersPage extends RootPage {
-	ExtentTest extentTest;
+
 
 	public UsersPage(WebDriver driver) {
 		super(driver);
@@ -42,10 +42,9 @@ public class UsersPage extends RootPage {
 
 	@FindBy(xpath = "//input[@placeholder='Email']")
 	private WebElement emailField;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Email Id']")
 	private WebElement emailFieldInEditUser;
-	
 
 	@FindBy(xpath = "//input[@placeholder='User Name']")
 	private WebElement userNameField;
@@ -76,10 +75,10 @@ public class UsersPage extends RootPage {
 
 	@FindBy(xpath = "//h4[text()='Edit']")
 	private WebElement editUserWindow;
-	
+
 	@FindBy(xpath = "//h4[text()='Update']")
 	private WebElement updatePasswordWindow;
-	
+
 	@FindBy(xpath = "//*[text()='Save']")
 	private WebElement saveButton;
 
@@ -94,31 +93,31 @@ public class UsersPage extends RootPage {
 
 	@FindBy(xpath = "//input[@placeholder='Last Name']//following-sibling::span")
 	private WebElement lastNameWaningAlert;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Phone Number']//following-sibling::span")
 	private WebElement phoneNumberWaningAlert;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Email']//following-sibling::span")
 	private WebElement emailWaningAlert;
-	
+
 	@FindBy(xpath = "//input[@placeholder='User Name']//following-sibling::span")
 	private WebElement userNameWaningAlert;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Password']//following-sibling::span")
 	private WebElement passwordWaningAlert;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Confirm Password']//following-sibling::span")
 	private WebElement confirmPasswordWaningAlert;
-	
+
 	@FindBy(xpath = "//*[text()='Location Type*']/following-sibling::div/div/select//following-sibling::span")
 	private WebElement locationTypeWaningAlert;
-	
+
 	@FindBy(xpath = "//*[text()='Location*']/following-sibling::div/div/select//following-sibling::span")
 	private WebElement locationWaningAlert;
-	
+
 	@FindBy(xpath = "//*[text()='Business Unit*']/following-sibling::div/div/select//following-sibling::span")
 	private WebElement businessUnitWaningAlert;
-	
+
 	@FindBy(xpath = "//*[text()='Assign Role*']/following-sibling::div/div/select//following-sibling::span")
 	private WebElement assignRoleWaningAlert;
 
@@ -134,7 +133,7 @@ public class UsersPage extends RootPage {
 	@FindBy(xpath = "//input[contains(@placeholder, 'Search User')]")
 	private WebElement searchUserTextField;
 
-	@FindBy(xpath = "//button[@aria-label=\"Clear search\"]")
+	@FindBy(xpath = "//button[@aria-label='Clear search']")
 	private WebElement clearSearchIcon;
 
 	@FindBy(xpath = "//div[@class='swal-text']")
@@ -148,6 +147,12 @@ public class UsersPage extends RootPage {
 
 	@FindBy(xpath = "//button[@aria-label=\"Go to next page\"]")
 	private WebElement nextPageIcon;
+
+	@FindBy(xpath = "//div[@class='swal-title']")
+	private WebElement deleteConfirmationAlertTitleText;
+
+	@FindBy(xpath = "//div[@class='swal-text']")
+	private WebElement deleteConfirmationAlertText;
 
 	public String usersPageHeading() {
 		String pageHeading = elementUtilities.getElementText(userPageHeading);
@@ -251,9 +256,12 @@ public class UsersPage extends RootPage {
 	public boolean addUserWindowHeading() {
 		return elementUtilities.waitAndCheckElementDisplayStatus(addUserWindow, 5);
 	}
+
+	
 	public boolean editUserWindowHeading() {
 		return elementUtilities.waitAndCheckElementDisplayStatus(editUserWindow, 5);
 	}
+
 	public boolean updatePasswordWindowHeading() {
 		return elementUtilities.waitAndCheckElementDisplayStatus(updatePasswordWindow, 5);
 	}
@@ -311,26 +319,31 @@ public class UsersPage extends RootPage {
 	public String getFirstNameFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(firstNameField, "value");
 	}
-	
+
 	public String getLastNameFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(lastNameField, "value");
 	}
+
 	public String getPhoneNumberFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(phoneNumberField, "value");
 	}
+
 	public String getEmailFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(emailFieldInEditUser, "value");
 	}
+
 	public String getUserNameFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(userNameField, "value");
 	}
+
 	public String getPasswordFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(passwordField, "value");
 	}
+
 	public String getConfirmPasswordFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(confirmPasswordField, "value");
 	}
-	
+
 	public String getLocationTypeFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(locationTypeDropdown, "value");
 	}
@@ -338,35 +351,40 @@ public class UsersPage extends RootPage {
 	public String getLocationFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(locationDropdown, "value");
 	}
-	
+
 	public String getBusinessUnitFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(businessUnitDropdown, "value");
 	}
-	
+
 	public String getAssingRoleFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(assignRoleDropdown, "value");
 	}
-	
+
 	public boolean getActiveCheckboxStatus() {
 		return elementUtilities.isElementSelected(activeCheckbox);
 	}
-	
+
 	public void clickOnEditUserIcon() {
 		elementUtilities.waitForElementAndClick(editUserIcon, 10);
 	}
 
 	public void enterSerachTextAndSearch(String searchText) {
-		elementUtilities.enterTextIntoElement(searchUserTextField, searchText);   
-		
+		elementUtilities.enterTextIntoElement(searchUserTextField, searchText);
+
 	}
-	
+
+	public String getdeleteConfirmationAlertTitleText() {
+		return elementUtilities.getElementText(deleteConfirmationAlertTitleText);
+	}
+
+	public String getdeleteConfirmationAlertText() {
+		return elementUtilities.getElementText(deleteConfirmationAlertText);
+	}
+
 	public void pressEnterKey() {
 		searchUserTextField.click();
 		searchUserTextField.sendKeys(Keys.ENTER);
 	}
-	
-	
-	
 
 	public int getLastPageCount() {
 		String count = elementUtilities.getTextFromElement(lastPageNumberElement);
@@ -415,83 +433,83 @@ public class UsersPage extends RootPage {
 
 	}
 
-	public void verifyGridColumnData() {
+	public boolean searchAndClickIcon(String searchInputOrUserName, String firstName, String lastName, String email,
+			String iconType) {
+		int noOfPages = getLastPageCount();
+		boolean recordFound = false;
 
+		for (int p = 1; p <= noOfPages; p++) {
+			for (int i = 1; i <= rows.size(); i++) {
+				try {
+					String actualUserName = rows.get(i - 1).findElement(By.xpath(".//td[2]")).getText();
+					if (actualUserName.equals(searchInputOrUserName)) {
+						String actualFirstName = rows.get(i - 1).findElement(By.xpath(".//td[3]")).getText();
+						String actualLastName = rows.get(i - 1).findElement(By.xpath(".//td[4]")).getText();
+						String actualEmail = rows.get(i - 1).findElement(By.xpath(".//td[5]")).getText();
+						if (actualFirstName.equals(firstName) && actualLastName.equals(lastName)
+								&& actualEmail.equals(email)) {
+							recordFound = true;
+							clickIcon(i, p, iconType);
+							break;
+						}
+					}
+				} catch (Exception e) {
+					if (!recordFound) {
+						System.out.println("Username not found in row " + i + " on page " + p);
+					}
+				}
+			}
+			if (!recordFound && p < noOfPages) {
+				goToNextPage(p + 1);
+			}
+		}
+		return recordFound;
+	}
+
+	private void clickIcon(int rowIndex, int pageNumber, String iconType) {
+		String iconXpath = getIconXpath(rowIndex, iconType);
+		System.out.println("Currently processing row " + rowIndex + " on page " + pageNumber);
+		System.out.println("XPath generated for " + iconType + " icon: " + iconXpath);
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement icon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(iconXpath)));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", icon);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'center'});",
+				icon);
+		icon.click();
+	}
+
+	private String getIconXpath(int rowIndex, String iconType) {
+		switch (iconType) {
+		case "edit":
+			return "//table//tbody//tr[" + rowIndex + "]//td//p//div//i[@class='fa fa-pencil-square-o fa-edit']";
+		case "delete":
+			return "//table//tbody//tr[" + rowIndex + "]//td//p//div//i[@class='fa fa-trash-o fa-delete']";
+		case "updatePassword":
+			return "//table//tbody//tr[" + rowIndex + "]//td//p//div//i[@class='fa fa-key']";
+		default:
+			throw new IllegalArgumentException("Unknown icon type: " + iconType);
+		}
 	}
 
 	public void goToNextPage(int pageNumber) {
 		String pageNoXpathText = "//button[@type='button' and contains(@aria-label, 'Go to page " + pageNumber + "')]";
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		try {
-			// Locate the next page button freshly
+			// Locate the next page button
 			WebElement nextPageButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pageNoXpathText)));
 
-			// Get the first row text before navigation (to confirm page change)
-			String oldFirstRowText = driver.findElement(By.xpath("//table/tbody/tr[1]/td[1]")).getText();
-
 			// Scroll into view & click
-			js.executeScript("arguments[0].scrollIntoView(true);", nextPageButton);
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", nextPageButton);
 			nextPageButton.click();
 
-			// **Wait until the first row text changes (indicating new page loaded)**
-			wait.until(ExpectedConditions.not(ExpectedConditions
-					.textToBePresentInElementLocated(By.xpath("//table/tbody/tr[1]/td[1]"), oldFirstRowText)));
-
-			// Scroll to top after navigating
-			js.executeScript("window.scrollTo(0, 0);");
+			// Wait for the page to load (using any element that confirms page load)
+			wait.until(ExpectedConditions.stalenessOf(nextPageButton));
 
 		} catch (Exception e) {
 			System.out.println("Exception in pagination: " + e.getMessage());
 		}
 	}
-
-	public boolean searchRecordAndClickOnEditIcon(String searchInputOrUserName, String firstName, String lastName, String email) {
-	    int noOfPages = getLastPageCount();
-	    boolean recordFound = false;
-	    outerloop: for (int p = 1; p <= noOfPages; p++) {
-	        for (int i = 1; i <= rows.size(); i++) {
-	            try {
-	                String actualUserName = rows.get(i - 1).findElement(By.xpath(".//td[2]")).getText();
-	                if (actualUserName.equals(searchInputOrUserName)) {
-
-	                    String actualFirstName = rows.get(i - 1).findElement(By.xpath(".//td[3]")).getText();
-	                    String actualLastName = rows.get(i - 1).findElement(By.xpath(".//td[4]")).getText();
-	                    String actualEmail = rows.get(i - 1).findElement(By.xpath(".//td[5]")).getText();
-	                    if (actualFirstName.equals(firstName) && actualLastName.equals(lastName)
-	                            && actualEmail.equals(email)) {
-	                        recordFound = true;
-	                        System.out.println("++++++++++++++++++userfound+++++++++++++++++++++++"+actualFirstName);
-	                        // Click on the Edit User button for the matched row
-	                        String eidtIconXpath = "//table//tbody//tr["+ i +"]//td//p//div//i[@class='fa fa-pencil-square-o fa-edit']";
-	                        System.out.println("Currently processing row " + i + " on page " + p);
-	                        System.out.println("XPath generated for edit icon: " + eidtIconXpath);
-	                        System.out.println("Record match status: " + recordFound);
-	                        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	                        WebElement editIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(eidtIconXpath)));
-	                        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editIcon);
-	                        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'center'});", editIcon);
-	                        editIcon.click();	                        
-	                        break outerloop;
-	                    }
-	                }
-	            } catch (Exception e) {
-	                
-	            	if (!recordFound) {
-	                    System.out.println("Username not found in row " + i + " on page " + p);
-	                }
-	            }
-	        }
-	        if (!recordFound && p < noOfPages) {
-	            goToNextPage(p + 1);
-	        }
-	    }
-	    return recordFound;
-	}
-
-	
-
-	
 
 }

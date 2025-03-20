@@ -14,17 +14,42 @@ import com.aventstack.extentreports.reporter.configuration.ExtentSparkReporterCo
 
 public class CommonUtils {
 
-	public static Properties loadProperties() {
-		Properties prop = new Properties();
-		FileReader fr;
-		try {
-			fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resource\\ProjectData.properties");
-			prop.load(fr);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block e.printStackTrace(); }
-		}
-		return prop;
+	
+	public String getClientName() {
+	    Properties prop = new Properties();
+	    try (FileReader fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resource\\Common.properties")) {
+	        prop.load(fr);
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	    return prop.getProperty("client"); // Retrieves the value of "client" from Common.properties
 	}
+
+	public static Properties loadProperties() {
+	    Properties prop = new Properties();
+	    try {
+	        // Retrieve the client name
+	        String clientName = new CommonUtils().getClientName();
+	        // Construct the file path dynamically
+	        String filePath = System.getProperty("user.dir") + "\\src\\test\\resource\\" + clientName + ".properties";
+	        try (FileReader fr = new FileReader(filePath)) {
+	            prop.load(fr);
+	        }
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	    return prop;
+	}
+	
+	
+	/*
+	 * public static Properties loadProperties() { Properties prop = new
+	 * Properties(); FileReader fr; try { fr = new
+	 * FileReader(System.getProperty("user.dir") +
+	 * "\\src\\test\\resource\\ProjectData.properties"); prop.load(fr); } catch
+	 * (IOException e) { // TODO Auto-generated catch block e.printStackTrace(); } }
+	 * return prop; }
+	 */
 
 	/*
 	 * public class ConfigReader { private static ThreadLocal<Properties> prop =
