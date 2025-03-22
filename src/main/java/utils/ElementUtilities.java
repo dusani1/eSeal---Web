@@ -87,7 +87,7 @@ public class ElementUtilities {
 	}
 
 	public void selectOptionFromDropdownFieldUsingVisibleText(WebElement element, String optionText) {
-		if (isElementDisplayedOnPage(element) && element.isEnabled()) {
+		if (optionText != null && !optionText.isEmpty() && isElementDisplayedOnPage(element) && element.isEnabled()) {
 			select = new Select(element);
 			select.selectByVisibleText(optionText);
 		}
@@ -209,7 +209,7 @@ public class ElementUtilities {
 	}
 
 	public void enterTextIntoElement(WebElement element, String text) {
-		if (isElementDisplayedOnPage(element) && element.isEnabled()) {
+		if (text != null && !text.isEmpty() && isElementDisplayedOnPage(element) && element.isEnabled()) {
 			clearTextFromElement(element);
 			element.sendKeys(text);
 		}

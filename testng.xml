@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite >
 <suite name="Smoke">
-  <listeners>
-  <listener class-name="listeners.MyListeners"></listener>
-  </listeners>
-  <test thread-count="5" name="Test">
-    <classes>
-    <class name="test.TransactionsTest"/>
-    <class name="test.UsersTest"/>
-    <class name="test.LoginTest"/>
-    <class name="test.LogoutTest"/>
-    </classes>
-  </test> <!-- Test -->
+	<listeners>
+		<listener class-name="listeners.MyListeners"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<groups>
+			<run>
+				<include name="Others" />
+			</run>
+		</groups>		
+		<classes>
+			<class name="test.LoginTest" />
+			<class name="test.LogoutTest" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

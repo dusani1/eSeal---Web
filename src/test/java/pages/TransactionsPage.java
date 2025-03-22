@@ -134,53 +134,47 @@ public class TransactionsPage extends RootPage {
 	}
 
 	public void enterTransactionName(String tranactionName) {
-		if (tranactionName != null && !tranactionName.isEmpty()) {
-			elementUtilities.enterTextIntoElement(transactionNameField, tranactionName);
-		}
+		elementUtilities.enterTextIntoElement(transactionNameField, tranactionName);
+
 	}
 
 	public void enterDescription(String description) {
-		if (description != null && !description.isEmpty()) {
-			elementUtilities.enterTextIntoElement(descriptionField, description);
-		}
+		elementUtilities.enterTextIntoElement(descriptionField, description);
+
 	}
 
 	public void enterActionCode(String actionCode) {
-		if (actionCode != null && !actionCode.isEmpty()) {
-			elementUtilities.enterTextIntoElement(actionCodeField, actionCode);
-		}
+		elementUtilities.enterTextIntoElement(actionCodeField, actionCode);
+
 	}
 
 	public void enterFeatureCode(String featureCode) {
-		if (featureCode != null && !featureCode.isEmpty()) {
-			elementUtilities.enterTextIntoElement(featureCodeField, featureCode);
-		}
+		elementUtilities.enterTextIntoElement(featureCodeField, featureCode);
+
 	}
 
 	public void enterGroup(String group) {
-		if (group != null && !group.isEmpty()) {
 			elementUtilities.enterTextIntoElement(groupField, group);
-		}
+		
 	}
 
 	public void selectSourceLocationAction(String sourceLocationAction) {
-		if (sourceLocationAction != null && !sourceLocationAction.isEmpty()) {
 			elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(sourceLocationActionDropdown,
 					sourceLocationAction);
-		}
+	
 	}
 
 	public void selectDestinationLocationAction(String destinationLocationAction) {
-		if (destinationLocationAction != null && !destinationLocationAction.isEmpty()) {
+		
 			elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(destinationLocationActionDropdown,
 					destinationLocationAction);
-		}
+		
 	}
 
 	public void selectIntransitAction(String intransitAction) {
-		if (intransitAction != null && !intransitAction.isEmpty()) {
+		
 			elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(intransitActionDropdown, intransitAction);
-		}
+		
 	}
 
 	public void clickOnSaveButton() {

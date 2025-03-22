@@ -16,7 +16,7 @@ public class LogoutTest extends Base {
 	public LoginPage loginPage;
 	public HomePage homePage;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setup() {
 		driver = openBrowserAndApplicationURL();
 		loginPage = new LoginPage(driver);
@@ -29,7 +29,7 @@ public class LogoutTest extends Base {
 		Assert.assertEquals(homePage.getLoggedInMail(), prop.getProperty("email"));
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		quitBrowser(driver);
 	}
@@ -43,6 +43,7 @@ public class LogoutTest extends Base {
 			e.printStackTrace();
 		}
 		Assert.assertEquals(getPageTitle(), "eSeal");
+		System.out.println(getUrl());
 		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
 	}
 

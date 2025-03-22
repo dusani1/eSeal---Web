@@ -1,16 +1,17 @@
-<suite name="Smoke" parallel="tests" thread-count="3">
-    <listeners>
-        <listener class-name="listeners.MyListeners"></listener>
-    </listeners>
-    <test name="SmokeTest">
-        <groups>
-            <run>
-                <include name="Others"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="test.LoginTest"/>
-            <class name="test.LogoutTest"/>
-        </classes>
-    </test>
-</suite>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite >
+<suite name="Smoke">
+	<listeners>
+		<listener class-name="listeners.MyListeners"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<groups>
+			<run>
+				<include name="Smoke" />
+			</run>
+		</groups>		
+		 <packages>
+            <package name="test" />
+        </packages>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

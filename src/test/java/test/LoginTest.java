@@ -22,14 +22,14 @@ public class LoginTest extends Base {
 	public LoginPage loginPage;
 	public HomePage homePage;
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setup() {
 		driver = openBrowserAndApplicationURL();
 		loginPage = new LoginPage(driver);
 
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		quitBrowser(driver);
 	}
@@ -39,6 +39,7 @@ public class LoginTest extends Base {
 		SoftAssert softAssert = new SoftAssert();
 		softAssert.assertEquals(getPageTitle(), "eSeal");
 		softAssert.assertEquals(getPageURL(driver), prop.getProperty("loginPageURL"));
+		softAssert.assertAll();
 		}
 
 

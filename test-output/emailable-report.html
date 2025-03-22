@@ -8,93 +8,50 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Smoke</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">22</td><td class="num">0</td><td class="num">0</td><td class="num attn">13</td><td class="num">4,716,755</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">25,466</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">test.LogoutTest</td><td><a href="#m0">verifyAutoLogoutAfterSessionTimeout</a></td><td rowspan="1">1742401915020</td><td rowspan="1">90420</td></tr><tr class="failedeven"><td><a href="#m1">verifyLogoutAndBackNavigation</a></td><td rowspan="1">1742401776902</td><td rowspan="1">1096</td></tr><tr class="failedeven"><td><a href="#m2">verifyLogoutAndForwardNavigation</a></td><td rowspan="1">1742401847823</td><td rowspan="1">1090</td></tr><tr class="failedeven"><td><a href="#m3">verifyLogoutFromLogoutOptionUnderProfile</a></td><td rowspan="1">1742401646567</td><td rowspan="1">1092</td></tr><tr class="failedeven"><td><a href="#m4">verifyReLoginImmediatelyAfterLogout</a></td><td rowspan="1">1742401706857</td><td rowspan="1">1099</td></tr><tr class="failedodd"><td rowspan="4">test.TransactionsTest</td><td><a href="#m5">verifyAddTransactionWithValidData</a></td><td rowspan="1">1742397385495</td><td rowspan="1">3485</td></tr><tr class="failedodd"><td><a href="#m6">verifyAddUserUsingLeadingAndTrailingSpaces</a></td><td rowspan="1">1742397665474</td><td rowspan="1">3121</td></tr><tr class="failedodd"><td><a href="#m7">verifyAddUserWithDuplicateTransactionName</a></td><td rowspan="1">1742397456702</td><td rowspan="1">4093</td></tr><tr class="failedodd"><td><a href="#m8">verifySavedTransactionDetailsInEditWindow</a></td><td rowspan="1">1742397693535</td><td rowspan="1">187762</td></tr><tr class="failedeven"><td rowspan="4">test.UsersTest</td><td><a href="#m9">verifyAddUserUsingLeadingAndTrailingSpaces</a></td><td rowspan="1">1742399617991</td><td rowspan="1">3062</td></tr><tr class="failedeven"><td><a href="#m10">verifyAddUserWithValidDetails</a></td><td rowspan="1">1742398993158</td><td rowspan="1">3660</td></tr><tr class="failedeven"><td><a href="#m11">verifyMandatoryFieldValidationForUpdatePassword</a></td><td rowspan="1">1742399136209</td><td rowspan="1">435820</td></tr><tr class="failedeven"><td><a href="#m12">verifySavedUserDetailsInEditWindow</a></td><td rowspan="1">1742399745093</td><td rowspan="1">426887</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="12">test.LoginTest</td><td><a href="#m13">verifyFieldAndCheckboxLabels</a></td><td rowspan="1">1742400781496</td><td rowspan="1">109</td></tr><tr class="passedeven"><td><a href="#m14">verifyLoginPageTitleAndUrl</a></td><td rowspan="1">1742400707476</td><td rowspan="1">15</td></tr><tr class="passedeven"><td><a href="#m15">verifyLoginUsingInvalidCredentials</a></td><td rowspan="1">1742400890925</td><td rowspan="1">1365</td></tr><tr class="passedeven"><td><a href="#m16">verifyLoginUsingValidCredentials</a></td><td rowspan="1">1742400827149</td><td rowspan="1">1036</td></tr><tr class="passedeven"><td><a href="#m17">verifyLoginWithBlankCredentials</a></td><td rowspan="1">1742401170009</td><td rowspan="1">414</td></tr><tr class="passedeven"><td><a href="#m18">verifyLoginWithEmailOnly</a></td><td rowspan="1">1742401262845</td><td rowspan="1">350</td></tr><tr class="passedeven"><td><a href="#m19">verifyLoginWithInvalidEmailAndValidPassword</a></td><td rowspan="1">1742400998267</td><td rowspan="1">11439</td></tr><tr class="passedeven"><td><a href="#m20">verifyLoginWithLowercaseInsensitiveEmail</a></td><td rowspan="1">1742401606084</td><td rowspan="1">923</td></tr><tr class="passedeven"><td><a href="#m21">verifyLoginWithPasswordOnly</a></td><td rowspan="1">1742401358415</td><td rowspan="1">326</td></tr><tr class="passedeven"><td><a href="#m22">verifyLoginWithShortPassword</a></td><td rowspan="1">1742401455160</td><td rowspan="1">469</td></tr><tr class="passedeven"><td><a href="#m23">verifyLoginWithUppercaseInsensitiveEmail</a></td><td rowspan="1">1742401544217</td><td rowspan="1">929</td></tr><tr class="passedeven"><td><a href="#m24">verifyLoginWithValidEmailAndInvalidPassword</a></td><td rowspan="1">1742401068536</td><td rowspan="1">10971</td></tr><tr class="passedodd"><td rowspan="5">test.TransactionsTest</td><td><a href="#m25">verifyAddUserWithDuplicateFeatureCode</a></td><td rowspan="1">1742397555961</td><td rowspan="1">4003</td></tr><tr class="passedodd"><td><a href="#m26">verifyDeleteUser</a></td><td rowspan="1">1742398177033</td><td rowspan="1">189122</td></tr><tr class="passedodd"><td><a href="#m27">verifyMandatoryFieldValidationForAddUser</a></td><td rowspan="1">1742397623854</td><td rowspan="1">2197</td></tr><tr class="passedodd"><td><a href="#m28">verifyNavigationToUsersModule</a></td><td rowspan="1">1742397345333</td><td rowspan="1">759</td></tr><tr class="passedodd"><td><a href="#m29">verifyUserInUsersModuleGridWithPagination</a></td><td rowspan="1">1742397933722</td><td rowspan="1">187689</td></tr><tr class="passedeven"><td rowspan="5">test.UsersTest</td><td><a href="#m30">verifyDeleteUser</a></td><td rowspan="1">1742398439662</td><td rowspan="1">439506</td></tr><tr class="passedeven"><td><a href="#m31">verifyMandatoryFieldValidationForAddUser</a></td><td rowspan="1">1742399064661</td><td rowspan="1">2090</td></tr><tr class="passedeven"><td><a href="#m32">verifyNavigationToUsersModule</a></td><td rowspan="1">1742398931440</td><td rowspan="1">1424</td></tr><tr class="passedeven"><td><a href="#m33">verifySearchUser</a></td><td rowspan="1">1742399682670</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m34">verifyUserInUsersModuleGridWithPagination</a></td><td rowspan="1">1742400240739</td><td rowspan="1">397959</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">test.UsersTest</td><td><a href="#m0">verifySavedUserDetailsInEditWindow</a></td><td rowspan="1">1742650207706</td><td rowspan="1">14608</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">test.LogoutTest#verifyAutoLogoutAfterSessionTimeout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [null] but found [https://vguard-bt-stg.esealcom.com/admin/home]
-	at test.LogoutTest.verifyAutoLogoutAfterSessionTimeout(LogoutTest.java:94)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">test.LogoutTest#verifyLogoutAndBackNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [null] but found [https://vguard-bt-stg.esealcom.com/login]
-	at test.LogoutTest.verifyLogoutAndBackNavigation(LogoutTest.java:74)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">test.LogoutTest#verifyLogoutAndForwardNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [null] but found [https://vguard-bt-stg.esealcom.com/login]
-	at test.LogoutTest.verifyLogoutAndForwardNavigation(LogoutTest.java:87)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">test.LogoutTest#verifyLogoutFromLogoutOptionUnderProfile</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [null] but found [https://vguard-bt-stg.esealcom.com/login]
-	at test.LogoutTest.verifyLogoutFromLogoutOptionUnderProfile(LogoutTest.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">test.LogoutTest#verifyReLoginImmediatelyAfterLogout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [null] but found [https://vguard-bt-stg.esealcom.com/login]
-	at test.LogoutTest.verifyReLoginImmediatelyAfterLogout(LogoutTest.java:54)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">test.TransactionsTest#verifyAddTransactionWithValidData</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Successfully submitted!] but found [Feature Code already exists]
-	at test.TransactionsTest.verifyAddTransactionWithValidData(TransactionsTest.java:69)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">test.TransactionsTest#verifyAddUserUsingLeadingAndTrailingSpaces</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	expected [Testabc] but found [ Testabc ]
-	at test.TransactionsTest.verifyAddUserUsingLeadingAndTrailingSpaces(TransactionsTest.java:151)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">test.TransactionsTest#verifyAddUserWithDuplicateTransactionName</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Transaction name is already exists] but found [Transaction Name already exists]
-	at test.TransactionsTest.verifyAddUserWithDuplicateTransactionName(TransactionsTest.java:86)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">test.TransactionsTest#verifySavedTransactionDetailsInEditWindow</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	expected [1] but found [null],
-	expected [0] but found [null],
-	expected [0] but found [null]
-	at test.TransactionsTest.verifySavedTransactionDetailsInEditWindow(TransactionsTest.java:177)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">test.UsersTest#verifyAddUserUsingLeadingAndTrailingSpaces</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	expected [atbs] but found [  atbs  ]
-	at test.UsersTest.verifyAddUserUsingLeadingAndTrailingSpaces(UsersTest.java:168)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">test.UsersTest#verifyAddUserWithValidDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Successfully submitted!] but found [User name is already exists]
-	at test.UsersTest.verifyAddUserWithValidDetails(UsersTest.java:82)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">test.UsersTest#verifyMandatoryFieldValidationForUpdatePassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at test.UsersTest.verifyMandatoryFieldValidationForUpdatePassword(UsersTest.java:135)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">test.UsersTest#verifySavedUserDetailsInEditWindow</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+<h2>Default test</h2><h3 id="m0">test.UsersTest#verifySavedUserDetailsInEditWindow</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	expected [atbs] but found [A B Traders],
+	expected [dasfd] but found [Plant],
+	expected [1234567890] but found [9948021022],
+	expected [abc@yomail.com] but found [Kolkota@plant.com],
+	expected [userss] but found [100013],
 	expected [Plant] but found [null],
 	expected [VCPL - Panthnagar] but found [null],
 	expected [None] but found [null],
 	expected [Testing role] but found [null]
-	at test.UsersTest.verifySavedUserDetailsInEditWindow(UsersTest.java:207)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at test.UsersTest.verifySavedUserDetailsInEditWindow(UsersTest.java:209)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">test.LoginTest#verifyFieldAndCheckboxLabels</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">test.LoginTest#verifyLoginPageTitleAndUrl</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">test.LoginTest#verifyLoginUsingInvalidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">test.LoginTest#verifyLoginUsingValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">test.LoginTest#verifyLoginWithBlankCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">test.LoginTest#verifyLoginWithEmailOnly</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m19">test.LoginTest#verifyLoginWithInvalidEmailAndValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m20">test.LoginTest#verifyLoginWithLowercaseInsensitiveEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m21">test.LoginTest#verifyLoginWithPasswordOnly</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m22">test.LoginTest#verifyLoginWithShortPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m23">test.LoginTest#verifyLoginWithUppercaseInsensitiveEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m24">test.LoginTest#verifyLoginWithValidEmailAndInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m25">test.TransactionsTest#verifyAddUserWithDuplicateFeatureCode</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m26">test.TransactionsTest#verifyDeleteUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m27">test.TransactionsTest#verifyMandatoryFieldValidationForAddUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m28">test.TransactionsTest#verifyNavigationToUsersModule</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m29">test.TransactionsTest#verifyUserInUsersModuleGridWithPagination</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m30">test.UsersTest#verifyDeleteUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m31">test.UsersTest#verifyMandatoryFieldValidationForAddUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m32">test.UsersTest#verifyNavigationToUsersModule</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m33">test.UsersTest#verifySearchUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m34">test.UsersTest#verifyUserInUsersModuleGridWithPagination</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

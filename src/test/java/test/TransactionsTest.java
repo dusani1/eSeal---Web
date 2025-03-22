@@ -19,7 +19,7 @@ public class TransactionsTest extends Base {
 	public HomePage homePage;
 	public TransactionsPage transactionPage;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void setup() {
 		try {
 			driver = openBrowserAndApplicationURL();
@@ -40,12 +40,12 @@ public class TransactionsTest extends Base {
 
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
 		quitBrowser(driver);
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, groups= {"Smoke"})
 	public void verifyNavigationToUsersModule() {
 		Assert.assertEquals(transactionPage.transactionsPageHeading(), prop.getProperty("transactionsPageHeading"));
 		homePage.clickOnProfileIcon();
@@ -53,7 +53,7 @@ public class TransactionsTest extends Base {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, groups= {"Smoke"})
 	public void verifyAddTransactionWithValidData() {
 		transactionPage.clickOnAddTransactionButton();
 		Assert.assertTrue(transactionPage.addTransactionWindowHeading());

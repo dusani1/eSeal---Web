@@ -2,6 +2,8 @@ package pages;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,16 +15,17 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.aventstack.extentreports.ExtentTest;
-
 import root.RootPage;
+
 
 public class UsersPage extends RootPage {
 
+	private Map<String, Integer> columnIndices;
 
 	public UsersPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
+
 	}
 
 	@FindBy(xpath = "//h4[text()='User']")
@@ -92,34 +95,34 @@ public class UsersPage extends RootPage {
 	private WebElement firstNameFieldWarningAlert;
 
 	@FindBy(xpath = "//input[@placeholder='Last Name']//following-sibling::span")
-	private WebElement lastNameWaningAlert;
+	private WebElement lastNameWarningAlert;
 
 	@FindBy(xpath = "//input[@placeholder='Phone Number']//following-sibling::span")
-	private WebElement phoneNumberWaningAlert;
+	private WebElement phoneNumberWarningAlert;
 
 	@FindBy(xpath = "//input[@placeholder='Email']//following-sibling::span")
-	private WebElement emailWaningAlert;
+	private WebElement emailWarningAlert;
 
 	@FindBy(xpath = "//input[@placeholder='User Name']//following-sibling::span")
-	private WebElement userNameWaningAlert;
+	private WebElement userNameWarningAlert;
 
 	@FindBy(xpath = "//input[@placeholder='Password']//following-sibling::span")
-	private WebElement passwordWaningAlert;
+	private WebElement passwordWarningAlert;
 
 	@FindBy(xpath = "//input[@placeholder='Confirm Password']//following-sibling::span")
-	private WebElement confirmPasswordWaningAlert;
+	private WebElement confirmPasswordWarningAlert;
 
-	@FindBy(xpath = "//*[text()='Location Type*']/following-sibling::div/div/select//following-sibling::span")
-	private WebElement locationTypeWaningAlert;
+	@FindBy(xpath = "//*[text()='Location Type*']/following-sibling::div//select/following-sibling::span")
+	private WebElement locationTypeWarningAlert;
 
-	@FindBy(xpath = "//*[text()='Location*']/following-sibling::div/div/select//following-sibling::span")
-	private WebElement locationWaningAlert;
+	@FindBy(xpath = "//*[text()='Location*']/following-sibling::div//select/following-sibling::span")
+	private WebElement locationWarningAlert;
 
-	@FindBy(xpath = "//*[text()='Business Unit*']/following-sibling::div/div/select//following-sibling::span")
-	private WebElement businessUnitWaningAlert;
+	@FindBy(xpath = "//*[text()='Business Unit*']/following-sibling::div//select/following-sibling::span")
+	private WebElement businessUnitWarningAlert;
 
-	@FindBy(xpath = "//*[text()='Assign Role*']/following-sibling::div/div/select//following-sibling::span")
-	private WebElement assignRoleWaningAlert;
+	@FindBy(xpath = "//*[text()='Assign Role*']/following-sibling::div//select/following-sibling::span")
+	private WebElement assignRoleWarningAlert;
 
 	@FindBy(xpath = "//table//tbody//tr[1]//td//p//div//i[@class='fa fa-pencil-square-o fa-edit']")
 	private WebElement editUserIcon;
@@ -164,69 +167,62 @@ public class UsersPage extends RootPage {
 	}
 
 	public void enterFirstName(String firstName) {
-		if (firstName != null && !firstName.isEmpty()) {
-			elementUtilities.enterTextIntoElement(firstNameField, firstName);
-		}
+		elementUtilities.enterTextIntoElement(firstNameField, firstName);
+
 	}
 
 	public void enterLastName(String lastName) {
-		if (lastName != null && !lastName.isEmpty()) {
-			elementUtilities.enterTextIntoElement(lastNameField, lastName);
-		}
+		elementUtilities.enterTextIntoElement(lastNameField, lastName);
+
 	}
 
 	public void enterPhoneNumber(String phoneNumber) {
-		if (phoneNumber != null && !phoneNumber.isEmpty()) {
-			elementUtilities.enterTextIntoElement(phoneNumberField, phoneNumber);
-		}
+		elementUtilities.enterTextIntoElement(phoneNumberField, phoneNumber);
+
 	}
 
 	public void enterEmail(String email) {
-		if (email != null && !email.isEmpty()) {
-			elementUtilities.enterTextIntoElement(emailField, email);
-		}
+		elementUtilities.enterTextIntoElement(emailField, email);
+
 	}
 
 	public void enterUserName(String userName) {
-		if (userName != null && !userName.isEmpty()) {
-			elementUtilities.enterTextIntoElement(userNameField, userName);
-		}
+		elementUtilities.enterTextIntoElement(userNameField, userName);
+
 	}
 
 	public void enterPassword(String password) {
-		if (password != null && !password.isEmpty()) {
-			elementUtilities.enterTextIntoElement(passwordField, password);
-		}
+		elementUtilities.enterTextIntoElement(passwordField, password);
+
 	}
 
 	public void enterConfirmPassword(String confirmPassword) {
-		if (confirmPassword != null && !confirmPassword.isEmpty()) {
-			elementUtilities.enterTextIntoElement(confirmPasswordField, confirmPassword);
-		}
+		elementUtilities.enterTextIntoElement(confirmPasswordField, confirmPassword);
+
 	}
 
 	public void selectLocationType(String locationType) {
-		if (locationType != null && !locationType.isEmpty()) {
-			elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(locationTypeDropdown, locationType);
-		}
+
+		elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(locationTypeDropdown, locationType);
+
 	}
 
 	public void selectLocation(String location) {
-		if (location != null && !location.isEmpty()) {
-			elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(locationDropdown, location);
-		}
+
+		elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(locationDropdown, location);
+
 	}
 
 	public void selectBusinessUnit(String businessUnit) {
-		if (businessUnit != null && !businessUnit.isEmpty()) {
-			elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(businessUnitDropdown, businessUnit);
-		}
+
+		elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(businessUnitDropdown, businessUnit);
+
 	}
 
 	public void selectAssignRole(String assignRole) {
-		if (assignRole != null && !assignRole.isEmpty()) {
-			elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(assignRoleDropdown, assignRole);
-		}
+
+		elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(assignRoleDropdown, assignRole);
+
 	}
 
 	public void selectActiveCheckbox() {
@@ -257,7 +253,6 @@ public class UsersPage extends RootPage {
 		return elementUtilities.waitAndCheckElementDisplayStatus(addUserWindow, 5);
 	}
 
-	
 	public boolean editUserWindowHeading() {
 		return elementUtilities.waitAndCheckElementDisplayStatus(editUserWindow, 5);
 	}
@@ -271,43 +266,43 @@ public class UsersPage extends RootPage {
 	}
 
 	public String getLastNameFieldWarningAlert() {
-		return elementUtilities.getElementText(lastNameWaningAlert);
+		return elementUtilities.getElementText(lastNameWarningAlert);
 	}
 
 	public String getPhoneNumberFieldWarningAlert() {
-		return elementUtilities.getElementText(phoneNumberWaningAlert);
+		return elementUtilities.getElementText(phoneNumberWarningAlert);
 	}
 
 	public String getEmailFieldWarningAlert() {
-		return elementUtilities.getElementText(emailWaningAlert);
+		return elementUtilities.getElementText(emailWarningAlert);
 	}
 
 	public String getUserNameFieldWarningAlert() {
-		return elementUtilities.getElementText(userNameWaningAlert);
+		return elementUtilities.getElementText(userNameWarningAlert);
 	}
 
 	public String getPasswordFieldWarningAlert() {
-		return elementUtilities.getElementText(passwordWaningAlert);
+		return elementUtilities.getElementText(passwordWarningAlert);
 	}
 
 	public String getConfirmPasswordFieldWarningAlert() {
-		return elementUtilities.getElementText(confirmPasswordWaningAlert);
+		return elementUtilities.getElementText(confirmPasswordWarningAlert);
 	}
 
 	public String getLocationTypeFieldWarningAlert() {
-		return elementUtilities.getElementText(locationTypeWaningAlert);
+		return elementUtilities.getElementText(locationTypeWarningAlert);
 	}
 
 	public String getLocationFieldWarningAlert() {
-		return elementUtilities.getElementText(locationWaningAlert);
+		return elementUtilities.getElementText(locationWarningAlert);
 	}
 
 	public String getBusinessUnitFieldWarningAlert() {
-		return elementUtilities.getElementText(businessUnitWaningAlert);
+		return elementUtilities.getElementText(businessUnitWarningAlert);
 	}
 
 	public String getAssignRoleFieldWarningAlert() {
-		return elementUtilities.getElementText(assignRoleWaningAlert);
+		return elementUtilities.getElementText(assignRoleWarningAlert);
 	}
 
 	public String getAlertText() {
@@ -356,7 +351,7 @@ public class UsersPage extends RootPage {
 		return elementUtilities.getElementDomAttribute(businessUnitDropdown, "value");
 	}
 
-	public String getAssingRoleFieldDoMValue() {
+	public String getAssignRoleFieldDoMValue() {
 		return elementUtilities.getElementDomAttribute(assignRoleDropdown, "value");
 	}
 
@@ -391,40 +386,72 @@ public class UsersPage extends RootPage {
 		return Integer.parseInt(count.trim());
 	}
 
+	/*
+	 * private void initializeColumnIndices() { columnIndices = new HashMap<>();
+	 * columnIndices.put("Role Name", getColumnIndex("Role Name"));
+	 * columnIndices.put("User Name", getColumnIndex("User Name"));
+	 * columnIndices.put("First Name", getColumnIndex("First Name"));
+	 * columnIndices.put("Last Name", getColumnIndex("Last Name"));
+	 * columnIndices.put("Email", getColumnIndex("Email"));
+	 * columnIndices.put("Status", getColumnIndex("Status"));
+	 * columnIndices.put("Phone No", getColumnIndex("Phone No"));
+	 * columnIndices.put("Actions", getColumnIndex("Actions")); }
+	 */
+
 	public boolean searchRecord(String searchInputOrUserName, String firstName, String lastName, String roleName,
 			String email, String status, String phoneNumber) {
+		
 		int noOfPages = getLastPageCount();
 		boolean recordFound = false;
-		outerloop: for (int p = 1; p <= noOfPages; p++) {
+
+		int roleNameColumnIndex = getColumnIndex("Role Name");
+		int userNameColumnIndex = getColumnIndex("User Name");
+		int firstNameColumnIndex = getColumnIndex("First Name");
+		int lastNameColumnIndex = getColumnIndex("Last Name");
+		int emailColumnIndex = getColumnIndex("Email");
+		int statusColumnIndex = getColumnIndex("Status");
+		int phoneNoColumnIndex = getColumnIndex("Phone No");
+
+		for (int p = 1; p <= noOfPages; p++) {
 			for (int i = 1; i <= rows.size(); i++) {
 				try {
-					String actualUserName = rows.get(i - 1).findElement(By.xpath(".//td[2]")).getText();
-					if (actualUserName.equals(searchInputOrUserName)) {
 
-						String actualFirstName = rows.get(i - 1).findElement(By.xpath(".//td[3]")).getText();
-						String actualLastName = rows.get(i - 1).findElement(By.xpath(".//td[4]")).getText();
-						String actualRoleName = rows.get(i - 1).findElement(By.xpath(".//td[1]")).getText();
-						String actualEmail = rows.get(i - 1).findElement(By.xpath(".//td[5]")).getText();
-						String actualStauts = rows.get(i - 1).findElement(By.xpath(".//td[6]")).getText();
-						String actualPhoneNumber = rows.get(i - 1).findElement(By.xpath(".//td[7]")).getText();
-						System.out.println(actualFirstName + "  " + actualLastName + "  " + actualRoleName + "  "
-								+ actualEmail + "  " + actualStauts + "  " + actualPhoneNumber);
+					String actualUserName = rows.get(i - 1).findElement(By.xpath(".//td[" + userNameColumnIndex + "]"))
+							.getText();
+					System.out.println(actualUserName);
+
+					if (actualUserName.equals(searchInputOrUserName)) {
+						String actualRoleName = rows.get(i - 1)
+								.findElement(By.xpath(".//td[" + roleNameColumnIndex + "]")).getText();
+						String actualFirstName = rows.get(i - 1)
+								.findElement(By.xpath(".//td[" + firstNameColumnIndex + "]")).getText();
+						String actualLastName = rows.get(i - 1)
+								.findElement(By.xpath(".//td[" + lastNameColumnIndex + "]")).getText();
+						String actualEmail = rows.get(i - 1).findElement(By.xpath(".//td[" + emailColumnIndex + "]"))
+								.getText();
+						String actualStauts = rows.get(i - 1).findElement(By.xpath(".//td[" + statusColumnIndex + "]"))
+								.getText();
+						String actualPhoneNumber = rows.get(i - 1)
+								.findElement(By.xpath(".//td[" + phoneNoColumnIndex + "]")).getText();
+
 						if (actualFirstName.equals(firstName) && actualLastName.equals(lastName)
 								&& actualRoleName.equals(roleName) && actualEmail.equals(email)
 								&& actualStauts.equals(status) && actualPhoneNumber.equals(phoneNumber)) {
-							System.out.println(
-									"All details match: firstName, lastName, roleName, email, status and phoneNumber.");
 							recordFound = true;
-							break outerloop;
+							break; // Breaks out of the inner loop
 						}
-
 					}
 				} catch (Exception e) {
-					System.out.println("Username not found in row " + i + " on page " + p);
-					// extentTest.log(Status.INFO, "Username not found in row " + i + " on page " +
-					// p);
+					if (!recordFound) {
+						System.out.println("Username not found in row " + i + " on page " + p);
+					}
 				}
 			}
+
+			if (recordFound) {
+				break;
+			}
+
 			if (!recordFound && p < noOfPages) {
 				goToNextPage(p + 1);
 			}
@@ -435,22 +462,35 @@ public class UsersPage extends RootPage {
 
 	public boolean searchAndClickIcon(String searchInputOrUserName, String firstName, String lastName, String email,
 			String iconType) {
+
 		int noOfPages = getLastPageCount();
 		boolean recordFound = false;
+		
+		int userNameColumnIndex = getColumnIndex("User Name");
+		int firstNameColumnIndex = getColumnIndex("First Name");
+		int lastNameColumnIndex = getColumnIndex("Last Name");
+		int emailColumnIndex = getColumnIndex("Email");
 
 		for (int p = 1; p <= noOfPages; p++) {
 			for (int i = 1; i <= rows.size(); i++) {
 				try {
-					String actualUserName = rows.get(i - 1).findElement(By.xpath(".//td[2]")).getText();
+					String actualUserName = rows.get(i - 1).findElement(By.xpath(".//td[" + userNameColumnIndex + "]"))
+							.getText();
+					System.out.println(actualUserName);
+
 					if (actualUserName.equals(searchInputOrUserName)) {
-						String actualFirstName = rows.get(i - 1).findElement(By.xpath(".//td[3]")).getText();
-						String actualLastName = rows.get(i - 1).findElement(By.xpath(".//td[4]")).getText();
-						String actualEmail = rows.get(i - 1).findElement(By.xpath(".//td[5]")).getText();
+						String actualFirstName = rows.get(i - 1)
+								.findElement(By.xpath(".//td[" + firstNameColumnIndex + "]")).getText();
+						String actualLastName = rows.get(i - 1)
+								.findElement(By.xpath(".//td[" + lastNameColumnIndex + "]")).getText();
+						String actualEmail = rows.get(i - 1).findElement(By.xpath(".//td[" + emailColumnIndex + "]"))
+								.getText();
+
 						if (actualFirstName.equals(firstName) && actualLastName.equals(lastName)
 								&& actualEmail.equals(email)) {
 							recordFound = true;
 							clickIcon(i, p, iconType);
-							break;
+							break; // Breaks out of the inner loop
 						}
 					}
 				} catch (Exception e) {
@@ -459,6 +499,11 @@ public class UsersPage extends RootPage {
 					}
 				}
 			}
+
+			if (recordFound) {
+				break;
+			}
+
 			if (!recordFound && p < noOfPages) {
 				goToNextPage(p + 1);
 			}
@@ -499,17 +544,51 @@ public class UsersPage extends RootPage {
 		try {
 			// Locate the next page button
 			WebElement nextPageButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pageNoXpathText)));
-
 			// Scroll into view & click
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", nextPageButton);
 			nextPageButton.click();
-
 			// Wait for the page to load (using any element that confirms page load)
 			wait.until(ExpectedConditions.stalenessOf(nextPageButton));
-
 		} catch (Exception e) {
 			System.out.println("Exception in pagination: " + e.getMessage());
 		}
+	}
+
+	public int getColumnIndex(String columnName) {
+		if (columnName == null || columnName.trim().isEmpty()) {
+			throw new IllegalArgumentException("Column name cannot be null or empty.");
+		}
+
+		List<WebElement> headers = driver.findElements(By.xpath("//table//thead//th"));
+		int headerCount = headers.size();
+		if (headerCount == 0) {
+			throw new NoSuchElementException("No headers found in the table.");
+		}
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		for (int j = 0; j < headerCount; j++) {
+			WebElement header = headers.get(j);
+			String headerText = header.getText().trim();
+
+			// Use JavaScript fallback if necessary
+			if (headerText.isEmpty()) {
+				headerText = (String) js.executeScript("return arguments[0].textContent.trim();", header);
+			}
+
+			// Normalize header text: remove trailing numbers and spaces
+			headerText = headerText.replaceAll("\\s*\\d+$", "").trim();
+
+			// System.out.println("Normalized Header: [" + headerText + "] at index " + (j +
+			// 1));
+
+			// Case-insensitive and trimmed comparison
+			if (headerText.equalsIgnoreCase(columnName.trim())) {
+				return j + 1; // Return 1-based index
+			}
+		}
+
+		throw new NoSuchElementException("Column '" + columnName + "' not found in the table.");
 	}
 
 }

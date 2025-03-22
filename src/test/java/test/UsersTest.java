@@ -26,8 +26,9 @@ public class UsersTest extends Base {
 	public LoginPage loginPage;
 	public HomePage homePage;
 	public UsersPage usersPage;
+	
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void setup() {
 		try {
 			driver = openBrowserAndApplicationURL();
@@ -48,12 +49,12 @@ public class UsersTest extends Base {
 
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
 		quitBrowser(driver);
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, groups= {"Smoke"})
 	public void verifyNavigationToUsersModule() {
 		System.out.println(usersPage.usersPageHeading());
 		Assert.assertEquals(usersPage.usersPageHeading(), prop.getProperty("usersPageHeading"));
@@ -62,7 +63,7 @@ public class UsersTest extends Base {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, groups= {"Smoke"})
 	public void verifyAddUserWithValidDetails() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
@@ -83,7 +84,7 @@ public class UsersTest extends Base {
 
 	}
 
-	//@Test(priority = 3)
+	@Test(priority = 3)
 	public void verifyAddUserWithDuplicateUserName() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
@@ -181,7 +182,8 @@ public class UsersTest extends Base {
 	@Test(priority = 7)
 	public void verifySavedUserDetailsInEditWindow() {
 		SoftAssert softAssert = new SoftAssert();
-		usersPage.searchAndClickIcon("userss", "atbs", "dasfd", "abc@yomail.com","edit");
+		//usersPage.searchAndClickIcon("userss", "atbs", "dasfd", "abc@yomail.com","edit");
+		usersPage.searchAndClickIcon("100013", "A B Traders", "Plant", "Kolkota@plant.com","edit");
 		Assert.assertTrue(usersPage.editUserWindowHeading());
 		String firstName = "atbs";
 		String lastName = "dasfd";
@@ -202,7 +204,7 @@ public class UsersTest extends Base {
 		softAssert.assertEquals(usersPage.getLocationTypeFieldDoMValue(), locationType);
 		softAssert.assertEquals(usersPage.getLocationFieldDoMValue(), location);
 		softAssert.assertEquals(usersPage.getBusinessUnitFieldDoMValue(), businessUnit);
-		softAssert.assertEquals(usersPage.getAssingRoleFieldDoMValue(), assingRole);
+		softAssert.assertEquals(usersPage.getAssignRoleFieldDoMValue(), assingRole);
 		softAssert.assertEquals(usersPage.getActiveCheckboxStatus(), activeStatus);
 		softAssert.assertAll();
 	}
