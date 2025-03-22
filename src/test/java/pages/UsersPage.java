@@ -17,10 +17,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import root.RootPage;
 
-
 public class UsersPage extends RootPage {
 
-	private Map<String, Integer> columnIndices;
 
 	public UsersPage(WebDriver driver) {
 		super(driver);
@@ -386,21 +384,10 @@ public class UsersPage extends RootPage {
 		return Integer.parseInt(count.trim());
 	}
 
-	/*
-	 * private void initializeColumnIndices() { columnIndices = new HashMap<>();
-	 * columnIndices.put("Role Name", getColumnIndex("Role Name"));
-	 * columnIndices.put("User Name", getColumnIndex("User Name"));
-	 * columnIndices.put("First Name", getColumnIndex("First Name"));
-	 * columnIndices.put("Last Name", getColumnIndex("Last Name"));
-	 * columnIndices.put("Email", getColumnIndex("Email"));
-	 * columnIndices.put("Status", getColumnIndex("Status"));
-	 * columnIndices.put("Phone No", getColumnIndex("Phone No"));
-	 * columnIndices.put("Actions", getColumnIndex("Actions")); }
-	 */
 
 	public boolean searchRecord(String searchInputOrUserName, String firstName, String lastName, String roleName,
 			String email, String status, String phoneNumber) {
-		
+
 		int noOfPages = getLastPageCount();
 		boolean recordFound = false;
 
@@ -465,7 +452,7 @@ public class UsersPage extends RootPage {
 
 		int noOfPages = getLastPageCount();
 		boolean recordFound = false;
-		
+
 		int userNameColumnIndex = getColumnIndex("User Name");
 		int firstNameColumnIndex = getColumnIndex("First Name");
 		int lastNameColumnIndex = getColumnIndex("Last Name");

@@ -4,6 +4,8 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -21,10 +23,13 @@ public class MyListeners implements ITestListener {
 	ExtentReports report;
 	ExtentTest extentTest;
 	WebDriver driver;
+	 //public static final Logger logger = LogManager.getLogger(MyListeners.class);
 
-	@Override
+
+	//@Override
 	public void onStart(ITestContext context) {
 		report = CommonUtils.getExtentReports();
+		//logger.info("Test started: " + result.getName());
 	}
 
 	@Override
@@ -39,7 +44,6 @@ public class MyListeners implements ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-	    System.out.println("=============================Test failed=====================================");
 	    extentTest.log(Status.FAIL, result.getName() + " Test got failed");
 	    
 	    WebDriver driver = null;

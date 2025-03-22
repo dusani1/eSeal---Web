@@ -1,19 +1,15 @@
 package test;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.time.Duration;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+
 
 import base.Base;
 import pages.HomePage;
@@ -27,6 +23,8 @@ public class UsersTest extends Base {
 	public HomePage homePage;
 	public UsersPage usersPage;
 	
+
+
 
 	@BeforeMethod(alwaysRun=true)
 	public void setup() {
@@ -195,7 +193,7 @@ public class UsersTest extends Base {
 		String businessUnit = "None";
 		String assingRole = "Testing role";
 		boolean activeStatus = true;
-
+		
 		softAssert.assertEquals(usersPage.getFirstNameFieldDoMValue(), firstName);
 		softAssert.assertEquals(usersPage.getLastNameFieldDoMValue(), lastName);
 		softAssert.assertEquals(usersPage.getPhoneNumberFieldDoMValue(), phoneNumber);
@@ -207,6 +205,7 @@ public class UsersTest extends Base {
 		softAssert.assertEquals(usersPage.getAssignRoleFieldDoMValue(), assingRole);
 		softAssert.assertEquals(usersPage.getActiveCheckboxStatus(), activeStatus);
 		softAssert.assertAll();
+		logger.info("endign the test");
 	}
 
 	@Test

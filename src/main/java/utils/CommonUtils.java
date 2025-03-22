@@ -1,13 +1,11 @@
 package utils;
 
-import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Properties;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -15,32 +13,6 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.ExtentSparkReporterConfig;
 
 public class CommonUtils {
-
-	/*
-	 * private static final Map<String, Map<String, String>> columnMappings = new
-	 * HashMap<>(); static { loadMappings(); }
-	 */
-	/*
-	 * private static void loadMappings() { try (BufferedReader br = new
-	 * BufferedReader(new FileReader(System.getProperty("user.dir")+
-	 * "\\src\\test\\resource\\gridColumnsMapping"))) { String line; while ((line =
-	 * br.readLine()) != null) { if (line.trim().isEmpty()) continue; // Skip empty
-	 * lines String[] moduleData = line.split(":"); if (moduleData.length < 2) {
-	 * System.out.println("Invalid line in configuration: " + line); continue; //
-	 * Skip invalid lines } String moduleName = moduleData[0].trim(); String[]
-	 * mappings = moduleData[1].split(","); Map<String, String> mappingMap = new
-	 * HashMap<>(); for (String mapping : mappings) { String[] keyValue =
-	 * mapping.split("="); if (keyValue.length < 2) {
-	 * System.out.println("Invalid mapping: " + mapping); continue; }
-	 * mappingMap.put(keyValue[0].trim(), keyValue[1].trim()); }
-	 * columnMappings.put(moduleName, mappingMap); } } catch (Exception e) { throw
-	 * new RuntimeException("Error loading column mappings from file: " +
-	 * e.getMessage(), e); } }
-	 */
-	/*
-	 * public static Map<String, String> getColumnMappings(String moduleName) {
-	 * return columnMappings.getOrDefault(moduleName, null); }
-	 */
 
 	public String getClientName() {
 		Properties prop = new Properties();
@@ -68,28 +40,6 @@ public class CommonUtils {
 		}
 		return prop;
 	}
-
-	/*
-	 * public static Properties loadProperties() { Properties prop = new
-	 * Properties(); FileReader fr; try { fr = new
-	 * FileReader(System.getProperty("user.dir") +
-	 * "\\src\\test\\resource\\ProjectData.properties"); prop.load(fr); } catch
-	 * (IOException e) { // TODO Auto-generated catch block e.printStackTrace(); } }
-	 * return prop; }
-	 */
-
-	/*
-	 * public class ConfigReader { private static ThreadLocal<Properties> prop =
-	 * ThreadLocal.withInitial(() -> { Properties properties = new Properties(); try
-	 * (FileInputStream fis = new
-	 * FileInputStream("src/test/resources/config.properties")) {
-	 * properties.load(fis); } catch (IOException e) { throw new
-	 * RuntimeException("Configuration file could not be loaded."); } return
-	 * properties; });
-	 * 
-	 * public static String getProperty(String key) { return
-	 * prop.get().getProperty(key); } }
-	 */
 
 	public static void waitForSeconds(int milliseconds) {
 		try {
@@ -206,5 +156,53 @@ public class CommonUtils {
 		return extentReport;
 
 	}
+
+	/*
+	 * private static final Map<String, Map<String, String>> columnMappings = new
+	 * HashMap<>(); static { loadMappings(); }
+	 */
+	/*
+	 * private static void loadMappings() { try (BufferedReader br = new
+	 * BufferedReader(new FileReader(System.getProperty("user.dir")+
+	 * "\\src\\test\\resource\\gridColumnsMapping"))) { String line; while ((line =
+	 * br.readLine()) != null) { if (line.trim().isEmpty()) continue; // Skip empty
+	 * lines String[] moduleData = line.split(":"); if (moduleData.length < 2) {
+	 * System.out.println("Invalid line in configuration: " + line); continue; //
+	 * Skip invalid lines } String moduleName = moduleData[0].trim(); String[]
+	 * mappings = moduleData[1].split(","); Map<String, String> mappingMap = new
+	 * HashMap<>(); for (String mapping : mappings) { String[] keyValue =
+	 * mapping.split("="); if (keyValue.length < 2) {
+	 * System.out.println("Invalid mapping: " + mapping); continue; }
+	 * mappingMap.put(keyValue[0].trim(), keyValue[1].trim()); }
+	 * columnMappings.put(moduleName, mappingMap); } } catch (Exception e) { throw
+	 * new RuntimeException("Error loading column mappings from file: " +
+	 * e.getMessage(), e); } }
+	 */
+	/*
+	 * public static Map<String, String> getColumnMappings(String moduleName) {
+	 * return columnMappings.getOrDefault(moduleName, null); }
+	 */
+
+	/*
+	 * public static Properties loadProperties() { Properties prop = new
+	 * Properties(); FileReader fr; try { fr = new
+	 * FileReader(System.getProperty("user.dir") +
+	 * "\\src\\test\\resource\\ProjectData.properties"); prop.load(fr); } catch
+	 * (IOException e) { // TODO Auto-generated catch block e.printStackTrace(); } }
+	 * return prop; }
+	 */
+
+	/*
+	 * public class ConfigReader { private static ThreadLocal<Properties> prop =
+	 * ThreadLocal.withInitial(() -> { Properties properties = new Properties(); try
+	 * (FileInputStream fis = new
+	 * FileInputStream("src/test/resources/config.properties")) {
+	 * properties.load(fis); } catch (IOException e) { throw new
+	 * RuntimeException("Configuration file could not be loaded."); } return
+	 * properties; });
+	 * 
+	 * public static String getProperty(String key) { return
+	 * prop.get().getProperty(key); } }
+	 */
 
 }

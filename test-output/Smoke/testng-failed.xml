@@ -11,13 +11,6 @@
       </run>
     </groups>
     <classes>
-      <class name="test.UsersTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="verifyAddUserWithValidDetails"/>
-        </methods>
-      </class> <!-- test.UsersTest -->
       <class name="test.TransactionsTest">
         <methods>
           <include name="setup"/>
@@ -25,6 +18,13 @@
           <include name="verifyAddTransactionWithValidData"/>
         </methods>
       </class> <!-- test.TransactionsTest -->
+      <class name="test.UsersTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="verifyAddUserWithValidDetails"/>
+        </methods>
+      </class> <!-- test.UsersTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Smoke] -->
