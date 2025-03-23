@@ -37,8 +37,8 @@ public class LoginTest extends Base {
 	@Test(priority = 1, groups = { "Smoke" })
 	public void verifyLoginPageTitleAndUrl() {
 		SoftAssert softAssert = new SoftAssert();
-		softAssert.assertEquals(getPageTitle(), "eSeal");
-		softAssert.assertEquals(getPageURL(driver), prop.getProperty("loginPageURL"));
+		softAssert.assertEquals(getPageTitle(), prop.getProperty("loginPageTitle"));
+		softAssert.assertEquals(getPageUrl(driver), getExpectedPageURL("loginPageUrl"));
 		softAssert.assertAll();
 		}
 
@@ -60,7 +60,6 @@ public class LoginTest extends Base {
 	public void verifyLoginUsingValidCredentials() {
 		loginPage.enterEmail(prop.getProperty("email"));
 		loginPage.enterPassword(prop.getProperty("password"));
-		System.out.println(loginPage.getCookieCheckBoxLabelText());
 		loginPage.checkRememberMeCheckBoxifNotSelected();
 		loginPage.checkCookieCheckBoxifNotSelected();
 		homePage = loginPage.clickOnSubmitButton();
@@ -72,7 +71,6 @@ public class LoginTest extends Base {
 	
 	@Test(priority = 4, groups = { "Sanity1" })
 	public void verifyLoginUsingInvalidCredentials() throws InterruptedException {
-
 		loginPage.enterEmail(CommonUtils.generateNewEmail());
 		loginPage.enterPassword(prop.getProperty("invalidPassword"));
 		loginPage.checkRememberMeCheckBoxifNotSelected();

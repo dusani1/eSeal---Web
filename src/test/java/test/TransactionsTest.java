@@ -32,7 +32,7 @@ public class TransactionsTest extends Base {
 			homePage.clickOnCompaniesOption();
 			transactionPage = homePage.clickOnTransactionsOption();
 			Assert.assertEquals(getPageTitle(), prop.getProperty("transactionsPageTitle"));
-			Assert.assertEquals(getUrl(), prop.get("transactionsPageURL"));
+			Assert.assertEquals(getUrl(), getExpectedPageURL("transactionsPageUrl"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail("Setup method failed due to exception: " + e.getMessage());

@@ -1,15 +1,16 @@
 package test;
 
 import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-
 
 import base.Base;
 import pages.HomePage;
@@ -24,8 +25,6 @@ public class UsersTest extends Base {
 	public UsersPage usersPage;
 	
 
-
-
 	@BeforeMethod(alwaysRun=true)
 	public void setup() {
 		try {
@@ -39,7 +38,7 @@ public class UsersTest extends Base {
 			homePage.clickOnAutorizationOption();
 			usersPage = homePage.clickOnUsersOption();
 			Assert.assertEquals(getPageTitle(), prop.getProperty("usersPageTitle"));
-			Assert.assertEquals(getUrl(), prop.get("usersPageURL"));
+			Assert.assertEquals(getUrl(), getExpectedPageURL("usersPageTitle"));
 		  } catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail("Setup method failed due to exception: " + e.getMessage());
@@ -54,7 +53,6 @@ public class UsersTest extends Base {
 
 	@Test(priority = 1, groups= {"Smoke"})
 	public void verifyNavigationToUsersModule() {
-		System.out.println(usersPage.usersPageHeading());
 		Assert.assertEquals(usersPage.usersPageHeading(), prop.getProperty("usersPageHeading"));
 		homePage.clickOnProfileIcon();
 		homePage.clickOnLogoutIcon();
@@ -169,12 +167,15 @@ public class UsersTest extends Base {
 
 	@Test(priority = 6)
 	public void verifySearchUser() throws InterruptedException, AWTException {
-		/*
-		 * usersPage.enterSerachTextAndSearch("atbs"); Robot robot = new Robot();
-		 * robot.keyPress(KeyEvent.VK_ENTER); // Simulate key press
-		 * robot.keyRelease(KeyEvent.VK_ENTER); // Simulate key release
-		 * Thread.sleep(10000); usersPage.clickOnEditUserIcon(); Thread.sleep(10000);
-		 */
+		
+		  usersPage.enterSerachTextAndSearch("atbs");
+		  clickKeyboradKeyMultipleTimes(driver, Keys.RETURN, 1); 
+			/*
+			 * Robot robot = new Robot(); robot.keyPress(KeyEvent.VK_ENTER);
+			 * robot.keyRelease(KeyEvent.VK_ENTER);
+			 */
+		  usersPage.clickOnEditUserIcon();
+		 
 	}
 
 	@Test(priority = 7)

@@ -384,6 +384,15 @@ public class UsersPage extends RootPage {
 		return Integer.parseInt(count.trim());
 	}
 
+	
+	public void searchUser() {
+		
+	}
+	
+	
+	
+	
+	
 
 	public boolean searchRecord(String searchInputOrUserName, String firstName, String lastName, String roleName,
 			String email, String status, String phoneNumber) {

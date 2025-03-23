@@ -18,8 +18,16 @@
           <include name="verifyAddTransactionWithValidData"/>
         </methods>
       </class> <!-- test.TransactionsTest -->
+      <class name="test.LogoutTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="verifyReLoginImmediatelyAfterLogout"/>
+        </methods>
+      </class> <!-- test.LogoutTest -->
       <class name="test.UsersTest">
         <methods>
+          <include name="verifyNavigationToUsersModule"/>
           <include name="tearDown"/>
           <include name="setup"/>
           <include name="verifyAddUserWithValidDetails"/>

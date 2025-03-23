@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import base.Base;
 import pages.HomePage;
@@ -42,28 +43,28 @@ public class LogoutTest extends Base {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		Assert.assertEquals(getPageTitle(), "eSeal");
-		System.out.println(getUrl());
-		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
+		Assert.assertEquals(getPageTitle(), prop.getProperty("loginPageTitle"));
+		Assert.assertEquals(getUrl(), getExpectedPageURL("loginPageUrl"));
 	}
 
 	@Test(priority = 2, groups = { "Smoke" })
 	public void verifyReLoginImmediatelyAfterLogout() throws InterruptedException {
+		SoftAssert softAssert = new SoftAssert();
 		homePage.clickOnLogoutIcon();
 		Thread.sleep(1000);
-		Assert.assertEquals(getPageTitle(), "eSeal");
-		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
+		softAssert.assertEquals(getPageTitle(), prop.getProperty("loginPageTitle"));
+		softAssert.assertEquals(getUrl(), getExpectedPageURL("loginPageUrl"));
 		loginPage.enterEmail(prop.getProperty("email"));
 		loginPage.enterPassword(prop.getProperty("password"));
 		loginPage.checkRememberMeCheckBoxifNotSelected();
 		loginPage.checkCookieCheckBoxifNotSelected();
 		homePage = loginPage.clickOnSubmitButton();
 		homePage.clickOnProfileIcon();
-		Assert.assertEquals(homePage.getLoggedInMail(), prop.getProperty("email"));
+		softAssert.assertEquals(homePage.getLoggedInMail(), prop.getProperty("email"));
 		homePage.clickOnLogoutIcon();
-		Thread.sleep(1000);
-		Assert.assertEquals(getPageTitle(), "eSeal");
-		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
+		softAssert.assertEquals(getPageTitle(), prop.getProperty("loginPageTitle"));	
+		softAssert.assertEquals(getUrl(), getExpectedPageURL("loginPageUrl"));
+		softAssert.assertAll();
 
 	}
 
@@ -71,12 +72,12 @@ public class LogoutTest extends Base {
 	public void verifyLogoutAndBackNavigation() throws InterruptedException {
 		homePage.clickOnLogoutIcon();
 		Thread.sleep(1000);
-		Assert.assertEquals(getPageTitle(), "eSeal");
-		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
+		Assert.assertEquals(getPageTitle(), prop.getProperty("loginPageTitle"));
+		Assert.assertEquals(getUrl(), getExpectedPageURL("loginPageUrl"));
 		driver.navigate().back();
 		Thread.sleep(1000);
-		Assert.assertEquals(getPageTitle(), "eSeal");
-		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
+		Assert.assertEquals(getPageTitle(), prop.getProperty("loginPageTitle"));
+		Assert.assertEquals(getUrl(), getExpectedPageURL("loginPageUrl"));
 	}
 
 	@Test(priority = 4, groups = { "Sanity" })
@@ -85,14 +86,14 @@ public class LogoutTest extends Base {
 		driver.navigate().back();
 		driver.navigate().forward();
 		Thread.sleep(1000);
-		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
+		Assert.assertEquals(getUrl(), getExpectedPageURL("loginPageUrl"));
 	}
 
 	@Test(priority = 5, groups = { "Sanity" })
 	public void verifyAutoLogoutAfterSessionTimeout() throws InterruptedException {
 		Thread.sleep(10000); // 15 minutes timeout simulation: Time need to get from Dev team
 		driver.navigate().refresh();
-		Assert.assertEquals(getUrl(), prop.getProperty("loginPageURL"));
+		Assert.assertEquals(getUrl(), getExpectedPageURL("loginPageUrl"));
 	}
 
 }

@@ -1,248 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="9" failed="2" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-22T19:29:14 IST" name="Smoke" finished-at="2025-03-22T19:31:54 IST" duration-ms="160916">
+  <suite started-at="2025-03-23T12:11:14 IST" name="Default suite" finished-at="2025-03-23T12:11:39 IST" duration-ms="24963">
     <groups>
       <group name="Smoke">
-        <method signature="LoginTest.verifyLoginPageTitleAndUrl()[pri:1, instance:test.LoginTest@4612b856]" name="verifyLoginPageTitleAndUrl" class="test.LoginTest"/>
-        <method signature="LogoutTest.verifyLogoutFromLogoutOptionUnderProfile()[pri:1, instance:test.LogoutTest@13d9b21f]" name="verifyLogoutFromLogoutOptionUnderProfile" class="test.LogoutTest"/>
-        <method signature="TransactionsTest.verifyNavigationToUsersModule()[pri:1, instance:test.TransactionsTest@2826f61]" name="verifyNavigationToUsersModule" class="test.TransactionsTest"/>
-        <method signature="UsersTest.verifyNavigationToUsersModule()[pri:1, instance:test.UsersTest@62727399]" name="verifyNavigationToUsersModule" class="test.UsersTest"/>
-        <method signature="LoginTest.verifyFieldAndCheckboxLabels()[pri:2, instance:test.LoginTest@4612b856]" name="verifyFieldAndCheckboxLabels" class="test.LoginTest"/>
-        <method signature="LogoutTest.verifyReLoginImmediatelyAfterLogout()[pri:2, instance:test.LogoutTest@13d9b21f]" name="verifyReLoginImmediatelyAfterLogout" class="test.LogoutTest"/>
-        <method signature="TransactionsTest.verifyAddTransactionWithValidData()[pri:2, instance:test.TransactionsTest@2826f61]" name="verifyAddTransactionWithValidData" class="test.TransactionsTest"/>
-        <method signature="UsersTest.verifyAddUserWithValidDetails()[pri:2, instance:test.UsersTest@62727399]" name="verifyAddUserWithValidDetails" class="test.UsersTest"/>
-        <method signature="LoginTest.verifyLoginUsingValidCredentials()[pri:3, instance:test.LoginTest@4612b856]" name="verifyLoginUsingValidCredentials" class="test.LoginTest"/>
-        <method signature="LoginTest.verifyLoginWithUppercaseInsensitiveEmail()[pri:11, instance:test.LoginTest@4612b856]" name="verifyLoginWithUppercaseInsensitiveEmail" class="test.LoginTest"/>
-        <method signature="LoginTest.verifyLoginWithLowercaseInsensitiveEmail()[pri:12, instance:test.LoginTest@4612b856]" name="verifyLoginWithLowercaseInsensitiveEmail" class="test.LoginTest"/>
+        <method signature="LogoutTest.verifyReLoginImmediatelyAfterLogout()[pri:2, instance:test.LogoutTest@3a0baae5]" name="verifyReLoginImmediatelyAfterLogout" class="test.LogoutTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-03-22T19:29:14 IST" name="Test" finished-at="2025-03-22T19:31:54 IST" duration-ms="160916">
-      <class name="test.UsersTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@62727399]" started-at="2025-03-22T19:31:24 IST" name="setup" finished-at="2025-03-22T19:31:35 IST" duration-ms="10678" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyNavigationToUsersModule()[pri:1, instance:test.UsersTest@62727399]" started-at="2025-03-22T19:31:35 IST" name="verifyNavigationToUsersModule" finished-at="2025-03-22T19:31:36 IST" duration-ms="1666" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyNavigationToUsersModule -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@62727399]" started-at="2025-03-22T19:31:36 IST" name="tearDown" finished-at="2025-03-22T19:31:37 IST" duration-ms="298" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@62727399]" started-at="2025-03-22T19:31:37 IST" name="setup" finished-at="2025-03-22T19:31:49 IST" duration-ms="11871" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyAddUserWithValidDetails()[pri:2, instance:test.UsersTest@62727399]" started-at="2025-03-22T19:31:49 IST" name="verifyAddUserWithValidDetails" finished-at="2025-03-22T19:31:54 IST" duration-ms="5332" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully submitted!] but found [User name is already exists]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully submitted!] but found [User name is already exists]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at test.UsersTest.verifyAddUserWithValidDetails(UsersTest.java:81)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAddUserWithValidDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@62727399]" started-at="2025-03-22T19:31:54 IST" name="tearDown" finished-at="2025-03-22T19:31:54 IST" duration-ms="251" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- test.UsersTest -->
-      <class name="test.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:29:14 IST" name="setup" finished-at="2025-03-22T19:29:41 IST" duration-ms="27112" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyLoginPageTitleAndUrl()[pri:1, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:29:41 IST" name="verifyLoginPageTitleAndUrl" finished-at="2025-03-22T19:29:41 IST" duration-ms="84" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginPageTitleAndUrl -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:29:41 IST" name="tearDown" finished-at="2025-03-22T19:29:41 IST" duration-ms="305" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:29:41 IST" name="setup" finished-at="2025-03-22T19:29:55 IST" duration-ms="13433" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyFieldAndCheckboxLabels()[pri:2, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:29:55 IST" name="verifyFieldAndCheckboxLabels" finished-at="2025-03-22T19:29:55 IST" duration-ms="474" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyFieldAndCheckboxLabels -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:29:55 IST" name="tearDown" finished-at="2025-03-22T19:29:56 IST" duration-ms="307" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:29:56 IST" name="setup" finished-at="2025-03-22T19:30:02 IST" duration-ms="6859" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyLoginUsingValidCredentials()[pri:3, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:30:02 IST" name="verifyLoginUsingValidCredentials" finished-at="2025-03-22T19:30:05 IST" duration-ms="2084" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginUsingValidCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:30:05 IST" name="tearDown" finished-at="2025-03-22T19:30:05 IST" duration-ms="210" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:30:05 IST" name="setup" finished-at="2025-03-22T19:30:12 IST" duration-ms="7240" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyLoginWithUppercaseInsensitiveEmail()[pri:11, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:30:12 IST" name="verifyLoginWithUppercaseInsensitiveEmail" finished-at="2025-03-22T19:30:14 IST" duration-ms="1563" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithUppercaseInsensitiveEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:30:14 IST" name="tearDown" finished-at="2025-03-22T19:30:14 IST" duration-ms="231" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:30:14 IST" name="setup" finished-at="2025-03-22T19:30:20 IST" duration-ms="6548" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyLoginWithLowercaseInsensitiveEmail()[pri:12, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:30:20 IST" name="verifyLoginWithLowercaseInsensitiveEmail" finished-at="2025-03-22T19:30:22 IST" duration-ms="1770" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithLowercaseInsensitiveEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LoginTest@4612b856]" started-at="2025-03-22T19:30:22 IST" name="tearDown" finished-at="2025-03-22T19:30:22 IST" duration-ms="172" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- test.LoginTest -->
-      <class name="test.TransactionsTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.TransactionsTest@2826f61]" started-at="2025-03-22T19:30:53 IST" name="setup" finished-at="2025-03-22T19:31:04 IST" duration-ms="11050" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyNavigationToUsersModule()[pri:1, instance:test.TransactionsTest@2826f61]" started-at="2025-03-22T19:31:04 IST" name="verifyNavigationToUsersModule" finished-at="2025-03-22T19:31:06 IST" duration-ms="2286" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyNavigationToUsersModule -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TransactionsTest@2826f61]" started-at="2025-03-22T19:31:06 IST" name="tearDown" finished-at="2025-03-22T19:31:06 IST" duration-ms="302" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.TransactionsTest@2826f61]" started-at="2025-03-22T19:31:06 IST" name="setup" finished-at="2025-03-22T19:31:19 IST" duration-ms="12537" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyAddTransactionWithValidData()[pri:2, instance:test.TransactionsTest@2826f61]" started-at="2025-03-22T19:31:19 IST" name="verifyAddTransactionWithValidData" finished-at="2025-03-22T19:31:24 IST" duration-ms="4841" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully submitted!] but found [Feature Code already exists]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully submitted!] but found [Feature Code already exists]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at test.TransactionsTest.verifyAddTransactionWithValidData(TransactionsTest.java:69)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAddTransactionWithValidData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TransactionsTest@2826f61]" started-at="2025-03-22T19:31:24 IST" name="tearDown" finished-at="2025-03-22T19:31:24 IST" duration-ms="214" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- test.TransactionsTest -->
+    <test started-at="2025-03-23T12:11:14 IST" name="Default test" finished-at="2025-03-23T12:11:39 IST" duration-ms="24963">
       <class name="test.LogoutTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LogoutTest@13d9b21f]" started-at="2025-03-22T19:30:22 IST" name="setup" finished-at="2025-03-22T19:30:37 IST" duration-ms="14537" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.LogoutTest@3a0baae5]" started-at="2025-03-23T12:11:14 IST" name="setup" finished-at="2025-03-23T12:11:36 IST" duration-ms="21307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyLogoutFromLogoutOptionUnderProfile()[pri:1, instance:test.LogoutTest@13d9b21f]" started-at="2025-03-22T19:30:37 IST" name="verifyLogoutFromLogoutOptionUnderProfile" finished-at="2025-03-22T19:30:38 IST" duration-ms="1286" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogoutFromLogoutOptionUnderProfile -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LogoutTest@13d9b21f]" started-at="2025-03-22T19:30:38 IST" name="tearDown" finished-at="2025-03-22T19:30:38 IST" duration-ms="339" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LogoutTest@13d9b21f]" started-at="2025-03-22T19:30:38 IST" name="setup" finished-at="2025-03-22T19:30:48 IST" duration-ms="9369" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyReLoginImmediatelyAfterLogout()[pri:2, instance:test.LogoutTest@13d9b21f]" started-at="2025-03-22T19:30:48 IST" name="verifyReLoginImmediatelyAfterLogout" finished-at="2025-03-22T19:30:52 IST" duration-ms="4416" status="PASS">
+        <test-method signature="verifyReLoginImmediatelyAfterLogout()[pri:2, instance:test.LogoutTest@3a0baae5]" started-at="2025-03-23T12:11:36 IST" name="verifyReLoginImmediatelyAfterLogout" finished-at="2025-03-23T12:11:39 IST" duration-ms="3170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyReLoginImmediatelyAfterLogout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LogoutTest@13d9b21f]" started-at="2025-03-22T19:30:52 IST" name="tearDown" finished-at="2025-03-22T19:30:53 IST" duration-ms="327" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LogoutTest@3a0baae5]" started-at="2025-03-23T12:11:39 IST" name="tearDown" finished-at="2025-03-23T12:11:39 IST" duration-ms="440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- test.LogoutTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Smoke -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
