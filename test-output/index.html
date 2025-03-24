@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\dusan\AppData\Local\Temp\testng-eclipse-1549664774\testng-customsuite.xml</span>
+                    <span>C:\Users\dusan\AppData\Local\Temp\testng-eclipse-1838652025\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="test.UsersTest" class="method navigator-link" hash-for-method="verifySavedUserDetailsInEditWindow">verifySavedUserDetailsInEditWindow</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.UsersTest" class="method navigator-link" hash-for-method="verifyUsersModuleFooterSection">verifyUsersModuleFooterSection</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,22 +126,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySavedUserDetailsInEditWindow">
-                  </a> <!-- verifySavedUserDetailsInEditWindow -->
-                  <span class="method-name">verifySavedUserDetailsInEditWindow</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	expected [atbs] but found [A B Traders],
-	expected [dasfd] but found [Plant],
-	expected [1234567890] but found [9948021022],
-	expected [abc@yomail.com] but found [Kolkota@plant.com],
-	expected [userss] but found [100013],
-	expected [Plant] but found [null],
-	expected [VCPL - Panthnagar] but found [null],
-	expected [None] but found [null],
-	expected [Testing role] but found [null]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at test.UsersTest.verifySavedUserDetailsInEditWindow(UsersTest.java:208)
+                  <a name="verifyUsersModuleFooterSection">
+                  </a> <!-- verifyUsersModuleFooterSection -->
+                  <span class="method-name">verifyUsersModuleFooterSection</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [© 2025, Eseal.ioo] but found [© 2025, Eseal.io]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.UsersTest.verifyUsersModuleFooterSection(UsersTest.java:78)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -177,7 +172,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\dusan\AppData\Local\Temp\testng-eclipse-1549664774\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\dusan\AppData\Local\Temp\testng-eclipse-1838652025\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -188,7 +183,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;test.UsersTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifySavedUserDetailsInEditWindow&quot;/&gt;
+          &lt;include name=&quot;verifyUsersModuleFooterSection&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- test.UsersTest --&gt;
     &lt;/classes&gt;
@@ -232,14 +227,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifySavedUserDetailsInEditWindow')
+data.setCell(0, 1, 'verifyUsersModuleFooterSection')
 data.setCell(0, 2, 'test.UsersTest')
-data.setCell(0, 3, 14623);
+data.setCell(0, 3, 137);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 137 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -254,19 +249,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">9 ignored methods</span>
+            <span class="header-content">11 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">test.UsersTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyAddUserWithDuplicateUserName</span>
-                <br/>
-                <span class="ignored-method-name">verifyUserInUsersModuleGridWithPagination</span>
-                <br/>
                 <span class="ignored-method-name">verifySearchUser</span>
                 <br/>
-                <span class="ignored-method-name">verifyAddUserUsingLeadingAndTrailingSpaces</span>
+                <span class="ignored-method-name">verifyMandatoryFieldValidationForUpdatePassword</span>
+                <br/>
+                <span class="ignored-method-name">verifySavedUserDetailsInEditWindow</span>
                 <br/>
                 <span class="ignored-method-name">verifyNavigationToUsersModule</span>
                 <br/>
@@ -274,9 +267,15 @@ return data;
                 <br/>
                 <span class="ignored-method-name">verifyAddUserWithValidDetails</span>
                 <br/>
-                <span class="ignored-method-name">verifyMandatoryFieldValidationForAddUser</span>
+                <span class="ignored-method-name">verifyUsersModuleDetails</span>
                 <br/>
-                <span class="ignored-method-name">verifyMandatoryFieldValidationForUpdatePassword</span>
+                <span class="ignored-method-name">verifyMandatoryFieldAlertsInAddUser</span>
+                <br/>
+                <span class="ignored-method-name">verifyAddUserWithDuplicateUserName</span>
+                <br/>
+                <span class="ignored-method-name">verifyUserInUsersModuleGridWithPagination</span>
+                <br/>
+                <span class="ignored-method-name">verifyAddUserUsingLeadingAndTrailingSpaces</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -296,12 +295,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifySavedUserDetailsInEditWindow</span>
-                <span class="method-start">14157 ms</span>
+                <span class="method-name">verifyUsersModuleFooterSection</span>
+                <span class="method-start">10568 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">28789 ms</span>
+                <span class="method-start">10713 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -27,6 +27,16 @@ public class RootPage {
 	@FindBy(xpath = "(//button[@type='button' and contains(@aria-label, 'Go to page')])[last()]")
 	private WebElement lastPageNumberElement;
 	
+	
+	@FindBy(xpath = "//p[@class='pull-right-ica']")
+	private WebElement footerSectionTextElement;
+	
+	public WebElement getFooterSectionTextElement() {
+		return footerSectionTextElement;
+	}
+	
+	
+	
 	public int getLastPageCount() {
 		String count = elementUtilities.getTextFromElement(lastPageNumberElement);
 		return Integer.parseInt(count.trim());

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite >
+<suite name="parellel" parallel="tests" thread-count="3">
+    <listeners>
+        <listener class-name="listeners.MyListeners"></listener>
+    </listeners>
+    <test name="Login Tests">
+        <classes>
+            <class name="test.LoginTest" />
+        </classes>
+    </test>
+    <test name="Logout Tests">
+        <classes>
+            <class name="test.LogoutTest" />
+        </classes>
+    </test>
+</suite> <!-- Suite -->

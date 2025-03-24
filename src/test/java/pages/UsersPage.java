@@ -378,7 +378,11 @@ public class UsersPage extends RootPage {
 	}
 
 	
-
+	public String getfooterSectionText() {
+		return elementUtilities.getTextFromElement(getFooterSectionTextElement());
+	
+	}
+	
 
 	public boolean searchRecord(String searchInputOrUserName, String firstName, String lastName, String roleName,
 			String email, String status, String phoneNumber) {

@@ -23,9 +23,8 @@ public class UsersTest extends Base {
 	public LoginPage loginPage;
 	public HomePage homePage;
 	public UsersPage usersPage;
-	
 
-	@BeforeMethod(alwaysRun=true)
+	@BeforeMethod(alwaysRun = true)
 	public void setup() {
 		try {
 			driver = openBrowserAndApplicationURL();
@@ -39,19 +38,19 @@ public class UsersTest extends Base {
 			usersPage = homePage.clickOnUsersOption();
 			Assert.assertEquals(getPageTitle(), prop.getProperty("usersPageTitle"));
 			Assert.assertEquals(getUrl(), getExpectedPageURL("usersPageUrl"));
-		  } catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail("Setup method failed due to exception: " + e.getMessage());
 		}
 
 	}
 
-	@AfterMethod(alwaysRun=true)
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		quitBrowser(driver);
 	}
 
-	@Test(priority = 1, groups= {"Smoke"})
+	@Test(priority = 1, groups = { "Smoke" })
 	public void verifyNavigationToUsersModule() {
 		Assert.assertEquals(usersPage.usersPageHeading(), prop.getProperty("usersPageHeading"));
 		homePage.clickOnProfileIcon();
@@ -59,7 +58,131 @@ public class UsersTest extends Base {
 
 	}
 
-	@Test(priority = 2, groups= {"Smoke"})
+	
+	@Test(groups="debug")
+	public void verifyUsersModuleDetails() {
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertEquals(getPageTitle(), prop.getProperty("usersPageTitle"), "Users Page Title Mismatched");
+		softAssert.assertEquals(getUrl(), getExpectedPageURL("usersPageUrl1"), "Users Page URL is mismatched");
+		softAssert.assertEquals(usersPage.usersPageHeading(), prop.getProperty("usersPageHeading1"), "Users Page Heading mismatchd");
+		softAssert.assertAll();
+	}
+	
+	public void verifyUsersModuleHeaderSection() {
+		//eSeal logo
+		//Customer logo
+		//Expand button
+		//profile icon
+		//loged in mail
+		
+	}
+
+	@Test
+	public void verifyUsersModuleFooterSection() {
+		Assert.assertEquals(usersPage.getfooterSectionText(), "© 2025, Eseal.io"); 
+		}
+	
+	public void verifyNavigationToAddUserPage() {
+		usersPage.clickOnAddUserButton();
+		Assert.assertTrue(usersPage.addUserWindowHeading());
+	}
+	
+	public void verifyFieldLabelAndButtonTextInAddUserPage() {
+
+	}
+	
+	public void verifyAsteriskSymbolForMandatoryFields() {
+
+	}
+	
+	public void verifyAddUserFormFieldPlaceholders() {
+
+	}
+	
+	
+	@Test(priority = 4)
+	public void verifyMandatoryFieldAlertsInAddUser() {
+		SoftAssert softAssert = new SoftAssert();
+		usersPage.clickOnAddUserButton();
+		Assert.assertTrue(usersPage.addUserWindowHeading());
+		usersPage.clickOnSaveButton();
+		softAssert.assertEquals(usersPage.getFirstNameFieldWarningAlert(), "The first name field is required.");
+		softAssert.assertEquals(usersPage.getLastNameFieldWarningAlert(), "The last name field is required.");
+		softAssert.assertEquals(usersPage.getPhoneNumberFieldWarningAlert(), "The phone number field is required.");
+		softAssert.assertEquals(usersPage.getEmailFieldWarningAlert(), "The email field is required.");
+		softAssert.assertEquals(usersPage.getPasswordFieldWarningAlert(), "The password field is required.");
+		softAssert.assertEquals(usersPage.getConfirmPasswordFieldWarningAlert(),
+				"The confirm password field is required.");
+		softAssert.assertEquals(usersPage.getLocationTypeFieldWarningAlert(), "The location type field is required.");
+		softAssert.assertEquals(usersPage.getLocationFieldWarningAlert(), "The location field is required.");
+		softAssert.assertEquals(usersPage.getBusinessUnitFieldWarningAlert(), "The business unit field is required.");
+		softAssert.assertEquals(usersPage.getAssignRoleFieldWarningAlert(), "The assign role field is required.");
+		softAssert.assertAll();
+		usersPage.clickOnCloseButton();
+		homePage.clickOnProfileIcon();
+		homePage.clickOnLogoutIcon();
+
+	}
+
+	
+	
+	public void verifyAddUserWithValidData() {
+
+	}
+	
+	public void verifyAddUserWithExistingUserName() {
+
+	}
+	
+	public void verifyAddUserWithExistingEmail() {
+
+	}
+	
+	public void verifyAddUserWithMismatchedPassword() {
+
+	}
+	
+	public void verifyAddUserWithInvalidEmailFormat() {
+
+	}
+	
+	public void verifyAddUserWithInvalidPhoneNumber() {
+
+	}
+	
+	public void verifyAddUserWithLongUserName() {
+
+	}
+	
+	public void verifyAddUserWithEmptySpacesInFields() {
+
+	}
+	
+	public void verifyAddUserWithTrillingSpaces() {
+
+	}
+	
+	public void verifyCloseAddUserWithoutEnteringDetails() {
+
+	}
+	
+	public void verifyCloseAddUserUsingCloseIcon() {
+
+	}
+	
+	
+	public void verifyCloseAddUserUsingCloseButton() {
+
+	}
+	
+	
+	public void verifyVerticalScrollInAddUserPage() {
+
+	}
+	
+	
+
+	@Test(priority = 2, groups = { "Smoke" })
 	public void verifyAddUserWithValidDetails() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
@@ -101,40 +224,17 @@ public class UsersTest extends Base {
 
 	}
 
-	@Test(priority = 4)
-	public void verifyMandatoryFieldValidationForAddUser() {
-		SoftAssert softAssert = new SoftAssert();
-		usersPage.clickOnAddUserButton();
-		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.clickOnSaveButton();
-		softAssert.assertEquals(usersPage.getFirstNameFieldWarningAlert(), "The first name field is required.");
-		softAssert.assertEquals(usersPage.getLastNameFieldWarningAlert(), "The last name field is required.");
-		softAssert.assertEquals(usersPage.getPhoneNumberFieldWarningAlert(), "The phone number field is required.");
-		softAssert.assertEquals(usersPage.getEmailFieldWarningAlert(), "The email field is required.");
-		softAssert.assertEquals(usersPage.getPasswordFieldWarningAlert(), "The password field is required.");
-		softAssert.assertEquals(usersPage.getConfirmPasswordFieldWarningAlert(),
-				"The confirm password field is required.");
-		softAssert.assertEquals(usersPage.getLocationTypeFieldWarningAlert(), "The location type field is required.");
-		softAssert.assertEquals(usersPage.getLocationFieldWarningAlert(), "The location field is required.");
-		softAssert.assertEquals(usersPage.getBusinessUnitFieldWarningAlert(), "The business unit field is required.");
-		softAssert.assertEquals(usersPage.getAssignRoleFieldWarningAlert(), "The assign role field is required.");
-		softAssert.assertAll();
-		usersPage.clickOnCloseButton();
-		homePage.clickOnProfileIcon();
-		homePage.clickOnLogoutIcon();
 
-	}
-	
 	@Test(priority = 4)
 	public void verifyMandatoryFieldValidationForUpdatePassword() {
 		SoftAssert softAssert = new SoftAssert();
-		usersPage.searchAndClickIcon("userss", "atbs", "dasfd", "abc@yomail.com","updatePassword");
+		usersPage.searchAndClickIcon("userss", "atbs", "dasfd", "abc@yomail.com", "updatePassword");
 		Assert.assertTrue(usersPage.updatePasswordWindowHeading());
 		usersPage.clickOnSaveButton();
 		softAssert.assertEquals(usersPage.getPasswordFieldWarningAlert(), "The password field is required.");
 		softAssert.assertEquals(usersPage.getConfirmPasswordFieldWarningAlert(),
 				"The confirm password field is required.");
-				softAssert.assertAll();
+		softAssert.assertAll();
 		usersPage.clickOnCloseButton();
 		homePage.clickOnProfileIcon();
 		homePage.clickOnLogoutIcon();
@@ -167,22 +267,23 @@ public class UsersTest extends Base {
 
 	@Test(priority = 6)
 	public void verifySearchUser() throws InterruptedException, AWTException {
-		
-		  usersPage.enterSerachTextAndSearch("atbs");
-		  clickKeyboradKeyMultipleTimes(driver, Keys.RETURN, 1); 
-			/*
-			 * Robot robot = new Robot(); robot.keyPress(KeyEvent.VK_ENTER);
-			 * robot.keyRelease(KeyEvent.VK_ENTER);
-			 */
-		  usersPage.clickOnEditUserIcon();
-		 
+
+		usersPage.enterSerachTextAndSearch("atbs");
+		clickKeyboradKeyMultipleTimes(driver, Keys.RETURN, 1);
+		/*
+		 * Robot robot = new Robot(); robot.keyPress(KeyEvent.VK_ENTER);
+		 * robot.keyRelease(KeyEvent.VK_ENTER);
+		 */
+		usersPage.clickOnEditUserIcon();
+
 	}
 
 	@Test(priority = 7)
 	public void verifySavedUserDetailsInEditWindow() {
 		SoftAssert softAssert = new SoftAssert();
-		//usersPage.searchAndClickIcon("userss", "atbs", "dasfd", "abc@yomail.com","edit");
-		usersPage.searchAndClickIcon("100013", "A B Traders", "Plant", "Kolkota@plant.com","edit");
+		// usersPage.searchAndClickIcon("userss", "atbs", "dasfd",
+		// "abc@yomail.com","edit");
+		usersPage.searchAndClickIcon("100013", "A B Traders", "Plant", "Kolkota@plant.com", "edit");
 		Assert.assertTrue(usersPage.editUserWindowHeading());
 		String firstName = "atbs";
 		String lastName = "dasfd";
@@ -194,7 +295,7 @@ public class UsersTest extends Base {
 		String businessUnit = "None";
 		String assingRole = "Testing role";
 		boolean activeStatus = true;
-		
+
 		softAssert.assertEquals(usersPage.getFirstNameFieldDoMValue(), firstName);
 		softAssert.assertEquals(usersPage.getLastNameFieldDoMValue(), lastName);
 		softAssert.assertEquals(usersPage.getPhoneNumberFieldDoMValue(), phoneNumber);
@@ -212,15 +313,15 @@ public class UsersTest extends Base {
 	@Test
 	public void verifyDeleteUser() throws InterruptedException {
 		SoftAssert softAssert = new SoftAssert();
-		boolean result = usersPage.searchAndClickIcon("userss", "atbs", "dasfd", "abc@yomail.com","delete");
+		boolean result = usersPage.searchAndClickIcon("userss", "atbs", "dasfd", "abc@yomail.com", "delete");
 		System.out.println(result);
 		Thread.sleep(10000);
 		softAssert.assertEquals(usersPage.getdeleteConfirmationAlertTitleText(), "Are you sure?");
-		softAssert.assertEquals(usersPage.getdeleteConfirmationAlertText(), "Once deleted, you will not be able to recover this data!");
+		softAssert.assertEquals(usersPage.getdeleteConfirmationAlertText(),
+				"Once deleted, you will not be able to recover this data!");
 		softAssert.assertAll();
 	}
-	
-	
+
 	@Test(priority = 8)
 	public void verifyUserInUsersModuleGridWithPagination() {
 		boolean userFound = usersPage.searchRecord("40078", "Triwendra", "Joshi", "Panthnagar GRN Operations",
@@ -235,8 +336,5 @@ public class UsersTest extends Base {
 		homePage.clickOnLogoutIcon();
 
 	}
-	
-	
-	
 
 }

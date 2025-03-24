@@ -5,7 +5,7 @@
     <classes>
       <class name="test.UsersTest">
         <methods>
-          <include name="verifySavedUserDetailsInEditWindow"/>
+          <include name="verifyUsersModuleFooterSection"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

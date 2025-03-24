@@ -2,43 +2,29 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-23T15:20:14 IST" name="Default suite" finished-at="2025-03-23T15:20:43 IST" duration-ms="29245">
+  <suite started-at="2025-03-24T23:28:24 IST" name="Default suite" finished-at="2025-03-24T23:28:35 IST" duration-ms="11236">
     <groups>
     </groups>
-    <test started-at="2025-03-23T15:20:14 IST" name="Default test" finished-at="2025-03-23T15:20:43 IST" duration-ms="29245">
+    <test started-at="2025-03-24T23:28:24 IST" name="Default test" finished-at="2025-03-24T23:28:35 IST" duration-ms="11236">
       <class name="test.UsersTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@403f0a22]" started-at="2025-03-23T15:20:14 IST" name="setup" finished-at="2025-03-23T15:20:28 IST" duration-ms="14157" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@5a709816]" started-at="2025-03-24T23:28:24 IST" name="setup" finished-at="2025-03-24T23:28:35 IST" duration-ms="10558" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySavedUserDetailsInEditWindow()[pri:7, instance:test.UsersTest@403f0a22]" started-at="2025-03-23T15:20:28 IST" name="verifySavedUserDetailsInEditWindow" finished-at="2025-03-23T15:20:43 IST" duration-ms="14623" status="FAIL">
+        <test-method signature="verifyUsersModuleFooterSection()[pri:0, instance:test.UsersTest@5a709816]" started-at="2025-03-24T23:28:35 IST" name="verifyUsersModuleFooterSection" finished-at="2025-03-24T23:28:35 IST" duration-ms="137" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The following asserts failed:
-expected [atbs] but found [A B Traders],
-expected [dasfd] but found [Plant],
-expected [1234567890] but found [9948021022],
-expected [abc@yomail.com] but found [Kolkota@plant.com],
-expected [userss] but found [100013],
-expected [Plant] but found [null],
-expected [VCPL - Panthnagar] but found [null],
-expected [None] but found [null],
-expected [Testing role] but found [null]]]>
+              <![CDATA[expected [© 2025, Eseal.ioo] but found [© 2025, Eseal.io]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [atbs] but found [A B Traders],
-expected [dasfd] but found [Plant],
-expected [1234567890] but found [9948021022],
-expected [abc@yomail.com] but found [Kolkota@plant.com],
-expected [userss] but found [100013],
-expected [Plant] but found [null],
-expected [VCPL - Panthnagar] but found [null],
-expected [None] but found [null],
-expected [Testing role] but found [null]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at test.UsersTest.verifySavedUserDetailsInEditWindow(UsersTest.java:208)
+              <![CDATA[java.lang.AssertionError: expected [© 2025, Eseal.ioo] but found [© 2025, Eseal.io]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at test.UsersTest.verifyUsersModuleFooterSection(UsersTest.java:78)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -70,8 +56,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySavedUserDetailsInEditWindow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@403f0a22]" started-at="2025-03-23T15:20:43 IST" name="tearDown" finished-at="2025-03-23T15:20:43 IST" duration-ms="413" status="PASS">
+        </test-method> <!-- verifyUsersModuleFooterSection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@5a709816]" started-at="2025-03-24T23:28:35 IST" name="tearDown" finished-at="2025-03-24T23:28:35 IST" duration-ms="481" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
