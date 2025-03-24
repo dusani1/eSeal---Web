@@ -38,7 +38,7 @@ public class UsersTest extends Base {
 			homePage.clickOnAutorizationOption();
 			usersPage = homePage.clickOnUsersOption();
 			Assert.assertEquals(getPageTitle(), prop.getProperty("usersPageTitle"));
-			Assert.assertEquals(getUrl(), getExpectedPageURL("usersPageTitle"));
+			Assert.assertEquals(getUrl(), getExpectedPageURL("usersPageUrl"));
 		  } catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail("Setup method failed due to exception: " + e.getMessage());
