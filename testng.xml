@@ -4,12 +4,12 @@
 	<listeners>
 		<listener class-name="listeners.MyListeners"></listener>
 	</listeners>
-	<test thread-count="5" name="Test">
-		<groups>
+	<test thread-count="2" name="Test">
+		<!-- <groups>
 			<run>
 				<include name="debug" />
 			</run>
-		</groups>		
+		</groups>	 -->	
 		<classes>
 			<!-- <class name="test.LoginTest" />
 			<class name="test.LogoutTest" /> -->

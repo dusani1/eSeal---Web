@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="tests" name="Failed suite [parellel]">
+<suite thread-count="2" parallel="tests" name="Failed suite [parellel]">
   <listeners>
     <listener class-name="listeners.MyListeners"/>
   </listeners>
-  <test thread-count="3" parallel="tests" name="Logout Tests(failed)">
+  <test thread-count="2" parallel="tests" name="Users Tests(failed)">
     <classes>
-      <class name="test.LogoutTest">
+      <class name="test.UsersTest">
         <methods>
-          <include name="verifyAutoLogoutAfterSessionTimeout"/>
+          <include name="verifyAddUserWithExistingEmail"/>
+          <include name="verifyAddUserUsingLeadingAndTrailingSpaces"/>
+          <include name="verifySavedUserDetailsInEditWindow"/>
+          <include name="verifyUsersModuleDetails"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="verifyMandatoryFieldValidationForUpdatePassword"/>
+          <include name="verifyAddUserWithValidData"/>
         </methods>
-      </class> <!-- test.LogoutTest -->
+      </class> <!-- test.UsersTest -->
     </classes>
-  </test> <!-- Logout Tests(failed) -->
+  </test> <!-- Users Tests(failed) -->
 </suite> <!-- Failed suite [parellel] -->

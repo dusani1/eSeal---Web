@@ -187,6 +187,22 @@ public class ElementUtilities {
 	public String getElementDomProperty(WebElement element, String attributeName) {
 		return element.getDomProperty(attributeName);
 	}
+	
+	public String getPlaceholderValue(WebElement element) {
+	    return element.getDomAttribute("placeholder");
+	}
+
+	public boolean validateDropdownPlaceholder(WebElement dropdown, String expectedPlaceholder) {
+        Select select = new Select(dropdown);
+        String selectedOption = select.getFirstSelectedOption().getText();
+        return selectedOption.equals(expectedPlaceholder);
+    }
+	
+	public String getDropdownPlaceholder(WebElement dropdown) {
+        Select select = new Select(dropdown);
+        return select.getFirstSelectedOption().getText();     
+    }
+
 
 	public boolean isElementSelected(WebElement element) {
 		boolean b = false;
