@@ -5,9 +5,9 @@
     <classes>
       <class name="test.UsersTest">
         <methods>
-          <include name="verifyFieldLabelAndAsteriskSymbolForMandatoryFieldsInAddUserPage"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="verifyAddUserWithValidData"/>
         </methods>
       </class> <!-- test.UsersTest -->
     </classes>

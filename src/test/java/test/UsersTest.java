@@ -59,78 +59,94 @@ public class UsersTest extends Base {
 
 	}
 
-	
-	@Test(groups="debug")
+	@Test(groups = "debug")
 	public void verifyUsersModuleDetails() {
 		softAssert = new SoftAssert();
 		softAssert.assertEquals(getPageTitle(), prop.getProperty("usersPageTitle"), "Users Page Title Mismatched");
 		softAssert.assertEquals(getUrl(), getExpectedPageURL("usersPageUrl"), "Users Page URL is mismatched");
-		softAssert.assertEquals(usersPage.usersPageHeading(), prop.getProperty("usersPageHeading1"), "Users Page Heading mismatchd");
+		softAssert.assertEquals(usersPage.usersPageHeading(), prop.getProperty("usersPageHeading1"),
+				"Users Page Heading mismatchd");
 		softAssert.assertAll();
 	}
-	
+
 	public void verifyUsersModuleHeaderSection() {
-		//eSeal logo
-		//Customer logo
-		//Expand button
-		//profile icon
-		//loged in mail
-		
+		// eSeal logo
+		// Customer logo
+		// Expand button
+		// profile icon
+		// loged in mail
+
 	}
 
 	@Test
 	public void verifyUsersModuleFooterSection() {
-		Assert.assertEquals(usersPage.getfooterSectionText(), "© 2025, Eseal.io"); 
-		}
-	
+		Assert.assertEquals(usersPage.getfooterSectionText(), "© 2025, Eseal.io");
+	}
+
 	@Test
 	public void verifyNavigationToAddUserPage() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
 	}
-	
+
 	@Test
 	public void verifyFieldLabelAndAsteriskSymbolForMandatoryFieldsInAddUserPage() {
 		softAssert = new SoftAssert();
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		softAssert.assertEquals(usersPage.getFirstNameFieldLabelText(), "First Name*", "First Name field label mismached");
-		softAssert.assertEquals(usersPage.getLasttNameFieldLabelText(), "Last Name*", "Last Name field label mismached");
-		softAssert.assertEquals(usersPage.getPhoneNumberrFieldLabelText(), "Phone Number*", "Phone Number field label mismached");
+		softAssert.assertEquals(usersPage.getFirstNameFieldLabelText(), "First Name*",
+				"First Name field label mismached");
+		softAssert.assertEquals(usersPage.getLasttNameFieldLabelText(), "Last Name*",
+				"Last Name field label mismached");
+		softAssert.assertEquals(usersPage.getPhoneNumberrFieldLabelText(), "Phone Number*",
+				"Phone Number field label mismached");
 		softAssert.assertEquals(usersPage.getEmailFieldLabelText(), "Email*", "Email field label mismached");
-		softAssert.assertEquals(usersPage.getUserNameFieldLabelText(), "User Name*", "FUser Name field label mismached");
+		softAssert.assertEquals(usersPage.getUserNameFieldLabelText(), "User Name*", "User Name field label mismached");
 		softAssert.assertEquals(usersPage.getPasswordFieldLabelText(), "Password*", "Password field label mismached");
-		softAssert.assertEquals(usersPage.getConfirmPasswordFieldLabelText(), "Confirm Password*", "Confirm Password field label mismached");
-		softAssert.assertEquals(usersPage.getLocationTypeFieldLabelText(), "Location Type*", "Location Type field label mismached");
+		softAssert.assertEquals(usersPage.getConfirmPasswordFieldLabelText(), "Confirm Password*",
+				"Confirm Password field label mismached");
+		softAssert.assertEquals(usersPage.getLocationTypeFieldLabelText(), "Location Type*",
+				"Location Type field label mismached");
 		softAssert.assertEquals(usersPage.getLocationFieldLabelText(), "Location*", "Location field label mismached");
-		softAssert.assertEquals(usersPage.getBusinessUnitFieldLabelText(), "Business Unit*", "Business Unit field label mismached");
-		softAssert.assertEquals(usersPage.getAssignRoleFieldLabelText(), "Assign Role*", "Assign Role field label mismached");
+		softAssert.assertEquals(usersPage.getBusinessUnitFieldLabelText(), "Business Unit*",
+				"Business Unit field label mismached");
+		softAssert.assertEquals(usersPage.getAssignRoleFieldLabelText(), "Assign Role*",
+				"Assign Role field label mismached");
 		softAssert.assertEquals(usersPage.getActiveCheckboxLabelText(), "Active*", "Active field label mismached");
-		softAssert.assertAll();		
-		
+		softAssert.assertAll();
+
 	}
-	
 
 	@Test
 	public void verifyAddUserFormFieldPlaceholders() {
 		softAssert = new SoftAssert();
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		softAssert.assertEquals(usersPage.getFirstNameFieldPlaceholderText(), "First Name", "First Name field placeholder text mismached");
-		softAssert.assertEquals(usersPage.getLasttNameFieldPlaceholderText(), "Last Name", "Last Name field placeholder text mismached");
-		softAssert.assertEquals(usersPage.getPhoneNumberrFieldPlaceholderText(), "Phone Number", "Phone Number placeholder text label mismached");
-		softAssert.assertEquals(usersPage.getEmailFieldPlaceholderText(), "Email", "Email field placeholder text mismached");
-		softAssert.assertEquals(usersPage.getUserNameFieldPlaceholderText(), "User Name", "FUser Name field placeholder text mismached");
-		softAssert.assertEquals(usersPage.getPasswordFieldPlaceholderText(), "Password", "Password field placeholder text mismached");
-		softAssert.assertEquals(usersPage.getConfirmPasswordFieldPlaceholderText(), "Confirm Password", "Confirm Password field placeholder text mismached");
-		softAssert.assertEquals(usersPage.getLocationTypeFieldPlaceholderText(), "Please Select", "Location Type field placeholder text mismached");
-		softAssert.assertEquals(usersPage.getLocationFieldPlaceholderText(), "Please Select", "Location field placeholder text mismached");
-		softAssert.assertEquals(usersPage.getBusinessUnitFieldPlaceholderText(), "Please Select", "Business Unit field placeholder text mismached");
-		softAssert.assertEquals(usersPage.getAssignRoleFieldPlaceholderText(), "Please Select", "Assign Role field placeholder text mismached");
-		softAssert.assertAll();		
+		softAssert.assertEquals(usersPage.getFirstNameFieldPlaceholderText(), "First Name",
+				"First Name field placeholder text mismached");
+		softAssert.assertEquals(usersPage.getLasttNameFieldPlaceholderText(), "Last Name",
+				"Last Name field placeholder text mismached");
+		softAssert.assertEquals(usersPage.getPhoneNumberrFieldPlaceholderText(), "Phone Number",
+				"Phone Number placeholder text label mismached");
+		softAssert.assertEquals(usersPage.getEmailFieldPlaceholderText(), "Email",
+				"Email field placeholder text mismached");
+		softAssert.assertEquals(usersPage.getUserNameFieldPlaceholderText(), "User Name",
+				"FUser Name field placeholder text mismached");
+		softAssert.assertEquals(usersPage.getPasswordFieldPlaceholderText(), "Password",
+				"Password field placeholder text mismached");
+		softAssert.assertEquals(usersPage.getConfirmPasswordFieldPlaceholderText(), "Confirm Password",
+				"Confirm Password field placeholder text mismached");
+		softAssert.assertEquals(usersPage.getLocationTypeFieldPlaceholderText(), "Please Select",
+				"Location Type field placeholder text mismached");
+		softAssert.assertEquals(usersPage.getLocationFieldPlaceholderText(), "Please Select",
+				"Location field placeholder text mismached");
+		softAssert.assertEquals(usersPage.getBusinessUnitFieldPlaceholderText(), "Please Select",
+				"Business Unit field placeholder text mismached");
+		softAssert.assertEquals(usersPage.getAssignRoleFieldPlaceholderText(), "Please Select",
+				"Assign Role field placeholder text mismached");
+		softAssert.assertAll();
 	}
-	
-	
+
 	@Test(priority = 4)
 	public void verifyMandatoryFieldAlertsInAddUser() {
 		softAssert = new SoftAssert();
@@ -155,170 +171,91 @@ public class UsersTest extends Base {
 
 	}
 
-	
 	@Test
 	public void verifyAddUserWithValidData() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.enterFirstName("atbs");
-		usersPage.enterLastName("dasfd");
-		usersPage.enterPhoneNumber("1234567890");
-		usersPage.enterEmail("abc@yomail.com");
-		usersPage.enterUserName("userss");
-		usersPage.enterPassword("vguard@123");
-		usersPage.enterConfirmPassword("vguard@123");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm("atbs", "dasfd", "1234567890", "abc@yomail.com", "userss", "vguard@123", "vguard@123",
+				"Plant", "VCPL - Panthnagar", "None", "Testing role");
 		usersPage.clickOnSaveButton();
 		Assert.assertEquals(usersPage.getAlertText(), "Successfully submitted!");
 
 	}
-	
+
 	@Test
 	public void verifyAddUserWithExistingUserName() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.enterFirstName("atbs");
-		usersPage.enterLastName("dasfd");
-		usersPage.enterPhoneNumber("1234567890");
-		usersPage.enterEmail("abc@yomail.com");
-		usersPage.enterUserName("userss");
-		usersPage.enterPassword("vguard@123");
-		usersPage.enterConfirmPassword("vguard@123");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm("atbs", "dasfd", "1234567890", "abc@yomail.com", "userss", "vguard@123", "vguard@123",
+				"Plant", "VCPL - Panthnagar", "None", "Testing role");
 		usersPage.clickOnSaveButton();
 		Assert.assertEquals(usersPage.getAlertText(), "User name is already exists");
 
 	}
-	
+
 	@Test
 	public void verifyAddUserWithExistingEmail() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.enterFirstName("atbs");
-		usersPage.enterLastName("dasfd");
-		usersPage.enterPhoneNumber("1234567890");
-		usersPage.enterEmail("abc@yomail.com");
-		usersPage.enterUserName("userss1");
-		usersPage.enterPassword("vguard@123");
-		usersPage.enterConfirmPassword("vguard@123");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm("atbs", "dasfd", "1234567890", "abc@yomail.com", "userss", "vguard@123", "vguard@123",
+				"Plant", "VCPL - Panthnagar", "None", "Testing role");
 		usersPage.clickOnSaveButton();
 		Assert.assertEquals(usersPage.getAlertText(), "Email is already exists");
 	}
-	
+
 	@Test
 	public void verifyAddUserWithMismatchedPassword() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.enterFirstName("atbs");
-		usersPage.enterLastName("dasfd");
-		usersPage.enterPhoneNumber("1234567890");
-		usersPage.enterEmail("abc@yomail.com");
-		usersPage.enterUserName("userss1");
-		usersPage.enterPassword("vguard@123");
-		usersPage.enterConfirmPassword("vguard@1234");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm("atbs", "dasfd", "1234567890", "abc@yomail.com", "userss", "vguard@123", "mismatchpwd",
+				"Plant", "VCPL - Panthnagar", "None", "Testing role");
 		usersPage.clickOnSaveButton();
 		Assert.assertEquals(usersPage.getConfirmPasswordFieldWarningAlert(), "Passwords need to match!");
-			
+
 	}
-	
+
 	@Test
 	public void verifyAddUserWithInvalidEmailFormat() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.enterFirstName("atbs");
-		usersPage.enterLastName("dasfd");
-		usersPage.enterPhoneNumber("1234567890");
-		usersPage.enterEmail("akljfowie@(83");
-		usersPage.enterUserName("userss1");
-		usersPage.enterPassword("vguard@123");
-		usersPage.enterConfirmPassword("vguard@123");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm("atbs", "dasfd", "1234567890", "4938JOi43maijsa", "userss", "vguard@123", "vguard@123",
+				"Plant", "VCPL - Panthnagar", "None", "Testing role");
 		usersPage.clickOnSaveButton();
 		Assert.assertEquals(usersPage.getEmailFieldWarningAlert(), "The email must be a valid email address.");
 	}
-	
+
 	@Test
 	public void verifyAddUserWithInvalidPhoneNumber() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.enterFirstName("atbs");
-		usersPage.enterLastName("dasfd");
-		usersPage.enterPhoneNumber("12345634534237890");
-		usersPage.enterEmail("abc@yopmail.com");
-		usersPage.enterUserName("userss1");
-		usersPage.enterPassword("vguard@123");
-		usersPage.enterConfirmPassword("vguard@123");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm("atbs", "dasfd", "123453324567890", "abc@yomail.com", "userss", "vguard@123",
+				"vguard@123", "Plant", "VCPL - Panthnagar", "None", "Testing role");
 		usersPage.clickOnSaveButton();
-		Assert.assertEquals(usersPage.getPhoneNumberFieldWarningAlert(), "The phone number must be a valid phone number.");
+		Assert.assertEquals(usersPage.getPhoneNumberFieldWarningAlert(),
+				"The phone number must be a valid phone number.");
 
-		
 	}
-	
+
 	@Test
 	public void verifyAddUserWithLongUserName() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.enterFirstName("atbs");
-		usersPage.enterLastName("dasfd");
-		usersPage.enterPhoneNumber("12345634534237890");
-		usersPage.enterEmail("abc@yopmail.com");
-		usersPage.enterUserName("1234563453423789012345634534237890");
-		usersPage.enterPassword("vguard@123");
-		usersPage.enterConfirmPassword("vguard@123");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm("atbs", "dasfd", "1234567890", "abc@yomail.com",
+				"userssdkfoeiriojasdlkfjoieoaifdjoiase32", "vguard@123", "vguard@123", "Plant", "VCPL - Panthnagar",
+				"None", "Testing role");
 		usersPage.clickOnSaveButton();
-		Assert.assertEquals(usersPage.getUserNameFieldWarningAlert(), "The user name may not be greater than 20 characters.");
+		Assert.assertEquals(usersPage.getUserNameFieldWarningAlert(),
+				"The user name may not be greater than 20 characters.");
 
 	}
-	
+
 	@Test
 	public void verifyAddUserWithEmptySpacesInFields() {
 		softAssert = new SoftAssert();
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.enterFirstName(" ");
-		usersPage.enterLastName(" ");
-		usersPage.enterPhoneNumber(" ");
-		usersPage.enterEmail(" ");
-		usersPage.enterUserName(" ");
-		usersPage.enterPassword(" ");
-		usersPage.enterConfirmPassword(" ");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm("  ", "  ", "  ", "  ", "  ", "  ", "  ", "Plant", "VCPL - Panthnagar", "None",
+				"Testing role");
 		usersPage.clickOnSaveButton();
 		softAssert.assertEquals(usersPage.getFirstNameFieldWarningAlert(), "The first name field is required.");
 		softAssert.assertEquals(usersPage.getLastNameFieldWarningAlert(), "The last name field is required.");
@@ -328,14 +265,13 @@ public class UsersTest extends Base {
 		softAssert.assertEquals(usersPage.getConfirmPasswordFieldWarningAlert(),
 				"The confirm password field is required.");
 		softAssert.assertAll();
-	
+
 	}
-	
+
 	public void verifyAddUserWithTrillingSpaces() {
 
 	}
-	
-	
+
 	@Test
 	public void verifyCloseAddUserWithoutEnteringDetailsUsingCloseButton() {
 		usersPage.clickOnAddUserButton();
@@ -344,7 +280,7 @@ public class UsersTest extends Base {
 		Assert.assertFalse(usersPage.addUserWindowHeading());
 
 	}
-	
+
 	@Test
 	public void verifyCloseAddUserWithoutEnteringDetailsUsingCloseIcon() {
 		usersPage.clickOnAddUserButton();
@@ -352,53 +288,30 @@ public class UsersTest extends Base {
 		usersPage.clickOnCloseIcon();
 		Assert.assertFalse(usersPage.addUserWindowHeading());
 	}
-	
+
 	@Test
 	public void verifyCloseAddUserUsingCloseButtonWithEnterDeatils() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.enterFirstName("atbs");
-		usersPage.enterLastName("dasfd");
-		usersPage.enterPhoneNumber("12345634534237890");
-		usersPage.enterEmail("abc@yopmail.com");
-		usersPage.enterUserName("1234563453423789012345634534237890");
-		usersPage.enterPassword("vguard@123");
-		usersPage.enterConfirmPassword("vguard@123");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm("atbs", "dasfd", "1234567890", "abc@yomail.com", "userss", "vguard@123", "vguard@123",
+				"Plant", "VCPL - Panthnagar", "None", "Testing role");
 		usersPage.clickOnCloseButton();
 		Assert.assertFalse(usersPage.addUserWindowHeading());
 	}
-	
+
 	@Test
 	public void verifyCloseAddUserUsingCloseIconWithEnterDeatils() {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
-		usersPage.enterFirstName("atbs");
-		usersPage.enterLastName("dasfd");
-		usersPage.enterPhoneNumber("12345634534237890");
-		usersPage.enterEmail("abc@yopmail.com");
-		usersPage.enterUserName("1234563453423789012345634534237890");
-		usersPage.enterPassword("vguard@123");
-		usersPage.enterConfirmPassword("vguard@123");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm("atbs", "dasfd", "1234567890", "abc@yomail.com", "userss", "vguard@123", "vguard@123",
+				"Plant", "VCPL - Panthnagar", "None", "Testing role");
 		usersPage.clickOnCloseIcon();
 		Assert.assertFalse(usersPage.addUserWindowHeading());
 	}
-	
-	
+
 	public void verifyVerticalScrollInAddUserPage() {
 
 	}
-	
-	
 
 	@Test(priority = 4)
 	public void verifyMandatoryFieldValidationForUpdatePassword() {
@@ -422,18 +335,9 @@ public class UsersTest extends Base {
 		usersPage.clickOnAddUserButton();
 		Assert.assertTrue(usersPage.addUserWindowHeading());
 		String firstName = "  atbs  ";
-		usersPage.enterFirstName(firstName);
-		usersPage.enterLastName("  dasfd  ");
-		usersPage.enterPhoneNumber("  1234567890  ");
-		usersPage.enterEmail("  abc@yomail.com  ");
-		usersPage.enterUserName("  userssa  ");
-		usersPage.enterPassword("  vguard@123  ");
-		usersPage.enterConfirmPassword("  vguard@123  ");
-		usersPage.selectLocationType("Plant");
-		usersPage.selectLocation("VCPL - Panthnagar");
-		usersPage.selectBusinessUnit("None");
-		usersPage.selectAssignRole("Testing role");
-		usersPage.selectActiveCheckbox();
+		usersPage.fillUserForm(firstName, " dasfd ", "  1234567890 ", "  abc@yomail.com  ", " userss ", " vguard@123",
+				" vguard@123", "Plant", "VCPL - Panthnagar", "None", "Testing role");
+
 		// usersPage.clickOnSaveButton();
 		// Assert.assertEquals(usersPage.getAlertText(), "Successfully submitted!");
 		softAssert.assertEquals(usersPage.getFirstNameFieldDoMValue(), firstName.trim());
@@ -445,10 +349,6 @@ public class UsersTest extends Base {
 
 		usersPage.enterSerachTextAndSearch("atbs");
 		clickKeyboradKeyMultipleTimes(driver, Keys.RETURN, 1);
-		/*
-		 * Robot robot = new Robot(); robot.keyPress(KeyEvent.VK_ENTER);
-		 * robot.keyRelease(KeyEvent.VK_ENTER);
-		 */
 		usersPage.clickOnEditUserIcon();
 
 	}
@@ -496,7 +396,6 @@ public class UsersTest extends Base {
 				"Once deleted, you will not be able to recover this data!");
 		softAssert.assertAll();
 	}
-	
 
 	@Test(priority = 8)
 	public void verifyUserInUsersModuleGridWithPagination() {
@@ -513,4 +412,10 @@ public class UsersTest extends Base {
 
 	}
 
+	@Test
+	public void verifyPaginationControlsPresence() {
+		usersPage.isPaginationPresence();
+	}
+
+	
 }

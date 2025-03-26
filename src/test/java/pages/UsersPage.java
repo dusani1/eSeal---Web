@@ -19,7 +19,6 @@ import root.RootPage;
 
 public class UsersPage extends RootPage {
 
-
 	public UsersPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -142,43 +141,39 @@ public class UsersPage extends RootPage {
 
 	@FindBy(xpath = "//label[@class='Label' and text()='First Name*']")
 	private WebElement firstNameFieldLabelTextElement;
-	
+
 	@FindBy(xpath = "//label[@class='Label' and text()='Last Name*']")
 	private WebElement lastNameFieldLabelTextElement;
-	
+
 	@FindBy(xpath = "//label[@class='Label' and text()='Phone Number*']")
 	private WebElement phoneNumberFieldLabelTextElement;
-	
+
 	@FindBy(xpath = "//label[@class='Label' and text()='Email*']")
 	private WebElement emailFieldLabelTextElement;
-		
+
 	@FindBy(xpath = "//label[@class='Label' and text()='User Name*']")
 	private WebElement userNameFieldLabelTextElement;
-	
+
 	@FindBy(xpath = "//label[@class='Label' and text()='Password*']")
 	private WebElement passwordFieldLabelTextElement;
-	
+
 	@FindBy(xpath = "//label[@class='Label' and text()='Confirm Password*']")
 	private WebElement confirmPasswordFieldLabelTextElement;
-	
+
 	@FindBy(xpath = "//label[@class='Label' and text()='Location Type*']")
 	private WebElement locationTypeFieldLabelTextElement;
-	
+
 	@FindBy(xpath = "//label[@class='Label' and text()='Location*']")
 	private WebElement locationFieldLabelTextElement;
-		
+
 	@FindBy(xpath = "//label[@class='Label' and text()='Business Unit*']")
 	private WebElement businessUnitFieldLabelTextElement;
-	
+
 	@FindBy(xpath = "//label[@class='Label' and text()='Assign Role*']")
 	private WebElement assingRoleFieldLabelTextElement;
-	
+
 	@FindBy(xpath = "//label[@class='Label' and text()='Active*']")
 	private WebElement ActiveCheckboxLabelTextElement;
-	
-	
-	
-	
 
 	@FindBy(xpath = "//table//tbody//tr")
 	List<WebElement> rows;
@@ -191,6 +186,13 @@ public class UsersPage extends RootPage {
 
 	@FindBy(xpath = "//div[@class='swal-text']")
 	private WebElement deleteConfirmationAlertText;
+	
+	@FindBy(xpath="//*[@aria-label='pagination navigation']")
+	private WebElement paginationElement;
+	
+	public boolean isPaginationPresence() {
+		return elementUtilities.isElementDisplayed(paginationElement);
+	}
 
 	public String usersPageHeading() {
 		String pageHeading = elementUtilities.getElementText(userPageHeading);
@@ -414,119 +416,108 @@ public class UsersPage extends RootPage {
 	public String getFirstNameFieldPlaceholderText() {
 		return elementUtilities.getPlaceholderValue(firstNameField);
 	}
-	
+
 	public String getLasttNameFieldPlaceholderText() {
 		return elementUtilities.getPlaceholderValue(lastNameField);
 	}
-	
+
 	public String getPhoneNumberrFieldPlaceholderText() {
 		return elementUtilities.getPlaceholderValue(phoneNumberField);
 	}
-	
+
 	public String getEmailFieldPlaceholderText() {
 		return elementUtilities.getPlaceholderValue(emailField);
 	}
-	
+
 	public String getUserNameFieldPlaceholderText() {
 		return elementUtilities.getPlaceholderValue(userNameField);
 	}
-	
+
 	public String getPasswordFieldPlaceholderText() {
 		return elementUtilities.getPlaceholderValue(passwordField);
 	}
-	
+
 	public String getConfirmPasswordFieldPlaceholderText() {
 		return elementUtilities.getPlaceholderValue(confirmPasswordField);
 	}
-	
+
 	public String getLocationTypeFieldPlaceholderText() {
 		return elementUtilities.getDropdownPlaceholder(locationTypeDropdown);
-	} 
-	
-	public boolean validateLocationTypeFieldPlaceholderText() {
-		return elementUtilities.validateDropdownPlaceholder(locationTypeDropdown,"Please Select");
 	}
+
+	public boolean validateLocationTypeFieldPlaceholderText() {
+		return elementUtilities.validateDropdownPlaceholder(locationTypeDropdown, "Please Select");
+	}
+
 	public String getLocationFieldPlaceholderText() {
 		return elementUtilities.getDropdownPlaceholder(locationDropdown);
 	}
-	
+
 	public String getBusinessUnitFieldPlaceholderText() {
 		return elementUtilities.getDropdownPlaceholder(businessUnitDropdown);
 	}
-	
-		
+
 	public String getAssignRoleFieldPlaceholderText() {
 		return elementUtilities.getDropdownPlaceholder(assignRoleDropdown);
 	}
 
-	
-	
-	
-	
-	
-	
-	
 	public String getFirstNameFieldLabelText() {
 		return elementUtilities.getTextFromElement(firstNameFieldLabelTextElement);
 	}
-	
+
 	public String getLasttNameFieldLabelText() {
 		return elementUtilities.getTextFromElement(lastNameFieldLabelTextElement);
 	}
-	
+
 	public String getPhoneNumberrFieldLabelText() {
 		return elementUtilities.getTextFromElement(phoneNumberFieldLabelTextElement);
 	}
-	
+
 	public String getEmailFieldLabelText() {
 		return elementUtilities.getTextFromElement(emailFieldLabelTextElement);
 	}
-	
+
 	public String getUserNameFieldLabelText() {
 		return elementUtilities.getTextFromElement(userNameFieldLabelTextElement);
 	}
-	
+
 	public String getPasswordFieldLabelText() {
 		return elementUtilities.getTextFromElement(passwordFieldLabelTextElement);
 	}
-	
+
 	public String getConfirmPasswordFieldLabelText() {
 		return elementUtilities.getTextFromElement(confirmPasswordFieldLabelTextElement);
 	}
-	
+
 	public String getLocationTypeFieldLabelText() {
 		return elementUtilities.getTextFromElement(locationTypeFieldLabelTextElement);
 	}
-	
+
 	public String getLocationFieldLabelText() {
 		return elementUtilities.getTextFromElement(locationFieldLabelTextElement);
 	}
-	
+
 	public String getBusinessUnitFieldLabelText() {
 		return elementUtilities.getTextFromElement(businessUnitFieldLabelTextElement);
 	}
-	
-		
+
 	public String getAssignRoleFieldLabelText() {
 		return elementUtilities.getTextFromElement(assingRoleFieldLabelTextElement);
 	}
-	
-	
+
 	public String getActiveCheckboxLabelText() {
 		return elementUtilities.getTextFromElement(ActiveCheckboxLabelTextElement);
 	}
-	
+
 	public void pressEnterKey() {
 		searchUserTextField.click();
 		searchUserTextField.sendKeys(Keys.ENTER);
 	}
 
-	
 	public String getfooterSectionText() {
 		return elementUtilities.getTextFromElement(getFooterSectionTextElement());
-	
+
 	}
-	
 
 	public boolean searchRecord(String searchInputOrUserName, String firstName, String lastName, String roleName,
 			String email, String status, String phoneNumber) {
@@ -640,6 +631,22 @@ public class UsersPage extends RootPage {
 		}
 		return recordFound;
 	}
-//================================================
+
+	public void fillUserForm(String firstName, String lastName, String phone, String email, String username,
+			String password, String confirmPassword, String locationType, String location, String businessUnit,
+			String assingRole) {
+		enterFirstName(firstName);
+		enterLastName(lastName);
+		enterPhoneNumber(phone);
+		enterEmail(email);
+		enterUserName(username);
+		enterPassword(password);
+		enterConfirmPassword(confirmPassword);
+		selectLocationType("Plant");
+		selectLocation("VCPL - Panthnagar");
+		selectBusinessUnit("None");
+		selectAssignRole("Testing role");
+		selectActiveCheckbox();
+	}
 
 }
