@@ -5,34 +5,18 @@
     <listener class-name="listeners.MyListeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="Smoke"/>
-      </run>
-    </groups>
     <classes>
       <class name="test.TransactionsTest">
         <methods>
           <include name="setup"/>
+          <include name="verifyDeleteTransaction"/>
           <include name="tearDown"/>
+          <include name="verifyMandatoryFieldValidationForAddUser"/>
+          <include name="verifyEditTrasaction"/>
           <include name="verifyAddTransactionWithValidData"/>
+          <include name="verifySearchTrasaction"/>
         </methods>
       </class> <!-- test.TransactionsTest -->
-      <class name="test.LogoutTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="verifyReLoginImmediatelyAfterLogout"/>
-        </methods>
-      </class> <!-- test.LogoutTest -->
-      <class name="test.UsersTest">
-        <methods>
-          <include name="verifyNavigationToUsersModule"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="verifyAddUserWithValidDetails"/>
-        </methods>
-      </class> <!-- test.UsersTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Smoke] -->

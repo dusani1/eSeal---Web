@@ -13,7 +13,7 @@
 		<classes>
 			<!-- <class name="test.LoginTest" />
 			<class name="test.LogoutTest" /> -->
-			<class name="test.UsersTest" />
+			<class name="test.TransactionsTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

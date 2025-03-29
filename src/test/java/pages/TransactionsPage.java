@@ -95,7 +95,7 @@ public class TransactionsPage extends RootPage {
 	private WebElement groupFieldWaningAlert;
 
 	@FindBy(xpath = "//table//tbody//tr[1]//td//p//div//i[@class='fa fa-pencil-square-o fa-edit']")
-	private WebElement editUserIcon;
+	private WebElement editIcon;
 
 	@FindBy(xpath = "//table//tbody//tr[1]//td//p//div//i[@class='fa fa-trash-o fa-delete']")
 	private WebElement deleteIcon;
@@ -121,6 +121,9 @@ public class TransactionsPage extends RootPage {
 	@FindBy(xpath = "//div[@class='swal-text']")
 	private WebElement deleteConfirmationAlertText;
 
+	@FindBy(xpath = "//input[contains(@placeholder, 'Search User')]")
+	private WebElement searchUserTextField;
+
 	public String transactionsPageHeading() {
 		String pageHeading = elementUtilities.getElementText(transactionsPageHeading);
 		return pageHeading;
@@ -141,6 +144,7 @@ public class TransactionsPage extends RootPage {
 	}
 
 	public void enterActionCode(String actionCode) {
+		elementUtilities.clearTextFromElement(actionCodeField);
 		elementUtilities.enterTextIntoElement(actionCodeField, actionCode);
 
 	}
@@ -151,27 +155,27 @@ public class TransactionsPage extends RootPage {
 	}
 
 	public void enterGroup(String group) {
-			elementUtilities.enterTextIntoElement(groupField, group);
-		
+		elementUtilities.enterTextIntoElement(groupField, group);
+
 	}
 
 	public void selectSourceLocationAction(String sourceLocationAction) {
-			elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(sourceLocationActionDropdown,
-					sourceLocationAction);
-	
+		elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(sourceLocationActionDropdown,
+				sourceLocationAction);
+
 	}
 
 	public void selectDestinationLocationAction(String destinationLocationAction) {
-		
-			elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(destinationLocationActionDropdown,
-					destinationLocationAction);
-		
+
+		elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(destinationLocationActionDropdown,
+				destinationLocationAction);
+
 	}
 
 	public void selectIntransitAction(String intransitAction) {
-		
-			elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(intransitActionDropdown, intransitAction);
-		
+
+		elementUtilities.selectOptionFromDropdownFieldUsingVisibleText(intransitActionDropdown, intransitAction);
+
 	}
 
 	public void clickOnSaveButton() {
@@ -265,8 +269,13 @@ public class TransactionsPage extends RootPage {
 	}
 
 	public void enterSerachTextAndSearch(String searchText) {
+		elementUtilities.clearTextFromElement(searchTransactionTextField);
 		elementUtilities.enterTextIntoElement(searchTransactionTextField, searchText);
 
+	}
+
+	public void clickOnClearSearchIcon() {
+		elementUtilities.clickOnElement(clearSearchIcon);
 	}
 
 	public String getdeleteConfirmationAlertTitleText() {
@@ -277,11 +286,14 @@ public class TransactionsPage extends RootPage {
 		return elementUtilities.getElementText(deleteConfirmationAlertText);
 	}
 
+	public void clickOnEditTransactionIcon() {
+		elementUtilities.waitForElementAndClick(editIcon, 10);
+	}
+
 	public void pressEnterKey() {
 		searchTransactionTextField.click();
 		searchTransactionTextField.sendKeys(Keys.ENTER);
 	}
-
 
 	public boolean searchRecord(String searchInputOrTransactionName, String actionCode, String featureCode) {
 		int noOfPages = getLastPageCount();
@@ -315,7 +327,7 @@ public class TransactionsPage extends RootPage {
 
 	}
 
-	public boolean searchAndClickIcon(String searchInputOrTransactionName, String featureCode, String iconType) {
+	public boolean searchAndClickIcon1(String searchInputOrTransactionName, String featureCode, String iconType) {
 		int noOfPages = getLastPageCount();
 		boolean recordFound = false;
 
@@ -328,7 +340,7 @@ public class TransactionsPage extends RootPage {
 						if (actualFeatureCode.equals(featureCode)) {
 							recordFound = true;
 							clickIcon(i, p, iconType);
-							break;
+						
 						}
 					}
 				} catch (Exception e) {
@@ -343,8 +355,34 @@ public class TransactionsPage extends RootPage {
 		}
 		return recordFound;
 	}
-
-		
-
 	
+	public boolean searchAndClickIcon(String searchInputOrTransactionName, String featureCode, String iconType) {
+	    int noOfPages = getLastPageCount();
+	    boolean recordFound = false;
+
+	    outerLoop: // Label for breaking out of both loops
+	    for (int p = 1; p <= noOfPages; p++) {
+	        for (int i = 1; i <= rows.size(); i++) {
+	            try {
+	                String actualUserName = rows.get(i - 1).findElement(By.xpath(".//td[1]")).getText();
+	                if (actualUserName.equals(searchInputOrTransactionName)) {
+	                    String actualFeatureCode = rows.get(i - 1).findElement(By.xpath(".//td[3]")).getText();
+	                    if (actualFeatureCode.equals(featureCode)) {
+	                        recordFound = true;
+	                        clickIcon(i, p, iconType);
+	                        break outerLoop; // Exit both loops immediately
+	                    }
+	                }
+	            } catch (Exception e) {
+	                System.out.println("Transaction not found in row " + i + " on page " + p);
+	            }
+	        }
+	        if (!recordFound && p < noOfPages) {
+	            goToNextPage(p + 1);
+	        }
+	    }
+	    return recordFound;
+	}
+
+
 }

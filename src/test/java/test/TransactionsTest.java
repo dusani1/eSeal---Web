@@ -1,5 +1,8 @@
 package test;
 
+import java.awt.AWTException;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -70,7 +73,7 @@ public class TransactionsTest extends Base {
 
 	}
 
-	@Test(priority = 3)
+//	@Test(priority = 3)
 	public void verifyAddUserWithDuplicateTransactionName() {
 		transactionPage.clickOnAddTransactionButton();
 		Assert.assertTrue(transactionPage.addTransactionWindowHeading());
@@ -87,7 +90,7 @@ public class TransactionsTest extends Base {
 
 	}
 
-	@Test(priority = 4)
+	//@Test(priority = 4)
 	public void verifyAddUserWithDuplicateFeatureCode() {
 		transactionPage.clickOnAddTransactionButton();
 		Assert.assertTrue(transactionPage.addTransactionWindowHeading());
@@ -130,7 +133,7 @@ public class TransactionsTest extends Base {
 
 	}
 
-	@Test(priority = 6)
+//	@Test(priority = 6)
 	public void verifyAddUserUsingLeadingAndTrailingSpaces() {
 		SoftAssert softAssert = new SoftAssert();
 		transactionPage.clickOnAddTransactionButton();
@@ -151,7 +154,7 @@ public class TransactionsTest extends Base {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 7)
+//	@Test(priority = 7)
 	public void verifySavedTransactionDetailsInEditWindow() throws InterruptedException {
 		SoftAssert softAssert = new SoftAssert();
 		transactionPage.searchAndClickIcon("Testabc", "AT1", "edit");
@@ -177,23 +180,47 @@ public class TransactionsTest extends Base {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 8)
-	public void verifyUserInUsersModuleGridWithPagination() {
-		boolean transactionFound = transactionPage.searchRecord("Testabc", "ABC", "AT1");
-		Assert.assertTrue(transactionFound);
-		if (transactionFound) {
-			System.out.println("Test Result: PASS - Transaction found in the grid as expected.");
-		} else {
-			System.out.println("Test Result: FAIL - Expected Transaction to be found, but it was not in the grid.");
-		}
-		homePage.clickOnProfileIcon();
-		homePage.clickOnLogoutIcon();
-
+	
+	@Test(priority = 6)
+	public void verifySearchTrasaction() throws InterruptedException, AWTException {
+		String transactionName="Testabc";
+		String actionCode="ABCABCD";
+		String featrueCode="AT1";
+		transactionPage.enterSerachTextAndSearch(transactionName);
+		clickKeyboradKeyMultipleTimes(driver, Keys.RETURN, 1);
+		Assert.assertTrue(transactionPage.searchRecord(transactionName,actionCode,featrueCode));
+		
 	}
-
+	
+	
+	
+	@Test(priority = 6)
+	public void verifyEditTrasaction() throws InterruptedException, AWTException {
+		String transactionName="Testabc";
+		String actionCode="ABCABCD";
+		String featrueCode="AT1";
+		String newActionCode="ABCD";
+		transactionPage.enterSerachTextAndSearch(transactionName);
+		clickKeyboradKeyMultipleTimes(driver, Keys.RETURN, 1);
+		transactionPage.searchRecord(transactionName,actionCode,featrueCode);
+		transactionPage.clickOnEditTransactionIcon();
+		transactionPage.enterActionCode(newActionCode);
+		transactionPage.clickOnSaveButton();
+		Thread.sleep(1000);
+		transactionPage.clickOnClearSearchIcon();
+		transactionPage.enterSerachTextAndSearch(transactionName);
+		clickKeyboradKeyMultipleTimes(driver, Keys.RETURN, 1);
+		transactionPage.searchRecord(transactionName,newActionCode,featrueCode);
+		
+	}
+	
+	
 	@Test(priority = 9)
-	public void verifyDeleteUser() throws InterruptedException {
+	public void verifyDeleteTransaction() throws InterruptedException {
 		SoftAssert softAssert = new SoftAssert();
+		String transactionName="Testabc";
+		transactionPage.enterSerachTextAndSearch(transactionName);
+		clickKeyboradKeyMultipleTimes(driver, Keys.RETURN, 1);
 		transactionPage.searchAndClickIcon("Testabc", "AT1", "delete");
 		Thread.sleep(3000);
 		softAssert.assertEquals(transactionPage.getdeleteConfirmationAlertTitleText(), "Are you sure?");

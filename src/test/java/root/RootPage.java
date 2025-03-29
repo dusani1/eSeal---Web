@@ -24,6 +24,7 @@ public class RootPage {
 		elementUtilities = new ElementUtilities(driver);
 	}
 	
+	
 	@FindBy(xpath = "(//button[@type='button' and contains(@aria-label, 'Go to page')])[last()]")
 	private WebElement lastPageNumberElement;
 	
@@ -34,6 +35,13 @@ public class RootPage {
 	public WebElement getFooterSectionTextElement() {
 		return footerSectionTextElement;
 	}
+	
+	@FindBy(xpath = "//input[contains(@placeholder, 'Search User')]")
+	private WebElement searchUserTextField;
+	
+	
+	
+	
 	
 	
 	

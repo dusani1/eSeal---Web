@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-26T22:34:47 IST" name="Default suite" finished-at="2025-03-26T22:35:01 IST" duration-ms="13854">
+  <suite started-at="2025-03-29T20:46:36 IST" name="Default suite" finished-at="2025-03-29T20:46:50 IST" duration-ms="13645">
     <groups>
     </groups>
-    <test started-at="2025-03-26T22:34:47 IST" name="Default test" finished-at="2025-03-26T22:35:01 IST" duration-ms="13854">
-      <class name="test.UsersTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.UsersTest@4748a0f9]" started-at="2025-03-26T22:34:47 IST" name="setup" finished-at="2025-03-26T22:35:00 IST" duration-ms="13223" status="PASS">
+    <test started-at="2025-03-29T20:46:36 IST" name="Default test" finished-at="2025-03-29T20:46:50 IST" duration-ms="13645">
+      <class name="test.TransactionsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.TransactionsTest@403f0a22]" started-at="2025-03-29T20:46:36 IST" name="setup" finished-at="2025-03-29T20:46:44 IST" duration-ms="7869" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyPaginationControlsPresence()[pri:0, instance:test.UsersTest@4748a0f9]" started-at="2025-03-26T22:35:00 IST" name="verifyPaginationControlsPresence" finished-at="2025-03-26T22:35:01 IST" duration-ms="389" status="PASS">
+        <test-method signature="verifyEditTrasaction()[pri:6, instance:test.TransactionsTest@403f0a22]" started-at="2025-03-29T20:46:44 IST" name="verifyEditTrasaction" finished-at="2025-03-29T20:46:50 IST" duration-ms="5302" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyPaginationControlsPresence -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UsersTest@4748a0f9]" started-at="2025-03-26T22:35:01 IST" name="tearDown" finished-at="2025-03-26T22:35:01 IST" duration-ms="210" status="PASS">
+        </test-method> <!-- verifyEditTrasaction -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TransactionsTest@403f0a22]" started-at="2025-03-29T20:46:50 IST" name="tearDown" finished-at="2025-03-29T20:46:50 IST" duration-ms="425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- test.UsersTest -->
+      </class> <!-- test.TransactionsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
